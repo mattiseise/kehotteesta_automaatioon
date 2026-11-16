@@ -13,3 +13,7 @@ label.tarkistus-rivi{display:flex;gap:12px;align-items:flex-start;cursor:pointer
 label.tarkistus-rivi input{flex:none;width:22px;height:22px;margin:.15em 0 0;accent-color:#9D7DFF;cursor:pointer}
 label.tarkistus-rivi input:focus-visible{outline:3px solid #FFFFFF;outline-offset:2px}
 label.tarkistus-rivi input:checked + span{opacity:.65;text-decoration:line-through}
+li.tarkistus-vaihe label{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+li.tarkistus-vaihe input{flex:none;width:22px;height:22px;margin:.15em 0 0;accent-color:#9D7DFF;cursor:pointer}
+li.tarkistus-vaihe input:focus-visible{outline:3px solid #FFFFFF;outline-offset:2px}
+li.tarkistus-vaihe input:checked + span{opacity:.65}

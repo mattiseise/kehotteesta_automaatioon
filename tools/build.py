@@ -259,6 +259,13 @@ def rakenna_kouluttaja():
                                      lambda m: '<label class="tarkistus-rivi"><input type="checkbox" class="tarkistus-ruutu"%s><span>%s</span></label>'
                                      % (' checked' if m.group(1) == 'x' else '', m.group(2)), body)
         ruutuja += rivi_ruutuja
+        if ulos == 'lisaharjoitukset.html':
+            def vaiheet(m):
+                return re.sub(r'<li>(.*?)</li>',
+                              lambda l: '<li class="tarkistus-vaihe"><label><input type="checkbox" class="tarkistus-ruutu"><span>%s</span></label></li>' % l.group(1),
+                              m.group(0), flags=re.S)
+            body, vaihe_n = re.subn(r'<ol>.*?</ol>', vaiheet, body, flags=re.S)
+            ruutuja += body.count('tarkistus-vaihe')
         if ruutuja:
             body += '\n<script src="assets/tarkistus.js"></script>'
         sivu = ('<!doctype html>\n<html lang="fi">\n<head>\n<meta charset="utf-8">\n'
@@ -325,6 +332,15 @@ def rakenna_osallistuja():
     if '<head>' not in src:
         sys.exit('osallistuja/index.html: <head> puuttuu')
     src = src.replace('<head>', '<head>' + lisays, 1)
+    # Brändin tumma ilme: ylikirjoitus viimeisen tyylilohkon perään ja valkoinen logo tummaa pohjaa vasten.
+    brandi = '<style id="brandi">\n' + lue(MALLIT / 'osallistuja-brandi.css') + '</style>'
+    paa = src.rfind('</style>')
+    if paa < 0:
+        sys.exit('osallistuja/index.html: </style> puuttuu')
+    src = src[:paa + len('</style>')] + brandi + src[paa + len('</style>'):]
+    src, n = re.subn(r'<img class="logo" src="data:image/png;base64,[^"]*"', '<img class="logo" src="assets/logo-valkoinen.png"', src)
+    if n != 1:
+        sys.exit('osallistuja/index.html: logoa ei löytynyt')
     for huono in ('/_blob', 'support.js', 'x-dc'):
         if huono in src:
             sys.exit('osallistuja/index.html: jäännös ' + huono)
@@ -332,6 +348,7 @@ def rakenna_osallistuja():
     shutil.copytree(LAHDE / 'osallistuja' / 'tiedostot', kohde / 'tiedostot')
     tuo(MALLIT / 'pages-shim.js', kohde / 'assets' / 'pages-shim.js')
     tuo(MALLIT / 'etusivu-linkki.js', kohde / 'assets' / 'etusivu-linkki.js')
+    tuo(LAHDE / 'assets' / 'logo-valkoinen.png', kohde / 'assets' / 'logo-valkoinen.png')
     return len(list((kohde / 'tiedostot').iterdir()))
 
 

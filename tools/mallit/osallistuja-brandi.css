@@ -1,0 +1,10 @@
+/* Brändin tumma ilme osallistujan sivulle. Blokkivärit (--o0 ... --o4, osat 1-4 ja lisäharjoitukset) pidetään ennallaan. */
+:root:root:root {
+  --pinta: #1A0530; --paperi: #24103F; --viiva: #33195A;
+  --teksti: #FFFFFF; --himmea: #CFC9DC;
+  --koodi: #33195A; --koodi-teksti: #FFFFFF;
+  --o0t: #CFC9DC; --o1t: #B9A6FF; --o2t: #E8B648; --o3t: #56D3C6; --o4t: #F590B4;
+  color-scheme: dark;
+}
+.ylapalkki { background: var(--paperi); color: #FFFFFF; }
+.logo-teksti { color: #FFFFFF; }
