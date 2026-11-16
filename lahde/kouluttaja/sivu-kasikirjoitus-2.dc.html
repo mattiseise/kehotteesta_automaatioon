@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<title>Diojen käsikirjoitukset (2/3)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#150427}
+.kv{--pinta:#150427;--paperi:#210A3A;--kirkas:#FFFFFF;--teksti:#FFFFFF;--himmea:#CFC9DC;--viiva:#3D2460;--koodi:#0F021A;--koodi-teksti:#F4F2F8;--o0:#5F596C;--o1:#6B4FD8;--o2:#96650A;--o3:#0F766E;--o4:#B4235A;--o0t:#CFC9DC;--o1t:#B9A6FF;--o2t:#E8B648;--o3t:#56D3C6;--o4t:#F590B4;--fontti:"Montserrat", "Segoe UI", Arial, sans-serif;--mono:ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;color-scheme:dark;background:var(--pinta);color:var(--teksti);font-family:var(--fontti);font-size:17px;line-height:1.6;padding:28px 16px 64px}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.palsta { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+h1, h2, h3, p, ol, ul, figure { margin: 0; }
+h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--o1t); outline-offset: 2px; }
+.nakyma:focus { outline: none; }
+.pieni { font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--himmea); }
+
+.o0 { --osa: var(--o0); --osa-t: var(--o0t); }
+.o1 { --osa: var(--o1); --osa-t: var(--o1t); }
+.o2 { --osa: var(--o2); --osa-t: var(--o2t); }
+.o3 { --osa: var(--o3); --osa-t: var(--o3t); }
+.o4 { --osa: var(--o4); --osa-t: var(--o4t); }
+
+/* Alkunäkymä */
+.alku { display: flex; flex-direction: column; gap: 14px; }
+.alku h1 { font-size: 30px; }
+.maaritelma { font-size: clamp(24px, 4.6vw, 34px); font-weight: 700; line-height: 1.25; text-wrap: balance; }
+.maaritelma mark { background: color-mix(in srgb, var(--osa, var(--o1)) 42%, var(--paperi)); color: inherit; padding: 0 0.14em; margin: 0 -0.14em; }
+.paiva { display: flex; flex-direction: column; gap: 18px; margin-top: 12px; }
+.osat { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.osat li { background: var(--paperi); }
+.osat .rivi { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: stretch; color: inherit; text-decoration: none; }
+.osat .rivi:hover { box-shadow: inset 0 0 0 3px var(--osa); }
+.osat .nro { background: var(--osa); color: var(--kirkas); font-size: 30px; font-weight: 700; display: grid; place-items: center; }
+.osat .mita { padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.osat .mita b { font-size: 20px; }
+.osat .mita span { color: var(--himmea); font-size: 15.5px; }
+.osat .kello { padding: 14px 18px 14px 0; font-size: 15px; font-weight: 600; color: var(--osa-t); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; align-self: center; }
+.osat li.tauko { display: block; background: none; color: var(--himmea); font-size: 14px; padding: 0 0 0 82px; }
+@media (max-width: 520px) {
+  .osat .rivi { grid-template-columns: 48px minmax(0, 1fr); }
+  .osat .kello { grid-column: 2; padding: 0 18px 12px; text-align: left; }
+  .osat li.tauko { padding-left: 66px; }
+}
+
+/* Osanäkymä */
+.sivu { background: var(--paperi); display: flex; flex-direction: column; }
+.valitsin { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paperi);
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-bottom: 1px solid var(--viiva); }
+.valitsin .vl { padding: 12px 6px; font-size: 13.5px; font-weight: 600; text-align: center; color: var(--osa-t); border-top: 5px solid var(--osa);
+  text-decoration: none; min-width: 0; overflow-wrap: anywhere; display: flex; align-items: center; justify-content: center; background: var(--paperi); }
+.valitsin .vl:hover { background: color-mix(in srgb, var(--osa) 14%, var(--paperi)); }
+.valitsin .vl[aria-current] { background: var(--osa); color: var(--kirkas); }
+.valitsin .vl:focus-visible { outline-offset: -4px; }
+@media (max-width: 520px) {
+  .valitsin .vl { font-size: 15px; }
+  .valitsin .nimi { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+.tunnus { background: var(--osa); color: var(--kirkas); padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 10px; }
+.tunnus .pieni { color: var(--kirkas); opacity: 0.9; }
+.tunnus h2 { font-size: clamp(34px, 7vw, 52px); }
+.tunnus p { font-size: 19px; max-width: 48ch; }
+.tunnus p.pieni { font-size: 14px; }
+.valiotsikko { font-size: 20px; text-align: center; color: var(--osa-t); background: var(--paperi);
+  border-top: 5px solid var(--osa); border-bottom: 1px solid var(--viiva); padding: 14px 18px; }
+.sisus { padding: 28px; display: flex; flex-direction: column; gap: 34px; }
+@media (max-width: 520px) { .tunnus { padding: 22px 18px; } .sisus { padding: 22px 18px; } }
+.sisus .maaritelma { font-size: clamp(20px, 3.8vw, 26px); }
+.kohta { display: flex; flex-direction: column; gap: 10px; }
+.kohta > p { max-width: 62ch; }
+.kohta h3 { font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--osa-t); }
+.kohta > ul:not(.takoa) { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+.puuttuu { color: var(--himmea); font-size: 18px; }
+
+.tehtava .aikalisa { font-size: 15px; color: var(--himmea); }
+.lisaa-koodi { padding: 0 4px 18px; max-width: 64ch; }
+.lisalinkki { display: flex; flex-direction: column; gap: 2px; padding: 14px 18px; background: var(--paperi); color: inherit;
+  text-decoration: none; border-left: 64px solid var(--osa); margin-top: -4px; }
+.lisalinkki b { font-size: 20px; }
+.lisalinkki span { color: var(--himmea); font-size: 15.5px; }
+.lisalinkki:hover { box-shadow: inset 0 0 0 3px var(--osa); }
+.lisalinkki-teksti { color: var(--osa-t); font-weight: 600; }
+.dok { display: flex; flex-direction: column; gap: 12px; padding: 0 4px 18px; min-width: 0; }
+.dok > * { margin: 0; }
+.dok h3, .dok h4, .dok h5, .dok h6 { font-size: 17px; margin-top: 6px; }
+.lisaa .dok ul, .lisaa .dok ol, .dok ul, .dok ol { display: block; padding: 0 0 0 22px; max-width: none; }
+.dok li + li { margin-top: 6px; }
+.dok p, .dok li { max-width: 64ch; }
+.dok .taulu { overflow-x: auto; max-width: 100%; }
+.dok table { border-collapse: collapse; font-size: 15px; }
+.dok th, .dok td { border: 1px solid var(--viiva); padding: 6px 10px; text-align: left; vertical-align: top; }
+.dok code { font-family: var(--mono); font-size: 0.9em; overflow-wrap: anywhere; }
+.pohja .dok { padding: 14px 12px; }
+.takoa { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.takoa li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.takoa i { font-style: normal; font-weight: 700; font-size: 20px; color: var(--osa-t); text-align: center; }
+.takoa b { font-weight: 600; }
+.takoa span { color: var(--himmea); }
+
+/* Polun valinta */
+.polut { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 520px) { .polut { grid-template-columns: 1fr; } }
+.polut button { font: inherit; font-size: 15.5px; text-align: left; display: flex; flex-direction: column; gap: 4px; padding: 12px 14px;
+  background: var(--paperi); color: var(--teksti); border: 2px solid var(--viiva); cursor: pointer; min-width: 0; }
+.polut button b { font-size: 17px; color: var(--osa-t); }
+.polut button span { color: var(--himmea); font-size: 14.5px; }
+.polut button:hover { border-color: var(--osa); }
+.polut button[aria-pressed="true"] { background: var(--osa); border-color: var(--osa); color: var(--kirkas); }
+.polut button[aria-pressed="true"] b, .polut button[aria-pressed="true"] span { color: var(--kirkas); }
+.polku { display: flex; flex-direction: column; gap: 34px; }
+.js .polkuotsikko { display: none; }
+.polkuotsikko { color: var(--osa-t); }
+
+.tehtava { border-top: 5px solid var(--osa); padding-top: 18px; display: flex; flex-direction: column; gap: 16px; }
+.tehtava header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.tehtava h3 { font-size: 24px; flex: 1 1 320px; }
+.tehtava .aika { font-size: 15px; font-weight: 700; color: var(--osa-t); white-space: nowrap; }
+.tehtava .tarvitset { color: var(--himmea); font-size: 15.5px; }
+.askeleet { list-style: none; padding: 0; counter-reset: askel; display: flex; flex-direction: column; gap: 14px; }
+.askeleet > li { counter-increment: askel; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; }
+.askeleet > li::before { content: counter(askel); font-weight: 700; font-size: 20px; color: var(--osa-t); text-align: center; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.askeleet > li > div { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.askeleet code, .kohta code, .aineisto code { font-family: var(--mono); font-size: 0.9em; overflow-wrap: anywhere; }
+figure.kuva { border: 1px solid var(--viiva); background: var(--kirkas); width: fit-content; max-width: 100%; margin-top: 8px; }
+details.kuvaus > summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--osa-t); width: fit-content; padding: 2px 0; }
+.valitsin .nro { margin-right: 0.4em; }
+figure.kuva img { display: block; max-width: 100%; height: auto; }
+.huomautus { border-left: 5px solid var(--o4t); background: color-mix(in srgb, var(--o4) 12%, var(--paperi)); padding: 10px 14px; font-size: 15.5px; }
+
+.pohja { border: 1px solid var(--viiva); }
+.pohja .rivi { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 12px; }
+.pohja .nimi { font-weight: 600; flex: 1 1 180px; }
+.pohja button { font: 600 15px var(--fontti); background: var(--osa); color: var(--kirkas); border: 0; padding: 9px 16px; cursor: pointer; }
+.pohja button:hover { filter: brightness(1.1); }
+.pohja details { border-top: 1px solid var(--viiva); }
+.pohja summary { padding: 8px 12px; cursor: pointer; font-size: 15px; color: var(--osa-t); font-weight: 600; }
+.pohja pre, .aineisto pre { margin: 0; padding: 14px; background: var(--koodi); color: var(--koodi-teksti); font-family: var(--mono); font-size: 13.5px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 340px; overflow: auto; }
+
+.aineisto { border: 1px solid var(--viiva); }
+.aineisto .rivi, .aineisto summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; padding: 10px 12px; }
+.aineisto summary { cursor: pointer; list-style: none; }
+.aineisto summary::-webkit-details-marker { display: none; }
+.aineisto .paine { font: 600 15px var(--fontti); background: var(--osa); color: var(--kirkas); padding: 9px 16px; }
+.aineisto summary:hover .paine { filter: brightness(1.1); }
+.aineisto .p { display: none; }
+.aineisto[open] .p { display: inline; }
+.aineisto[open] .n { display: none; }
+
+.onnistui { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 14px 14px 14px 0; background: color-mix(in srgb, var(--osa) 12%, var(--paperi)); }
+.onnistui svg { width: 22px; height: 22px; justify-self: center; margin-top: 3px; color: var(--osa-t); }
+.onnistui b { font-weight: 700; }
+
+.lisaa { display: flex; flex-direction: column; border-top: 1px solid var(--viiva); }
+.lisaa details { border-bottom: 1px solid var(--viiva); }
+.lisaa summary { padding: 14px 4px; cursor: pointer; font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; gap: 12px; }
+.lisaa summary span { font-weight: 500; font-size: 15px; color: var(--himmea); }
+.lisaa ul { padding: 0 4px 18px 22px; display: flex; flex-direction: column; gap: 10px; max-width: 64ch; }
+.lisaa .lisaa-teksti { padding: 0 4px 14px; max-width: 64ch; }
+.lisaa dl { margin: 0; padding: 0 4px 18px; display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 8px 16px; }
+.lisaa dt { font-weight: 700; overflow-wrap: anywhere; }
+.lisaa dd { margin: 0; }
+@media (max-width: 520px) { .lisaa dl { grid-template-columns: 1fr; gap: 2px; } .lisaa dd { margin-bottom: 8px; } }
+
+.seuraavaksi { background: var(--osa); color: var(--kirkas); padding: 18px 28px; display: flex; flex-direction: column; gap: 4px; text-decoration: none; }
+.seuraavaksi .pieni { color: var(--kirkas); opacity: 0.9; }
+.seuraavaksi p { font-size: 18px; font-weight: 600; max-width: 56ch; }
+.seuraavaksi p.pieni { font-size: 14px; }
+a.seuraavaksi:hover { filter: brightness(1.1); }
+a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: -6px; }
+@media (max-width: 520px) { .seuraavaksi { padding: 18px; } }
+
+/* Tunnuspalkki: valkoinen pohja kantaa logon molemmissa teemoissa, ei sticky */
+.ylapalkki { background: var(--kirkas); color: #1A0530; display: flex; align-items: center; padding: 10px 16px; margin-bottom: -16px; }
+.logo-linkki { display: flex; align-items: center; }
+.logo { display: block; height: 52px; width: auto; }
+.logo-teksti { font-weight: 600; color: #1A0530; }
+@media (max-width: 520px) { .logo { height: 44px; } }
+
+/* Alkunäkymän lisälinkit */
+.lisalinkit { display: flex; flex-direction: column; gap: 10px; }
+.lisalinkit .lisalinkki { margin-top: 0; }
+
+/* Aineisto ja lataus */
+.aineistolista { display: flex; flex-direction: column; gap: 10px; }
+.aineistolohko { display: flex; align-items: flex-start; gap: 0; border: 1px solid var(--viiva); background: var(--paperi); }
+.aineistolohko .aineisto { border: 0; flex: 1 1 auto; min-width: 0; }
+.aineistolohko .lataa { margin: 8px 10px 8px 0; flex: none; }
+.lataa { font: 600 15px var(--fontti); background: var(--paperi); color: var(--osa-t); border: 2px solid var(--osa); padding: 7px 14px; cursor: pointer; }
+.lataa:hover { background: color-mix(in srgb, var(--osa) 14%, var(--paperi)); }
+.lataa:disabled { opacity: 0.6; cursor: default; }
+.kohta > .lataa { align-self: flex-start; }
+.tila { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); margin: 0;
+  background: var(--koodi); color: var(--kirkas); font-size: 15px; font-weight: 600; padding: 10px 18px; max-width: calc(100% - 32px); z-index: 10; }
+.tila:empty { display: none; }
+.ylapalkki{background:var(--koodi);color:var(--kirkas)}
+.valitsin{position:static}
+.valitsin .vl{padding:12px 6px;font-size:13.5px;font-weight:600;text-align:center;color:var(--osa-t);border-top:5px solid var(--osa);min-width:0;overflow-wrap:anywhere;display:flex;align-items:center;justify-content:center;background:var(--paperi)}
+
+</style>
+</helmet>
+<div class="kv"><main class="palsta"><header class="ylapalkki"><div class="logo-linkki"><img class="logo" src="/_blob/efed3696e0d96f7d44b8c687579618c8" alt="Business College Pro" width="171" height="52" /></div></header><article class="sivu o0 nakyma" aria-label="Diojen käsikirjoitukset"><nav class="valitsin" aria-label="Päivän osat"><div class="vl o0"><span>Päivä</span></div><div class="vl o1"><span class="nro">1</span><span class="nimi"> Mitä agentit ovat?</span></div><div class="vl o2"><span class="nro">2</span><span class="nimi"> Anna tehtävä</span></div><div class="vl o3"><span class="nro">3</span><span class="nimi"> Anna tiedot ja rajat</span></div><div class="vl o4"><span class="nro">4</span><span class="nimi"> Oma agentti</span></div></nav><header class="tunnus"><p class="pieni">Diojen käsikirjoitukset · jatkuu (2/3)</p></header><div class="sisus"><div class="dok"><h3>Diat jaksoittain</h3>
+<p>Minuutit lasketaan jakson alusta.</p>
+<h4>Osa 1: Mitä agentit ovat? 9.00–9.30</h4>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Tyyppi</th>
+<th>Otsikko</th>
+<th>Min</th>
+<th>Kuka</th>
+<th>Sisältö</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sisältö</td>
+<td>Kehotteesta automaatioon</td>
+<td>0–2</td>
+<td>Kari vetää</td>
+<td>Kari toivottaa osallistujat tervetulleiksi ja esittelee yhdellä lauseella päivän aiheen ja kouluttajat.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sisältö</td>
+<td>Mikä agentti on?</td>
+<td>2–5</td>
+<td>Kari vetää</td>
+<td>Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Katsokaa demosta kolme asiaa: mikä tehtävä annettiin, mitä agentti teki itse ja missä ihminen päätti.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kouluttaja näyttää</td>
+<td>Demo: Agentti käyttää tietokonetta</td>
+<td>5–17</td>
+<td>Matti näyttää demon, Kari päättää hyväksyntäkohdassa</td>
+<td>Agentti saa tavoitteen, tekee vaiheet itse ja pysähtyy pyytämään hyväksynnän. Matti näyttää demon suoraan ruudulta, eikä sen aikana näytetä diaa.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Purku</td>
+<td>Mitä näit?</td>
+<td>17–20</td>
+<td>Kari vetää</td>
+<td>Kari kysyy, mikä tehtävä agentille annettiin, mitä se teki itse ja missä ihminen päätti. Lopuksi hän sanoo, että agentille annetaan tehtävä, mutta ei avaimia kaikkeen.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sisältö</td>
+<td>Päivän neljä osaa</td>
+<td>17–20</td>
+<td>Kari vetää</td>
+<td>Kari kertoo päivän neljä osaa yhdellä lauseella. Ensin katsotaan, mitä agentit ovat. Sitten agentille annetaan tehtävä sekä tiedot ja rajat, ja lopuksi jokainen tekee oman agentin.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Tehtävä</td>
+<td>Tehtävä 2: Kysy hintaa ilman hinnastoa</td>
+<td>20–25</td>
+<td>Kari vetää, Matti kiertää neuvomassa</td>
+<td>Kysy tekoälyltä Virtaaman koulutuspäivän hintaa antamatta sille hinnastoa. Vertaa vastausta sitten hinnastoon.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Purku</td>
+<td>Mistä vastaus tuli?</td>
+<td>25–27</td>
+<td>Kari vetää</td>
+<td>Kenenkään vastaus ei tullut Virtaaman hinnastosta, koska tekoälyllä ei ollut sitä. Tehtävän voi antaa hoidettavaksi vasta, kun annat tiedot.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Tehtävä</td>
+<td>Tehtävä 3: Kirjoita tehtävä agentille</td>
+<td>27–30</td>
+<td>Kari vetää, Matti kiertää neuvomassa</td>
+<td>Minkä toistuvan työtehtävän haluaisit antaa agentin hoidettavaksi? Kirjoita se paperille yhdellä virkkeellä ilman nimiä. Paperi otetaan esiin osassa 4.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tärkein viesti: agentille voi antaa tehtävän hoidettavaksi, mutta ilman tietoja tekoäly arvaa. Demossa hyväksyntäkohtaa ei saa ohittaa. Kari lukee luonnoksen ääneen, ja luonnos tallentuu tiedostoksi vasta, kun hän on hyväksynyt sen. Hinnan purkua ei rakenneta keksityn hinnan varaan, koska testissä ChatGPT ei keksinyt hintaa. Tehtävä 3 tehdään aina, koska paperia tarvitaan osassa 4.</p>
+<h4>Osa 2: Anna tehtävä 9.30–10.15</h4>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Tyyppi</th>
+<th>Otsikko</th>
+<th>Min</th>
+<th>Kuka</th>
+<th>Sisältö</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>Osan aloitus</td>
+<td>Osa 2: Anna tehtävä</td>
+<td>0–1</td>
+<td>Kari vetää</td>
+<td>Tässä osassa käsitellään määritelmän kohtaa ”antaa tehtävän”. Osan lopussa sinulla on tallessa oma käsittelyohje.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sisältö</td>
+<td>TAKOA</td>
+<td>1–8</td>
+<td>Kari esittelee TAKOAn</td>
+<td>Kari näyttää TAKOAn viisi vaihetta yhdellä kuvalla. Sitten hän näyttää, missä T ja A näkyvät käsittelyohjeessa, ja kertoo, miksi osallistuja kysyy puuttuvat tiedot asiakkaalta itse.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sisältö</td>
+<td>Viestistä tulosteeksi</td>
+<td>8–9</td>
+<td>Matti vetää</td>
+<td>Dia näyttää, miten asiakkaan viestistä tulee käsittelyohjeen avulla tuloste. Tulosteessa ovat aina samat kentät.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Tehtävä</td>
+<td>Tehtävä 1: Käsittele ensimmäinen asiakasviesti</td>
+<td>9–23</td>
+<td>Matti ja Kari kiertävät neuvomassa</td>
+<td>Kirjoita ensin itse, mitä viestistä puuttuu. Käytä sitten käsittelyohjetta ja vertaa tulosta omaan listaasi.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Tehtävä</td>
+<td>Tehtävä 2: Muokkaa ohjetta ja kokeile toisella viestillä</td>
+<td>23–35</td>
+<td>Matti ja Kari kiertävät neuvomassa</td>
+<td>Tee ohjeeseen yksi muutos, tallenna ohje ja kokeile sitä toisella viestillä. Älä vielä vaihda Virtaaman taustatietoja omiin.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Purku</td>
+<td>Mitä viestistä puuttui?</td>
+<td>35–45</td>
+<td>Matti vetää</td>
+<td>Kenen tekoäly arvasi puuttuvan tiedon? Mihin omaan viestiin käyttäisit tätä ohjetta? Tallennettu ohje on tapa antaa tehtävä.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tärkein viesti: tallennettu ohje on tapa antaa tehtävä, ja sen avulla tulos on joka kerta samassa muodossa. Osallistuja kirjoittaa puuttuvat tiedot paperille ennen kuin antaa viestin tekoälylle, koska tekoälyn arvauksen huomaa vain, jos on itse lukenut viestin. Purussa kysytään aina, mihin omaan viestiin osallistuja käyttäisi ohjetta, vaikka purku lyhenisi. Jos TAKOAn esittely venyy, Matti aloittaa tehtävän 1 joka tapauksessa klo 9.38.</p>
+<h4>Osa 3, alkupuoli: Anna tiedot 10.25–11.30</h4>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Tyyppi</th>
+<th>Otsikko</th>
+<th>Min</th>
+<th>Kuka</th>
+<th>Sisältö</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15</td>
+<td>Osan aloitus</td>
+<td>Osa 3: Anna tiedot ja rajat</td>
+<td>0–1</td>
+<td>Matti vetää</td>
+<td>Tässä osassa käsitellään määritelmän kohtaa ”hoidettavaksi”. Ennen lounasta tekoälylle annetaan tiedot. Lounaan jälkeen agentille annetaan rajat, ja se testataan.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Kouluttaja näyttää</td>
+<td>Tehtävä 1: Luo projekti ja tallenna siihen ohje</td>
+<td>1–15</td>
+<td>Matti näyttää heijastimella, Kari kiertää neuvomassa</td>
+<td>Jokainen luo projektin omassa palvelussaan, tallentaa siihen ohjeen ja lisää raportin samaan tahtiin Matin kanssa. Matti näyttää askeleet ChatGPT:ssä. Askeleen 4 jälkeen hän näyttää Clauden näkymän ja kysyy, kenellä jokin ei toimi.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Sisältö</td>
+<td>Valitse polku</td>
+<td>15–16</td>
+<td>Matti vetää</td>
+<td>Polulla A tekoäly tekee dokumentista tehtävälistan, ja polulla B se analysoi taulukon. Matti pyytää niitä, jotka valitsevat polun B, nostamaan käden.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Tehtävä</td>
+<td>Polku A: Tehtävälista ja tarkistus</td>
+<td>16–50</td>
+<td>Matti ohjaa polkua A</td>
+<td>Tekoäly tekee listan tekijän ohjeella ja etsii lähteet tarkistajan ohjeella. Sinä tarkistat itse kaksi sivuviitettä ja kaksi ristiriitaa.</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Tehtävä</td>
+<td>Polku B: Analyysi ja kaava</td>
+<td>16–50</td>
+<td>Kari ohjaa polkua B</td>
+<td>Tekoäly laskee tuloksen ja nimeää poikkeamat. Sinä tarkistat luvun kaavalla.</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Purku</td>
+<td>Mistä tarkistit?</td>
+<td>50–60</td>
+<td>Matti purkaa polun A, Kari polun B</td>
+<td>Löytyikö asia raportin sivulta? Olivatko luvut samat? Tekoälyllä oli nyt tiedot, mutta tulos voi silti olla väärä. Siksi tarkistus jää sinulle.</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Siirtymä</td>
+<td>Lounaan jälkeen rakennetaan agentti</td>
+<td>60–65</td>
+<td>Matti vetää</td>
+<td>Mistä lähteestä sinä tarkistaisit tuloksen omassa työssäsi? Projekti jää talteen, ja iltapäivällä agentti tehdään samalla tavalla.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tärkein viesti: tehtävän voi antaa hoidettavaksi vasta, kun tekoälyllä on tiedot, mutta tulos voi silti olla väärä. Ennen kuin kukaan lisää ensimmäistä tiedostoa, kouluttaja kertoo, että ChatGPT:n ilmaisella tunnuksella tässä osassa lisätään tiedostona vain raportti. Ristiriitoja ja oikeaa tulosta ei kerrota ennen purkua. Jokainen tarkistaa itse kaksi sivuviitettä tai laskee luvun kaavalla, vaikka aika loppuisi.</p>
+<h4>Osa 3, loppupuoli: Anna rajat ja testaa 12.15–13.15</h4>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Tyyppi</th>
+<th>Otsikko</th>
+<th>Min</th>
+<th>Kuka</th>
+<th>Sisältö</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td>Osan aloitus</td>
+<td>Agentilla on tehtävä, tiedot ja rajat</td>
+<td>0–2</td>
+<td>Matti vetää</td>
+<td>Rajat kertovat, mitä agentti ei keksi, ei lupaa eikä päätä. Ennen lopullista viestiä se pysähtyy pyytämään hyväksynnän.</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Tehtävä</td>
+<td>Tehtävä 1: Rakenna Virtaaman asiakasviestiagentti</td>
+<td>2–20</td>
+<td>Matti aloittaa, sitten molemmat kiertävät neuvomassa</td>
+<td>Liitä määritys projektin ohjeisiin, lisää tietopohja lähteisiin ja anna agentille ensimmäinen asiakasviesti. Vertaa agentin työtä aamun tulosteeseen.</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Tehtävä</td>
+<td>Tehtävä 2: Testaa agentti kolmella viestillä ja korjaa</td>
+<td>20–35</td>
+<td>Matti ja Kari kiertävät neuvomassa</td>
+<td>Anna jokainen testi omassa uudessa keskustelussaan. Kun agentti kysyy, hyväksytkö luonnoksen, vastaa samassa keskustelussa Hyväksyn.</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Sisältö</td>
+<td>Hankala asiakas</td>
+<td>35–45</td>
+<td>Matti vetää, Kari esittää hankalaa asiakasta</td>
+<td>Kari esittää neljä hankalan asiakkaan viestiä järjestyksessä 1, 3, 4, 2. Jokainen kirjoittaa viestin heijastimelta omalle agentilleen.</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Tehtävä</td>
+<td>Korjaa ja testaa uudelleen</td>
+<td>45–55</td>
+<td>Matti näyttää kerran, molemmat kiertävät neuvomassa</td>
+<td>Lisää yksi korjausvirke osan RAJAT loppuun ja tee sama testi uudelleen.</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Purku</td>
+<td>Missä agentti piti ja missä se petti?</td>
+<td>55–60</td>
+<td>Matti vetää</td>
+<td>Mitä agentti teki sellaista, mitä aamun ohje ei tehnyt? Mitä sinun agenttisi ei saa luvata? Kirjoita se ylös osaa 4 varten.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tärkein viesti: rajat ja testit kertovat, voiko tehtävän jättää agentin hoidettavaksi. Alussa kouluttaja kertoo, että ChatGPT:n projektin ohjeisiin mahtuu 8 000 merkkiä ja että painiketta Yhdistä sähköposti ei paineta. Jokainen tekee kolme testiä ja yhden korjauksen, ja korjauksen jälkeen sama testi tehdään uudelleen. Jos aika loppuu, hankalan asiakkaan viesteistä käydään läpi vain viestit 1 ja 3.</p>
+<h4>Osa 4: Oma agentti 13.25–15.00</h4>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Tyyppi</th>
+<th>Otsikko</th>
+<th>Min</th>
+<th>Kuka</th>
+<th>Sisältö</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28</td>
+<td>Osan aloitus</td>
+<td>Osa 4: Oma agentti</td>
+<td>0–2</td>
+<td>Matti vetää</td>
+<td>Tässä osassa käsitellään määritelmän kohtaa ”voi antaa”. Ota esiin aamun paperi.</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Tehtävä</td>
+<td>Tehtävä 1: Valitse aihe ja täytä agenttikortti</td>
+<td>2–15</td>
+<td>Matti ja Kari kiertävät neuvomassa</td>
+<td>Valitse viidestä aihiosta se, joka sopii parhaiten omaan tehtävääsi. Aihio on agentin lähtökohta, ei valmis määritys. Täytä kortin alku ja kokoa tietopohja, jossa ei ole henkilötietoja.</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Tehtävä</td>
+<td>Tehtävä 2: Rakenna agentti pohjasta</td>
+<td>15–50</td>
+<td>Matti ja Kari kiertävät neuvomassa</td>
+<td>Tekoäly tekee määrityksen haastattelemalla sinua. Liitä määrityksen viisi ensimmäistä osaa projektin ohjeisiin ja pidä osa Testit itselläsi.</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Sisältö</td>
+<td>Parien muodostaminen</td>
+<td>45–50</td>
+<td>Matti vetää</td>
+<td>Klo 14.10 Matti kysyy, kenen agentti pysähtyi testissä pyytämään hyväksynnän, ja pyytää nostamaan käden. Parit muodostetaan niin, että jokaisessa on vähintään yksi valmis agentti.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Tehtävä</td>
+<td>Tehtävä 3: Testaa parin kanssa ja korjaa yksi asia</td>
+<td>50–80</td>
+<td>Matti ja Kari kiertävät neuvomassa</td>
+<td>Pari antaa agentillesi testiviestit, ja sinä merkitset tulokset korttiin. Klo 14.25 vaihdatte vuoroa. Korjaa sitten yksi asia ja tee sama testi uudelleen.</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Purku</td>
+<td>Kolme agenttia</td>
+<td>80–85</td>
+<td>Matti vetää</td>
+<td>Kolme osallistujaa kertoo paikaltaan, mitä heidän agenttinsa tekee ja mitä testi paljasti.</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Sisältö</td>
+<td>Määritelmä uudelleen</td>
+<td>85–87</td>
+<td>Matti vetää</td>
+<td>Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Osallistujat lukevat määritelmän oman agenttinsa kannalta. Agentti tekee vaiheet ja pysähtyy pyytämään hyväksynnän, ja se on valmis vasta testattuna.</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Tehtävä</td>
+<td>Kortin loppu: Seuraavat 30 päivää</td>
+<td>87–92</td>
+<td>Kari vetää</td>
+<td>Täytä kortin kohdat Missä agentti on, Seuraava askel 30 päivän aikana ja Mistä huomaan hyödyn.</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Sisältö</td>
+<td>Kiitos</td>
+<td>92–95</td>
+<td>Matti ja Kari päättävät päivän</td>
+<td>Kouluttajat pyytävät tarkistamaan, että käsittelyohje, molemmat agentit, kortti ja pohjat ovat tallessa, ja muistuttavat tietosuojasta. Lopuksi he kertovat lisäharjoituksista, joita voi tehdä päivän jälkeen, ja kiittävät.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tärkein viesti: agentti on valmis vasta, kun se on testattu. Kouluttaja kertoo ääneen, mitä tietoja agenttiin ei saa laittaa, ennen kuin kukaan kokoaa tietopohjaa. Kortti täytetään ja lopetuksen 15 minuuttia pidetään aina. Jos aika loppuu, korjaus kirjataan korttiin seuraavaksi askeleeksi. Jos agentti ei pysähtynyt testissä, se on hyvä löytö eikä epäonnistuminen.</p></div><div class="dok"><h3>Tarinat ja käsitteet</h3>
+<p>Matti tarkistaa tarinoiden yksityiskohdat ja kertoo ne omin sanoin, kukin noin minuutissa. Tarinat ja käsitteet näkyvät dioilla merkintöinä.</p>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Tarina</th>
+<th>Dia</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Näin tämä koulutus tehtiin. Tekoäly kirjoitti aineiston, toinen tekoäly luki sen ensikertalaisen silmin, ja kaksi tarkistajaa palautti työn.</td>
+<td>20</td>
+<td>Polulla A tehdään sama pienessä mittakaavassa: tekoäly tekee työn ensin tekijän ja sitten tarkistajan ohjeella, ja ihminen hyväksyy tuloksen. Tarina kerrotaan ilman kuvaa.</td>
+</tr>
+<tr>
+<td>2 Matin oma agentti ei muista eilistä</td>
+<td>21</td>
+<td>Projekti jää talteen, koska agentti tietää vain sen, mitä sille on annettu. Jos joku on huomannut ChatGPT:n muistavan hänet, palvelu on lisännyt tallentamiaan muistiinpanoja konteksti-ikkunaan eli siihen, minkä tekoäly näkee.</td>
+</tr>
+<tr>
+<td>3 Oman kirjoitustyylin opettaminen tekoälylle vaati kolme korjauskierrosta.</td>
+<td>26</td>
+<td>Agenttia korjataan virke kerrallaan ja testataan uudelleen. Tarina näyttää saman tavan kertojan omassa työssä.</td>
+</tr>
+<tr>
+<td>4 Agentti julkaisi demosivun oikean sivun päälle. Kerrotaan vain, jos siitä sovitaan.</td>
+<td>22</td>
+<td>Tarina näyttää, miksi agentti pysähtyy ennen kuin se tekee jotain lopullista. Se kerrotaan vain, jos siitä sovitaan eikä opiskelijaa tai ryhmää voi tunnistaa.</td>
+</tr>
+<tr>
+<td>5 Iltapoikkeukset ja yhteydenottolomake</td>
+<td>pois</td>
+<td>Tarina havainnollisti automaation ja agentin eroa, ja se jäi pois itsenäisyyden asteikon mukana. Sen voi kertoa, jos joku kysyy.</td>
+</tr>
+<tr>
+<td>6 Luparaja</td>
+<td>29</td>
+<td>Agenttikorttiin kirjoitetaan agentin rajat, ja tarina antaa niistä arkisen esimerkin.</td>
+</tr>
+<tr>
+<td>Seuranta-agentti (varalla)</td>
+<td>pois</td>
+<td>Luonnoksen 3 osion 5 teoriajakso jäi pois, eikä tarina tue yhtäkään tehtävää.</td>
+</tr>
+<tr>
+<td>Työnjakotarina (varalla)</td>
+<td>pois</td>
+<td>Tarina toistaa tarinaa 1 ja on kauimpana osallistujan työstä.</td>
+</tr>
+<tr>
+<td>Matkakortit, valmentaja, tehtäväkansio, mittari, varmuuskopio</td>
+<td>pois</td>
+<td>Tarinat jäivät pois samasta syystä kuin luonnoksessa 3. Tarinat toimivat vain osittain, niitä ei ole varmistettu tai ne ovat liian teknisiä.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Käsite</th>
+<th>Dia</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agentti</td>
+<td>2</td>
+<td>Määritelmä annetaan ennen demoa, ja se palaa jokaisen osan alussa.</td>
+</tr>
+<tr>
+<td>Hallusinointi</td>
+<td>7</td>
+<td>Aineistossa siitä käytetään nimeä keksitty vastaus, ja se nimetään hinnan purussa. Dialla 20 väärä sivunumero näyttää saman ilmiön.</td>
+</tr>
+<tr>
+<td>Lämpötila</td>
+<td>27, sanana pois</td>
+<td>Ilmiö kerrotaan purussa sanalla vaihtelu: sama viesti voi tuottaa eri kerralla eri tuloksen, joten testi tehdään uudelleen. Sanaa lämpötila ei tarvita, koska sitä ei voi näissä sovelluksissa säätää.</td>
+</tr>
+<tr>
+<td>Konteksti</td>
+<td>10</td>
+<td>Osan 2 sanastossa konteksti tarkoittaa taustatietoa eli TAKOAn T:tä.</td>
+</tr>
+<tr>
+<td>Konteksti-ikkuna</td>
+<td>16</td>
+<td>Käsite selittää, miksi aineisto viedään projektiin. Projektiin lisätty tiedosto on käytössä jokaisessa projektin keskustelussa.</td>
+</tr>
+<tr>
+<td>Agenttiverkko</td>
+<td>pois</td>
+<td>Kuva siitä, miten koulutus tehtiin, jäi pois, eikä yksikään tehtävä tarvitse sanaa.</td>
+</tr>
+<tr>
+<td>Automatisoitu työnkulku</td>
+<td>pois</td>
+<td>Käsite jäi pois itsenäisyyden asteikon ja tarinan 5 mukana.</td>
+</tr>
+</tbody>
+</table></div></div></div></article></main></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 7310}}'>
+class Component extends DCLogic {
+  componentDidMount() { if ([].length) this.toista(); }
+  componentWillUnmount() { this.tyhjenna(); }
+  tyhjenna() { (this._ajastimet || []).forEach(clearTimeout); this._ajastimet = []; }
+  toista() {
+    this.tyhjenna();
+    var ajat = [];
+    var vaha = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (vaha) { this.setState({ aika: 1e9, soi: false }); return; }
+    var self = this;
+    this.setState({ aika: -1, soi: true });
+    ajat.forEach(function (t) { self._ajastimet.push(setTimeout(function () { self.setState({ aika: t }); }, t)); });
+    this._ajastimet.push(setTimeout(function () { self.setState({ soi: false }); }, (ajat[ajat.length - 1] || 0) + 1200));
+  }
+  valmis() { this.tyhjenna(); this.setState({ aika: 1e9, soi: false }); }
+  raaka() { if (!this._raaka) this._raaka = {}; return this._raaka; }
+  varakopio(teksti) {
+    var ta = document.createElement('textarea');
+    ta.value = teksti; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta); return ok;
+  }
+  kopioi(avain) {
+    var self = this, teksti = this.raaka()[avain];
+    var ok = function () { self.setState({ kopioitu: avain }); setTimeout(function () { if ((self.state || {}).kopioitu === avain) self.setState({ kopioitu: null }); }, 2200); };
+    var vara = function () { if (self.varakopio(teksti)) ok(); else self.setState({ kopioitu: 'virhe' }); };
+    try { navigator.clipboard.writeText(teksti).then(ok, vara); } catch (e) { vara(); }
+  }
+  renderVals() {
+    var s = this.state || {};
+    var aika = s.aika == null ? 1e9 : s.aika;
+    var a = {};
+    [].forEach(function (t) { a['t' + t] = aika >= t ? 'on' : ''; });
+    var self = this, k = {}, l = {};
+    Object.keys(this.raaka()).forEach(function (avain) {
+      k[avain] = function () { self.kopioi(avain); };
+      l[avain] = s.kopioitu === avain ? 'Kopioitu' : (s.kopioitu === 'virhe' ? 'Valitse teksti ja kopioi itse' : 'Kopioi');
+    });
+    var vals = { a: a, aika: aika, k: k, l: l,
+      animNappi: s.soi ? 'Näytä kaikki heti' : 'Toista animaatio',
+      animToiminto: function () { if (s.soi) self.valmis(); else self.toista(); } };
+    
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

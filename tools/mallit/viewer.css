@@ -1,0 +1,31 @@
+:root{--tumma:#1A0530;--liila:#9D7DFF;--valiB:#33195A;--valiA:#24103F;--valk:#FFFFFF;--himmea:#CFC9DC}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--tumma);color:var(--valk);font-family:'Montserrat',Arial,sans-serif;overflow:hidden}
+button{font:inherit;color:inherit;border:0;background:var(--valiB);padding:10px 16px;cursor:pointer;font-weight:600;font-size:15px;transition:background-color .2s cubic-bezier(.2,0,0,1)}
+button:hover{background:var(--liila);color:var(--tumma)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--liila);outline-offset:2px}
+button[disabled]{opacity:.4;cursor:default}
+button[disabled]:hover{background:var(--valiB);color:inherit}
+button[aria-pressed="true"]{background:var(--liila);color:var(--tumma)}
+.esitys{height:100vh;height:100dvh;display:flex;flex-direction:column}
+.lava{flex:1;min-height:0;container-type:size;display:grid;place-items:center;background:#0E0219}
+#dia{width:min(100cqw,calc(100cqh * 16 / 9));aspect-ratio:16/9;height:auto;border:0;background:var(--tumma);display:block}
+.palkki{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 12px;background:var(--valiA)}
+.palkki .laskuri{font-weight:600;font-size:15px;min-width:5.5em;text-align:center;font-variant-numeric:tabular-nums}
+.palkki .otsikko{flex:1;min-width:0;font-size:14px;color:var(--himmea);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px}
+.palkki .ohje{font-size:13px;color:var(--himmea)}
+.muist{display:none;max-height:34vh;overflow:auto;background:var(--valiB);padding:14px 20px 18px}
+.muist.nakyy{display:block}
+.muist h2{margin:0 0 6px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--liila)}
+.muist p{margin:0;white-space:pre-wrap;font-size:17px;line-height:1.5;max-width:70em}
+.muist p.aika{font-weight:700;margin-bottom:6px}
+.ruudukko{position:fixed;inset:0;background:var(--tumma);overflow:auto;padding:16px;display:none;z-index:10}
+.ruudukko.nakyy{display:block}
+.ruudukko h2{margin:0 0 14px;font-size:20px}
+.ruudukko .rivi{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.ruutu{display:flex;flex-direction:column;gap:8px;padding:8px;text-align:left;background:var(--valiA);font-weight:500;font-size:14px;line-height:1.3}
+.ruutu.nyt{background:var(--liila);color:var(--tumma)}
+.ruutu .kuva{position:relative;aspect-ratio:16/9;background:var(--tumma);overflow:hidden}
+.ruutu iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+.ruutu b{font-weight:700}
+@media (max-width:640px){.palkki .otsikko,.palkki .ohje{display:none}.palkki{justify-content:center}}

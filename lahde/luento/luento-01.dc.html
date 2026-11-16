@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<title>Dia 1: Kehotteesta automaatioon</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.dia p, .dia h1, .dia h2, .dia h3{margin:0}
+.hahmo-kuva{transform-origin:50% 100%;animation:hahmo-keinu 6s ease-in-out infinite}
+@keyframes hahmo-keinu{0%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}100%{transform:rotate(-2deg)}}
+@media (prefers-reduced-motion: reduce){.hahmo-kuva{animation:none}}
+</style>
+</helmet>
+<div class="dia" style="position: relative; width: 1920px; height: 1080px; overflow: hidden; box-sizing: border-box; background:#1A0530;color:#FFFFFF;font-family:'Montserrat', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:end;gap:36px">
+<div aria-hidden="true" style="position:absolute;left:1300px;top:90px;width:900px;height:900px;background:#9D7DFF;clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"></div>
+<img src="/_blob/efed3696e0d96f7d44b8c687579618c8" alt="Business College Pro" style="position:absolute;left:128px;top:88px;width:329px;height:100px" />
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9D7DFF">Tekoälykoulutus</p>
+<h1 style="font-size:132px;font-weight:700;line-height:1.1;color:#FFFFFF">Kehotteesta<br />automaatioon</h1>
+<p style="width:1000px;font-size:36px;line-height:1.4;color:#FFFFFF">Päivän lopussa sinulla on testattu agentti omaa työtäsi varten.</p>
+<div style="display:flex;flex-direction:row;gap:16px">
+<p style="padding:12px 26px;font-size:32px;font-weight:600;color:#1A0530;background:#9D7DFF">2.12.2026 · klo 9–15</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1920, "height": 1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

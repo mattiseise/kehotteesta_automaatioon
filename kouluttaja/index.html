@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kouluttajan materiaali</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/nav.css">
+<style>
+body{margin:0;background:#1A0530;color:#FFFFFF;font-family:'Montserrat',Arial,sans-serif;font-size:17px;line-height:1.6}
+main{max-width:900px;margin:0 auto;padding:32px 20px 64px;display:flex;flex-direction:column;gap:28px}
+img{width:171px;height:52px;display:block}
+h1{margin:0;font-size:clamp(34px,6vw,56px);line-height:1.1}
+p{margin:0}
+.pieni{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9D7DFF}
+.kortit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px}
+.kortti{display:flex;flex-direction:column;gap:8px;padding:22px;background:#33195A;color:#FFFFFF;text-decoration:none;transition:background-color .2s cubic-bezier(.2,0,0,1),color .2s cubic-bezier(.2,0,0,1)}
+.kortti:nth-child(2n){background:#24103F}
+.kortti h2{margin:0;font-size:22px;line-height:1.25}
+.kortti p{font-size:15.5px;color:#CFC9DC}
+.kortti:hover,.kortti:focus-visible{background:#9D7DFF;color:#1A0530}
+.kortti:hover p,.kortti:focus-visible p{color:#1A0530}
+.kortti:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
+</style>
+</head>
+<body>
+<nav class="ko-nav" aria-label="Kouluttajan materiaali"><span class="ko-tunniste">Kouluttajan materiaali</span><a href="index.html" aria-current="page">Hakemisto</a><a href="ohjeet.html">Kouluttajan ohjeet</a><a href="kasikirjoitus-1.html">Diojen käsikirjoitukset (1/3)</a><a href="kasikirjoitus-2.html">Diojen käsikirjoitukset (2/3)</a><a href="kasikirjoitus-3.html">Diojen käsikirjoitukset (3/3)</a><a href="lisaharjoitukset.html">Lisäharjoitukset</a><a href="aineisto.html">Pohjat ja aineisto</a></nav>
+<main>
+<img src="assets/logo-valkoinen.png" alt="Business College Pro" width="171" height="52">
+<div><p class="pieni">Kouluttajille</p><h1>Kouluttajan materiaali</h1></div>
+<p>Kouluttajan omat sivut: ohjeet, käsikirjoitukset, lisäharjoitukset sekä pohjat ja aineisto. Osallistujalle jaetaan vain osallistujan sivusto.</p>
+<div class="kortit"><a class="kortti" href="ohjeet.html"><h2>Kouluttajan ohjeet</h2><p>Tarkistuslista, päivän aikataulu ja osakohtaiset ohjeet kouluttajille.</p></a><a class="kortti" href="kasikirjoitus-1.html"><h2>Diojen käsikirjoitukset (1/3)</h2><p>Dioilla näytettävä ja sanottava sisältö, ensimmäinen osa.</p></a><a class="kortti" href="kasikirjoitus-2.html"><h2>Diojen käsikirjoitukset (2/3)</h2><p>Diojen käsikirjoitukset, toinen osa.</p></a><a class="kortti" href="kasikirjoitus-3.html"><h2>Diojen käsikirjoitukset (3/3)</h2><p>Diojen käsikirjoitukset, kolmas osa.</p></a><a class="kortti" href="lisaharjoitukset.html"><h2>Lisäharjoitukset</h2><p>Harjoitukset, joita osallistuja voi tehdä päivän jälkeen.</p></a><a class="kortti" href="aineisto.html"><h2>Pohjat ja aineisto</h2><p>Päivän pohjat ja Virtaama Oy:n harjoitusaineisto.</p></a></div>
+</main>
+</body>
+</html>

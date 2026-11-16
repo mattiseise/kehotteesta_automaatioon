@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Diojen käsikirjoitukset (3/3)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#150427}
+.kv{--pinta:#150427;--paperi:#210A3A;--kirkas:#FFFFFF;--teksti:#FFFFFF;--himmea:#CFC9DC;--viiva:#3D2460;--koodi:#0F021A;--koodi-teksti:#F4F2F8;--o0:#5F596C;--o1:#6B4FD8;--o2:#96650A;--o3:#0F766E;--o4:#B4235A;--o0t:#CFC9DC;--o1t:#B9A6FF;--o2t:#E8B648;--o3t:#56D3C6;--o4t:#F590B4;--fontti:"Montserrat", "Segoe UI", Arial, sans-serif;--mono:ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;color-scheme:dark;background:var(--pinta);color:var(--teksti);font-family:var(--fontti);font-size:17px;line-height:1.6;padding:28px 16px 64px}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.palsta { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+h1, h2, h3, p, ol, ul, figure { margin: 0; }
+h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--o1t); outline-offset: 2px; }
+.nakyma:focus { outline: none; }
+.pieni { font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--himmea); }
+
+.o0 { --osa: var(--o0); --osa-t: var(--o0t); }
+.o1 { --osa: var(--o1); --osa-t: var(--o1t); }
+.o2 { --osa: var(--o2); --osa-t: var(--o2t); }
+.o3 { --osa: var(--o3); --osa-t: var(--o3t); }
+.o4 { --osa: var(--o4); --osa-t: var(--o4t); }
+
+/* Alkunäkymä */
+.alku { display: flex; flex-direction: column; gap: 14px; }
+.alku h1 { font-size: 30px; }
+.maaritelma { font-size: clamp(24px, 4.6vw, 34px); font-weight: 700; line-height: 1.25; text-wrap: balance; }
+.maaritelma mark { background: color-mix(in srgb, var(--osa, var(--o1)) 42%, var(--paperi)); color: inherit; padding: 0 0.14em; margin: 0 -0.14em; }
+.paiva { display: flex; flex-direction: column; gap: 18px; margin-top: 12px; }
+.osat { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.osat li { background: var(--paperi); }
+.osat .rivi { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: stretch; color: inherit; text-decoration: none; }
+.osat .rivi:hover { box-shadow: inset 0 0 0 3px var(--osa); }
+.osat .nro { background: var(--osa); color: var(--kirkas); font-size: 30px; font-weight: 700; display: grid; place-items: center; }
+.osat .mita { padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.osat .mita b { font-size: 20px; }
+.osat .mita span { color: var(--himmea); font-size: 15.5px; }
+.osat .kello { padding: 14px 18px 14px 0; font-size: 15px; font-weight: 600; color: var(--osa-t); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; align-self: center; }
+.osat li.tauko { display: block; background: none; color: var(--himmea); font-size: 14px; padding: 0 0 0 82px; }
+@media (max-width: 520px) {
+  .osat .rivi { grid-template-columns: 48px minmax(0, 1fr); }
+  .osat .kello { grid-column: 2; padding: 0 18px 12px; text-align: left; }
+  .osat li.tauko { padding-left: 66px; }
+}
+
+/* Osanäkymä */
+.sivu { background: var(--paperi); display: flex; flex-direction: column; }
+.valitsin { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paperi);
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-bottom: 1px solid var(--viiva); }
+.valitsin .vl { padding: 12px 6px; font-size: 13.5px; font-weight: 600; text-align: center; color: var(--osa-t); border-top: 5px solid var(--osa);
+  text-decoration: none; min-width: 0; overflow-wrap: anywhere; display: flex; align-items: center; justify-content: center; background: var(--paperi); }
+.valitsin .vl:hover { background: color-mix(in srgb, var(--osa) 14%, var(--paperi)); }
+.valitsin .vl[aria-current] { background: var(--osa); color: var(--kirkas); }
+.valitsin .vl:focus-visible { outline-offset: -4px; }
+@media (max-width: 520px) {
+  .valitsin .vl { font-size: 15px; }
+  .valitsin .nimi { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+.tunnus { background: var(--osa); color: var(--kirkas); padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 10px; }
+.tunnus .pieni { color: var(--kirkas); opacity: 0.9; }
+.tunnus h2 { font-size: clamp(34px, 7vw, 52px); }
+.tunnus p { font-size: 19px; max-width: 48ch; }
+.tunnus p.pieni { font-size: 14px; }
+.valiotsikko { font-size: 20px; text-align: center; color: var(--osa-t); background: var(--paperi);
+  border-top: 5px solid var(--osa); border-bottom: 1px solid var(--viiva); padding: 14px 18px; }
+.sisus { padding: 28px; display: flex; flex-direction: column; gap: 34px; }
+@media (max-width: 520px) { .tunnus { padding: 22px 18px; } .sisus { padding: 22px 18px; } }
+.sisus .maaritelma { font-size: clamp(20px, 3.8vw, 26px); }
+.kohta { display: flex; flex-direction: column; gap: 10px; }
+.kohta > p { max-width: 62ch; }
+.kohta h3 { font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--osa-t); }
+.kohta > ul:not(.takoa) { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+.puuttuu { color: var(--himmea); font-size: 18px; }
+
+.tehtava .aikalisa { font-size: 15px; color: var(--himmea); }
+.lisaa-koodi { padding: 0 4px 18px; max-width: 64ch; }
+.lisalinkki { display: flex; flex-direction: column; gap: 2px; padding: 14px 18px; background: var(--paperi); color: inherit;
+  text-decoration: none; border-left: 64px solid var(--osa); margin-top: -4px; }
+.lisalinkki b { font-size: 20px; }
+.lisalinkki span { color: var(--himmea); font-size: 15.5px; }
+.lisalinkki:hover { box-shadow: inset 0 0 0 3px var(--osa); }
+.lisalinkki-teksti { color: var(--osa-t); font-weight: 600; }
+.dok { display: flex; flex-direction: column; gap: 12px; padding: 0 4px 18px; min-width: 0; }
+.dok > * { margin: 0; }
+.dok h3, .dok h4, .dok h5, .dok h6 { font-size: 17px; margin-top: 6px; }
+.lisaa .dok ul, .lisaa .dok ol, .dok ul, .dok ol { display: block; padding: 0 0 0 22px; max-width: none; }
+.dok li + li { margin-top: 6px; }
+.dok p, .dok li { max-width: 64ch; }
+.dok .taulu { overflow-x: auto; max-width: 100%; }
+.dok table { border-collapse: collapse; font-size: 15px; }
+.dok th, .dok td { border: 1px solid var(--viiva); padding: 6px 10px; text-align: left; vertical-align: top; }
+.dok code { font-family: var(--mono); font-size: 0.9em; overflow-wrap: anywhere; }
+.pohja .dok { padding: 14px 12px; }
+.takoa { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.takoa li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.takoa i { font-style: normal; font-weight: 700; font-size: 20px; color: var(--osa-t); text-align: center; }
+.takoa b { font-weight: 600; }
+.takoa span { color: var(--himmea); }
+
+/* Polun valinta */
+.polut { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 520px) { .polut { grid-template-columns: 1fr; } }
+.polut button { font: inherit; font-size: 15.5px; text-align: left; display: flex; flex-direction: column; gap: 4px; padding: 12px 14px;
+  background: var(--paperi); color: var(--teksti); border: 2px solid var(--viiva); cursor: pointer; min-width: 0; }
+.polut button b { font-size: 17px; color: var(--osa-t); }
+.polut button span { color: var(--himmea); font-size: 14.5px; }
+.polut button:hover { border-color: var(--osa); }
+.polut button[aria-pressed="true"] { background: var(--osa); border-color: var(--osa); color: var(--kirkas); }
+.polut button[aria-pressed="true"] b, .polut button[aria-pressed="true"] span { color: var(--kirkas); }
+.polku { display: flex; flex-direction: column; gap: 34px; }
+.js .polkuotsikko { display: none; }
+.polkuotsikko { color: var(--osa-t); }
+
+.tehtava { border-top: 5px solid var(--osa); padding-top: 18px; display: flex; flex-direction: column; gap: 16px; }
+.tehtava header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.tehtava h3 { font-size: 24px; flex: 1 1 320px; }
+.tehtava .aika { font-size: 15px; font-weight: 700; color: var(--osa-t); white-space: nowrap; }
+.tehtava .tarvitset { color: var(--himmea); font-size: 15.5px; }
+.askeleet { list-style: none; padding: 0; counter-reset: askel; display: flex; flex-direction: column; gap: 14px; }
+.askeleet > li { counter-increment: askel; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; }
+.askeleet > li::before { content: counter(askel); font-weight: 700; font-size: 20px; color: var(--osa-t); text-align: center; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.askeleet > li > div { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.askeleet code, .kohta code, .aineisto code { font-family: var(--mono); font-size: 0.9em; overflow-wrap: anywhere; }
+figure.kuva { border: 1px solid var(--viiva); background: var(--kirkas); width: fit-content; max-width: 100%; margin-top: 8px; }
+details.kuvaus > summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--osa-t); width: fit-content; padding: 2px 0; }
+.valitsin .nro { margin-right: 0.4em; }
+figure.kuva img { display: block; max-width: 100%; height: auto; }
+.huomautus { border-left: 5px solid var(--o4t); background: color-mix(in srgb, var(--o4) 12%, var(--paperi)); padding: 10px 14px; font-size: 15.5px; }
+
+.pohja { border: 1px solid var(--viiva); }
+.pohja .rivi { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 12px; }
+.pohja .nimi { font-weight: 600; flex: 1 1 180px; }
+.pohja button { font: 600 15px var(--fontti); background: var(--osa); color: var(--kirkas); border: 0; padding: 9px 16px; cursor: pointer; }
+.pohja button:hover { filter: brightness(1.1); }
+.pohja details { border-top: 1px solid var(--viiva); }
+.pohja summary { padding: 8px 12px; cursor: pointer; font-size: 15px; color: var(--osa-t); font-weight: 600; }
+.pohja pre, .aineisto pre { margin: 0; padding: 14px; background: var(--koodi); color: var(--koodi-teksti); font-family: var(--mono); font-size: 13.5px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 340px; overflow: auto; }
+
+.aineisto { border: 1px solid var(--viiva); }
+.aineisto .rivi, .aineisto summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; padding: 10px 12px; }
+.aineisto summary { cursor: pointer; list-style: none; }
+.aineisto summary::-webkit-details-marker { display: none; }
+.aineisto .paine { font: 600 15px var(--fontti); background: var(--osa); color: var(--kirkas); padding: 9px 16px; }
+.aineisto summary:hover .paine { filter: brightness(1.1); }
+.aineisto .p { display: none; }
+.aineisto[open] .p { display: inline; }
+.aineisto[open] .n { display: none; }
+
+.onnistui { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 14px 14px 14px 0; background: color-mix(in srgb, var(--osa) 12%, var(--paperi)); }
+.onnistui svg { width: 22px; height: 22px; justify-self: center; margin-top: 3px; color: var(--osa-t); }
+.onnistui b { font-weight: 700; }
+
+.lisaa { display: flex; flex-direction: column; border-top: 1px solid var(--viiva); }
+.lisaa details { border-bottom: 1px solid var(--viiva); }
+.lisaa summary { padding: 14px 4px; cursor: pointer; font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; gap: 12px; }
+.lisaa summary span { font-weight: 500; font-size: 15px; color: var(--himmea); }
+.lisaa ul { padding: 0 4px 18px 22px; display: flex; flex-direction: column; gap: 10px; max-width: 64ch; }
+.lisaa .lisaa-teksti { padding: 0 4px 14px; max-width: 64ch; }
+.lisaa dl { margin: 0; padding: 0 4px 18px; display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 8px 16px; }
+.lisaa dt { font-weight: 700; overflow-wrap: anywhere; }
+.lisaa dd { margin: 0; }
+@media (max-width: 520px) { .lisaa dl { grid-template-columns: 1fr; gap: 2px; } .lisaa dd { margin-bottom: 8px; } }
+
+.seuraavaksi { background: var(--osa); color: var(--kirkas); padding: 18px 28px; display: flex; flex-direction: column; gap: 4px; text-decoration: none; }
+.seuraavaksi .pieni { color: var(--kirkas); opacity: 0.9; }
+.seuraavaksi p { font-size: 18px; font-weight: 600; max-width: 56ch; }
+.seuraavaksi p.pieni { font-size: 14px; }
+a.seuraavaksi:hover { filter: brightness(1.1); }
+a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: -6px; }
+@media (max-width: 520px) { .seuraavaksi { padding: 18px; } }
+
+/* Tunnuspalkki: valkoinen pohja kantaa logon molemmissa teemoissa, ei sticky */
+.ylapalkki { background: var(--kirkas); color: #1A0530; display: flex; align-items: center; padding: 10px 16px; margin-bottom: -16px; }
+.logo-linkki { display: flex; align-items: center; }
+.logo { display: block; height: 52px; width: auto; }
+.logo-teksti { font-weight: 600; color: #1A0530; }
+@media (max-width: 520px) { .logo { height: 44px; } }
+
+/* Alkunäkymän lisälinkit */
+.lisalinkit { display: flex; flex-direction: column; gap: 10px; }
+.lisalinkit .lisalinkki { margin-top: 0; }
+
+/* Aineisto ja lataus */
+.aineistolista { display: flex; flex-direction: column; gap: 10px; }
+.aineistolohko { display: flex; align-items: flex-start; gap: 0; border: 1px solid var(--viiva); background: var(--paperi); }
+.aineistolohko .aineisto { border: 0; flex: 1 1 auto; min-width: 0; }
+.aineistolohko .lataa { margin: 8px 10px 8px 0; flex: none; }
+.lataa { font: 600 15px var(--fontti); background: var(--paperi); color: var(--osa-t); border: 2px solid var(--osa); padding: 7px 14px; cursor: pointer; }
+.lataa:hover { background: color-mix(in srgb, var(--osa) 14%, var(--paperi)); }
+.lataa:disabled { opacity: 0.6; cursor: default; }
+.kohta > .lataa { align-self: flex-start; }
+.tila { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); margin: 0;
+  background: var(--koodi); color: var(--kirkas); font-size: 15px; font-weight: 600; padding: 10px 18px; max-width: calc(100% - 32px); z-index: 10; }
+.tila:empty { display: none; }
+.ylapalkki{background:var(--koodi);color:var(--kirkas)}
+.valitsin{position:static}
+.valitsin .vl{padding:12px 6px;font-size:13.5px;font-weight:600;text-align:center;color:var(--osa-t);border-top:5px solid var(--osa);min-width:0;overflow-wrap:anywhere;display:flex;align-items:center;justify-content:center;background:var(--paperi)}
+
+</style>
+<link rel="stylesheet" href="assets/nav.css">
+</head>
+<body>
+<nav class="ko-nav" aria-label="Kouluttajan materiaali"><span class="ko-tunniste">Kouluttajan materiaali</span><a href="index.html">Hakemisto</a><a href="ohjeet.html">Kouluttajan ohjeet</a><a href="kasikirjoitus-1.html">Diojen käsikirjoitukset (1/3)</a><a href="kasikirjoitus-2.html">Diojen käsikirjoitukset (2/3)</a><a href="kasikirjoitus-3.html" aria-current="page">Diojen käsikirjoitukset (3/3)</a><a href="lisaharjoitukset.html">Lisäharjoitukset</a><a href="aineisto.html">Pohjat ja aineisto</a></nav>
+<div class="kv"><main class="palsta"><header class="ylapalkki"><div class="logo-linkki"><img class="logo" src="assets/logo-valkoinen.png" alt="Business College Pro" width="171" height="52" /></div></header><article class="sivu o0 nakyma" aria-label="Diojen käsikirjoitukset"><nav class="valitsin" aria-label="Päivän osat"><div class="vl o0"><span>Päivä</span></div><div class="vl o1"><span class="nro">1</span><span class="nimi"> Mitä agentit ovat?</span></div><div class="vl o2"><span class="nro">2</span><span class="nimi"> Anna tehtävä</span></div><div class="vl o3"><span class="nro">3</span><span class="nimi"> Anna tiedot ja rajat</span></div><div class="vl o4"><span class="nro">4</span><span class="nimi"> Oma agentti</span></div></nav><header class="tunnus"><p class="pieni">Diojen käsikirjoitukset · jatkuu (3/3)</p></header><div class="sisus"><div class="dok"><h3>Sovittavat asiat</h3>
+<ol>
+<li><strong>Demon työkalu, vetäjä ja tehtävä.</strong> Käytetäänkö ChatGPT Workia vai Claude Coworkia? Käyttääkö agentti selainta vai koko tietokonetta? Ehdotus on, että Matti näyttää demon ja Kari päättää hyväksyntäkohdassa.</li>
+<li><strong>Karin TAKOA-diat.</strong> Tulevatko diat samaan esitykseen BC Pron ilmeellä, vai näyttääkö Kari ne omasta tiedostostaan?</li>
+<li><strong>Kouluttajien työnjako.</strong> Jokaisen osan vetäjä on ehdotus. Samoin on ehdotus se, kumpi kouluttaja kiertää neuvomassa minkäkin palvelun käyttäjiä.</li>
+<li><strong>Parit ja lopetus.</strong> Parien muodostaminen klo 14.10 ja kolmen agentin esittely lopetuksessa ovat ehdotuksia.</li>
+<li><strong>Osan 1 aikataulu.</strong> Dioille 4 ja 5 on yhteensä kolme minuuttia. Jos aika ei riitä, dia 5 jätetään pois, ja osallistujat näkevät päivän osat sivuston osavalitsimesta.</li>
+<li><strong>Tarina 4.</strong> Saako kertoa, miten agentti julkaisi demosivun oikean sivun päälle?</li>
+<li><strong>Viestin liittäminen ohjeen perään.</strong> Tapa mainitaan nyt osan 2 ongelmatilanteiden neuvoissa sekä osallistujan sivulla että kouluttajan ohjeissa. Muutetaanko osallistujan varsinaiset askeleet sen mukaisiksi? Tapaa on kokeiltu kerran ja vain yhdessä palvelussa.</li>
+<li><strong>Agenttikortti paperilla.</strong> Tulostetaanko kortti, jotta sen täyttämisen voi aloittaa odotellessa?</li>
+<li><strong>Konteksti-ikkuna.</strong> Lisätäänkö sana osallistujan sanastoon, vai sanotaanko se vain ääneen?</li>
+<li><strong>Osallistujamäärä.</strong> Kumpi osallistujamäärä aineistoon kirjataan, 22 vai 24?</li>
+</ol></div><div class="dok"><h3>Testien tila</h3>
+<p>Osallistujan tehtäviä on kokeiltu oikeassa palvelussa vain ChatGPT:n ilmaisella tunnuksella 13.11. ja 14.11.2026. Jokainen viesti annettiin kerran, joten toisella kerralla tulos voi olla erilainen. Hintakysymykseen ChatGPT ei keksinyt hintaa yhdessäkään viidestä vastauksesta. Tarkistajan ohjeella tekoäly antoi budjetin lähteeksi sivun 2, vaikka lause on sivulla 1. Virtaaman agentti pysähtyi pyytämään hyväksynnän jokaisessa testatussa viestissä. Hankalan asiakkaan viestin 1 ja kolmannen asiakasviestin testit epäonnistuivat 13.11. Kun määritykseen oli lisätty rivi varausehdosta, molemmat testit menivät läpi 14.11. Claudessa ei ole kokeiltu mitään, eikä demoa ole harjoiteltu kummallakaan työkalulla. Oman agentin haastattelua ja parin kanssa tehtävää testiä ei ole kokeiltu missään palvelussa.</p></div></div></article></main></div>
+</body>
+</html>

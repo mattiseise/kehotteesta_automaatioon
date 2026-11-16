@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<title>Dia 1: Kehotteesta automaatioon</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.dia{font-family:'Montserrat', Arial, sans-serif}
+.dia p, .dia h1, .dia h2, .dia h3{margin:0}
+.anim{opacity:.1;transition:opacity 1s cubic-bezier(.65,0,.35,1)}
+.anim.on{opacity:1}
+.toista{position:absolute;left:128px;top:990px;font:600 20px 'Montserrat', Arial, sans-serif;background:#33195A;color:#FFFFFF;border:0;padding:10px 18px;cursor:pointer;transition:background-color .2s cubic-bezier(.2,0,0,1)}
+.toista:hover{background:#9D7DFF;color:#1A0530}
+@media (prefers-reduced-motion: reduce){.anim, .s, .mk, .pl, .solmu, .nuoli, .rivi, .lappu{transition:none !important}}
+</style>
+</helmet>
+<div class="dia" style="position: relative; width: 1920px; height: 1080px; overflow: hidden; box-sizing: border-box; background:#1A0530;color:#FFFFFF;font-family:'Montserrat', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:end;gap:36px">
+<div aria-hidden="true" style="position:absolute;left:1300px;top:90px;width:900px;height:900px;background:#9D7DFF;clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"></div>
+<img src="/_blob/efed3696e0d96f7d44b8c687579618c8" alt="Business College Pro" style="position:absolute;left:128px;top:88px;width:329px;height:100px" />
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9D7DFF">Tekoälykoulutus</p>
+<h1 style="font-size:132px;font-weight:700;line-height:1.1;color:#FFFFFF">Kehotteesta<br />automaatioon</h1>
+<p style="width:1000px;font-size:36px;line-height:1.4;color:#FFFFFF">Koulutuspäivän rakenne, harjoitukset ja työnjako. Kouluttajina Matti ja Kari.</p>
+<div style="display:flex;flex-direction:row;gap:16px">
+<p style="padding:12px 26px;font-size:28px;font-weight:600;color:#1A0530;background:#9D7DFF">Esittely tilaajille 26.11.</p>
+<p style="padding:12px 26px;font-size:28px;font-weight:600;color:#FFFFFF;background:#33195A">Noin 22 osallistujaa</p>
+<p style="padding:12px 26px;font-size:28px;font-weight:600;color:#FFFFFF;background:#33195A">Koulutus 2.12.2026 klo 9–15</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1920, "height": 1080}}'>
+class Component extends DCLogic {
+  componentDidMount() { if ([].length) this.toista(); }
+  componentWillUnmount() { this.tyhjenna(); }
+  tyhjenna() { (this._ajastimet || []).forEach(clearTimeout); this._ajastimet = []; }
+  toista() {
+    this.tyhjenna();
+    var ajat = [];
+    var vaha = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (vaha) { this.setState({ aika: 1e9, soi: false }); return; }
+    var self = this;
+    this.setState({ aika: -1, soi: true });
+    ajat.forEach(function (t) { self._ajastimet.push(setTimeout(function () { self.setState({ aika: t }); }, t)); });
+    this._ajastimet.push(setTimeout(function () { self.setState({ soi: false }); }, (ajat[ajat.length - 1] || 0) + 1200));
+  }
+  valmis() { this.tyhjenna(); this.setState({ aika: 1e9, soi: false }); }
+  raaka() { if (!this._raaka) this._raaka = {}; return this._raaka; }
+  varakopio(teksti) {
+    var ta = document.createElement('textarea');
+    ta.value = teksti; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta); return ok;
+  }
+  kopioi(avain) {
+    var self = this, teksti = this.raaka()[avain];
+    var ok = function () { self.setState({ kopioitu: avain }); setTimeout(function () { if ((self.state || {}).kopioitu === avain) self.setState({ kopioitu: null }); }, 2200); };
+    var vara = function () { if (self.varakopio(teksti)) ok(); else self.setState({ kopioitu: 'virhe' }); };
+    try { navigator.clipboard.writeText(teksti).then(ok, vara); } catch (e) { vara(); }
+  }
+  renderVals() {
+    var s = this.state || {};
+    var aika = s.aika == null ? 1e9 : s.aika;
+    var a = {};
+    [].forEach(function (t) { a['t' + t] = aika >= t ? 'on' : ''; });
+    var self = this, k = {}, l = {};
+    Object.keys(this.raaka()).forEach(function (avain) {
+      k[avain] = function () { self.kopioi(avain); };
+      l[avain] = s.kopioitu === avain ? 'Kopioitu' : (s.kopioitu === 'virhe' ? 'Valitse teksti ja kopioi itse' : 'Kopioi');
+    });
+    var vals = { a: a, aika: aika, k: k, l: l,
+      animNappi: s.soi ? 'Näytä kaikki heti' : 'Toista animaatio',
+      animToiminto: function () { if (s.soi) self.valmis(); else self.toista(); } };
+    
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

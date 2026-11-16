@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kehotteesta automaatioon · tilaajaversio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+:root{--tumma:#1A0530;--liila:#9D7DFF;--valiA:#24103F;--valiB:#33195A;--valk:#FFFFFF;--himmea:#CFC9DC}
+*{box-sizing:border-box}
+html{scroll-padding-top:16px}
+body{margin:0;background:var(--tumma);color:var(--valk);font-family:'Montserrat',Arial,sans-serif;font-size:18px;line-height:1.6;overflow-x:hidden}
+.timantti{position:absolute;right:-140px;top:-120px;width:520px;height:520px;background:var(--liila);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);pointer-events:none}
+.sivu{position:relative;max-width:1040px;margin:0 auto;padding:40px 24px 72px;display:flex;flex-direction:column;gap:44px}
+.ylapalkki{display:flex;align-items:center}
+.ylapalkki img{width:171px;height:52px;display:block}
+.alku{display:flex;flex-direction:column;gap:18px;max-width:46rem}
+.pieni{margin:0;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--liila)}
+h1{margin:0;font-size:clamp(40px,8vw,84px);font-weight:700;line-height:1.1}
+h2{margin:0;font-size:26px;font-weight:700;line-height:1.2}
+p{margin:0}
+.ingressi{font-size:clamp(19px,2.4vw,24px);line-height:1.5}
+.tiedot{display:flex;flex-wrap:wrap;gap:10px}
+.tiedot span{background:var(--valiB);padding:8px 16px;font-size:15px;font-weight:600}
+.tiedot span.kirkas{background:var(--liila);color:var(--tumma)}
+.huom{background:var(--valiA);padding:18px 22px;font-size:16px;line-height:1.55;border-left:8px solid var(--liila)}
+.kortit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.kortti{display:flex;flex-direction:column;gap:10px;padding:26px;background:var(--valiB);color:var(--valk);text-decoration:none;transition:background-color .2s cubic-bezier(.2,0,0,1),color .2s cubic-bezier(.2,0,0,1)}
+.kortti:nth-child(2),.kortti:nth-child(3){background:var(--valiA)}
+.kortti .nro{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--liila)}
+.kortti p{font-size:16px;line-height:1.55;color:var(--himmea)}
+.kortti .avaa{margin-top:auto;padding-top:8px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--valk)}
+.kortti:hover,.kortti:focus-visible{background:var(--liila);color:var(--tumma)}
+.kortti:hover .nro,.kortti:hover p,.kortti:hover .avaa,.kortti:focus-visible .nro,.kortti:focus-visible p,.kortti:focus-visible .avaa{color:var(--tumma)}
+.kortti:focus-visible{outline:3px solid var(--valk);outline-offset:3px}
+.lyhyt{display:flex;flex-direction:column;gap:12px;max-width:46rem}
+.lyhyt p{color:var(--himmea);font-size:16px}
+footer{font-size:14px;color:var(--himmea)}
+@media (max-width:520px){.sivu{padding:28px 16px 56px}.kortti{padding:20px}.timantti{width:320px;height:320px;right:-120px;top:-100px}}
+</style>
+</head>
+<body>
+<div class="timantti" aria-hidden="true"></div>
+<div class="sivu">
+<header class="ylapalkki"><img src="assets/logo-valkoinen.png" alt="Business College Pro" width="171" height="52"></header>
+<section class="alku">
+<p class="pieni">Tekoälykoulutus · tilaajaversio</p>
+<h1>Kehotteesta<br>automaatioon</h1>
+<p class="ingressi">Päivän lopussa sinulla on testattu agentti omaa työtäsi varten.</p>
+<div class="tiedot"><span class="kirkas">2.12.2026 · klo 9–15</span><span>Kouluttajat Matti ja Kari</span><span>Esittely tilaajille 26.11.</span></div>
+</section>
+<p class="huom">Tämä on tilaajaversio. Se sisältää kaiken koulutuksen materiaalin kouluttajan ohjeineen ja käsikirjoituksineen. Osallistujille jaetaan vain osallistujan sivusto.</p>
+<section aria-labelledby="osiot" class="lyhyt">
+<h2 id="osiot">Neljä materiaalia</h2>
+</section>
+<nav class="kortit" aria-label="Materiaalit">
+<a class="kortti" href="diat/esittajat/">
+<span class="nro">Diat</span><h2>Esittäjien diat</h2>
+<p>Päivän 26 diaa koulutuksen esittäjille: lähtökohta, aikataulu, demo ja kolme harjoitusosaa. Mukana animoidut diat ja lähdemuistiinpanot.</p>
+<span class="avaa">Avaa diat</span></a>
+<a class="kortti" href="diat/luennoija/">
+<span class="nro">Diat</span><h2>Luennoijan diat</h2>
+<p>36 diaa luennoijan käyttöön. Jokaisella dialla on puhujan muistiinpano: aika, vetäjä ja se, mitä sanotaan ja tehdään.</p>
+<span class="avaa">Avaa diat</span></a>
+<a class="kortti" href="kouluttaja/">
+<span class="nro">Kouluttajat</span><h2>Kouluttajan materiaali</h2>
+<p>Kouluttajan ohjeet, diojen käsikirjoitukset, lisäharjoitukset sekä pohjat ja aineisto.</p>
+<span class="avaa">Avaa materiaali</span></a>
+<a class="kortti" href="osallistuja/">
+<span class="nro">Osallistujat</span><h2>Osallistujan sivusto</h2>
+<p>Sivusto, jota osallistuja käyttää päivän aikana: neljä osaa, tehtävät, lisäharjoitukset sekä pohjat ja aineisto ladattavina tiedostoina.</p>
+<span class="avaa">Avaa sivusto</span></a>
+</nav>
+<footer>Koulutuksen harjoitusyritys Virtaama Oy ja sen henkilöt ovat keksittyjä.</footer>
+</div>
+</body>
+</html>
