@@ -4,3 +4,12 @@
 .ko-nav a[aria-current="page"]{color:#9D7DFF;text-decoration:underline;text-underline-offset:4px}
 .ko-nav .ko-tunniste{color:#CFC9DC;margin-right:8px}
 .ko-nav a:focus-visible{outline:3px solid #9D7DFF;outline-offset:2px}
+li.tarkistus{list-style:none;margin-left:-1.4em}
+li.tarkistus label{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+li.tarkistus input{flex:none;width:22px;height:22px;margin:.15em 0 0;accent-color:#9D7DFF;cursor:pointer}
+li.tarkistus input:focus-visible{outline:3px solid #FFFFFF;outline-offset:2px}
+li.tarkistus input:checked + span{opacity:.65;text-decoration:line-through}
+label.tarkistus-rivi{display:flex;gap:12px;align-items:flex-start;cursor:pointer;margin:.5em 0}
+label.tarkistus-rivi input{flex:none;width:22px;height:22px;margin:.15em 0 0;accent-color:#9D7DFF;cursor:pointer}
+label.tarkistus-rivi input:focus-visible{outline:3px solid #FFFFFF;outline-offset:2px}
+label.tarkistus-rivi input:checked + span{opacity:.65;text-decoration:line-through}

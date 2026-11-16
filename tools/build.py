@@ -252,6 +252,15 @@ def rakenna_kouluttaja():
         src = lue(LAHDE / 'kouluttaja' / lahde_nimi)
         otsikko, helmet, body = pura_dc(src, lahde_nimi)
         body = body.replace(LOGO_BLOB, 'assets/logo-valkoinen.png')
+        body, ruutuja = re.subn(r'<li>\[( |x)\] (.*?)</li>',
+                                lambda m: '<li class="tarkistus"><label><input type="checkbox" class="tarkistus-ruutu"%s><span>%s</span></label></li>'
+                                % (' checked' if m.group(1) == 'x' else '', m.group(2)), body, flags=re.S)
+        body, rivi_ruutuja = re.subn(r'(?m)^- \[( |x)\] (.*)$',
+                                     lambda m: '<label class="tarkistus-rivi"><input type="checkbox" class="tarkistus-ruutu"%s><span>%s</span></label>'
+                                     % (' checked' if m.group(1) == 'x' else '', m.group(2)), body)
+        ruutuja += rivi_ruutuja
+        if ruutuja:
+            body += '\n<script src="assets/tarkistus.js"></script>'
         sivu = ('<!doctype html>\n<html lang="fi">\n<head>\n<meta charset="utf-8">\n'
                 '<meta name="viewport" content="width=device-width,initial-scale=1">\n' + ROBOTS + '\n'
                 '<title>' + otsikko + '</title>\n' + helmet + '\n'
@@ -300,6 +309,7 @@ p{{margin:0}}
 </html>
 """.format(robots=ROBOTS, nav=kouluttaja_nav('index.html'), kortit=kortit))
     tuo(MALLIT / 'nav.css', kohde / 'assets' / 'nav.css')
+    tuo(MALLIT / 'tarkistus.js', kohde / 'assets' / 'tarkistus.js')
     tuo(LAHDE / 'assets' / 'logo-valkoinen.png', kohde / 'assets' / 'logo-valkoinen.png')
     return len(KOULUTTAJA_SIVUT) + 1
 
@@ -311,7 +321,7 @@ def rakenna_osallistuja():
     tyhjenna(kohde)
     src = lue(LAHDE / 'osallistuja' / 'index.html')
     # Ainoat muutokset: robots-meta ja Pages-korvike lataus-rajapinnalle (ks. assets/pages-shim.js).
-    lisays = ROBOTS + '<script src="assets/pages-shim.js"></script>'
+    lisays = ROBOTS + '<script src="assets/pages-shim.js"></script><script src="assets/etusivu-linkki.js" defer></script>'
     if '<head>' not in src:
         sys.exit('osallistuja/index.html: <head> puuttuu')
     src = src.replace('<head>', '<head>' + lisays, 1)
@@ -321,6 +331,7 @@ def rakenna_osallistuja():
     kirjoita(kohde / 'index.html', src)
     shutil.copytree(LAHDE / 'osallistuja' / 'tiedostot', kohde / 'tiedostot')
     tuo(MALLIT / 'pages-shim.js', kohde / 'assets' / 'pages-shim.js')
+    tuo(MALLIT / 'etusivu-linkki.js', kohde / 'assets' / 'etusivu-linkki.js')
     return len(list((kohde / 'tiedostot').iterdir()))
 
 
