@@ -358,7 +358,7 @@ def rakenna_osallistuja():
 # ---------------------------------------------------------------- video
 
 def rakenna_video():
-    """lahde/video/<nimi>.html -> video/<nimi>/index.html. Ainoa muutos: robots-meta."""
+    """lahde/video/<nimi>.html -> video/<nimi>/index.html. Muutokset: robots-meta ja BC Pron ilme (tools/mallit/video-brandi.css)."""
     kohde = ROOT / 'video'
     tyhjenna(kohde)
     n = 0
@@ -366,6 +366,14 @@ def rakenna_video():
         t = lue(src)
         if '<head>' not in t:
             sys.exit('%s: <head> puuttuu' % src.name)
+        if '</head>' not in t:
+            sys.exit('%s: </head> puuttuu' % src.name)
+        brandi = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">'
+                  '<style id="brandi">\n' + lue(MALLIT / 'video-brandi.css') + '</style>')
+        t = t.replace('</head>', brandi + '</head>', 1)
+        # BC Pron ohje: ei emojeja painikkeissa.
+        for emoji in ('\U0001F507 \u00c4\u00e4ni pois', '\U0001F50A \u00c4\u00e4ni p\u00e4\u00e4ll\u00e4'):
+            t = t.replace(emoji, emoji[2:])
         kirjoita(kohde / src.stem / 'index.html', t.replace('<head>', '<head>' + ROBOTS, 1))
         n += 1
     return n

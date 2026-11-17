@@ -1,0 +1,33 @@
+/* BC Pron ilme sarjakuvavideon sivukehykseen (napit, valikot, lukulista, otsikot).
+   Näyttämö (sarjakuvaruutu, hahmot, tekstit) säilyy sarjakuvapalettinaan. Lukujen ja hahmojen värit (--c) säilyvät. */
+:root:root {
+  --agp-bg: #1A0530; --agp-surface: #24103F; --agp-surface-2: #33195A;
+  --agp-text: #FFFFFF; --agp-muted: #CFC9DC; --agp-accent: #9D7DFF;
+  --agp-line: transparent;
+  --agp-display: Montserrat, "Segoe UI", Arial, sans-serif;
+  --agp-body: Montserrat, "Segoe UI", Arial, sans-serif;
+  --agp-display-lh: 1.15;
+}
+.agp.agp { --agx-display: Anton, "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; --agx-big: Anton, "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; --agx-display-w: 400; --agx-big-w: 400; }
+.agp h1 { font-weight: 700; letter-spacing: 0; font-size: clamp(2rem, 5.5vw, 3.4rem); }
+.agp h2, .agp h3 { font-weight: 700; }
+.agp-eyeb { font-weight: 600; letter-spacing: 0.18em; }
+.agp-start-btn { background: #9D7DFF; color: #1A0530; border: 0; border-radius: 0; box-shadow: none; font-family: var(--agp-body); font-weight: 700; letter-spacing: 0; text-transform: none; transition: background-color .2s cubic-bezier(.2,0,0,1), color .2s cubic-bezier(.2,0,0,1); }
+.agp-start-btn:hover { background: #FFFFFF; color: #1A0530; transform: none; box-shadow: none; }
+.agp-start-icon { width: 2em; height: 2em; padding: 0; border-radius: 0; background: #1A0530; color: #9D7DFF; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); font-size: 0.8em; }
+.agp-menu, .agp-toc-item, .agp-script-ch, .agp-endrow, .agp-dem, .agp-ch-bar { border-radius: 0; }
+.agp-menu { background: var(--agp-surface); border: 0; }
+.agp-toc-item { background: #24103F; border: 0; border-left: 4px solid var(--c, #9D7DFF); transition: background-color .2s cubic-bezier(.2,0,0,1); }
+.agp-toc-item:hover, .agp-toc-item.is-cur { background: #33195A; }
+.agp-script-ch, .agp-endrow { border-top: 0; border-right: 0; border-bottom: 0; }
+.agx-btn, .agx-seg, .agx-intro-btn, .agx-bigplay { border-radius: 0; font-family: var(--agp-body); transition: background-color .2s cubic-bezier(.2,0,0,1), color .2s cubic-bezier(.2,0,0,1); }
+.agx-btn, .agx-seg { background: #33195A; color: #FFFFFF; border: 0; }
+.agx-btn:hover:not(:disabled), .agx-seg:hover:not(:disabled) { background: #9D7DFF; color: #1A0530; }
+.agx-btn.is-primary, .agx-seg[aria-pressed="true"], .agx-seg.is-on { background: #9D7DFF; color: #1A0530; }
+.agx-btn.is-primary:hover:not(:disabled) { background: #FFFFFF; color: #1A0530; }
+.agp-textlink { color: #9D7DFF; }
+.agx-stage { box-shadow: none; }
+.agp-ch.is-on .agp-ch-bar { box-shadow: 0 0 0 2px var(--agp-bg), 0 0 0 4px #9D7DFF; }
+.agx-bigplay { background: #9D7DFF; color: #1A0530; border: 0; box-shadow: none; font-weight: 700; }
+.agx-bigplay:hover { background: #FFFFFF; color: #1A0530; box-shadow: none; transform: none; }
+.agx-bigplay > :first-child { border-radius: 0; background: #1A0530; color: #9D7DFF; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
