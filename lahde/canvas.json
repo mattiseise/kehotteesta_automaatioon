@@ -851,7 +851,7 @@
    "x": 4000,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus, Määritelmä), kouluttajan ohje osa-1-mita-agentit-ovat.md (kohta Demo, Mitä sanot: ennen demoa ja demon jälkeen), osallistujan osien 3 ja 4 tehtävät ja lisaharjoitukset.md (Kokeilu 2). Esittäjä sanoo demon jälkeen: \"Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja itse, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.\" Lopetuksessa määritelmä luetaan oman agentin kannalta: \"Teidän agenttinne tekee vaiheet, kun annatte sille työn, ja pysähtyy pyytämään hyväksynnän. Se ei avaa tiedostoja, ei lähetä mitään eikä tee mitään itsestään. Ja se voi erehtyä. Sama määritys siirtyy sellaisenaan agentille, jolla on työkalut. Sellaisen näitte aamun demossa.\" Demossa kouluttaja antaa agentille tavoitteen eikä vaiheita. Agentti avaa viestin ja hinnaston itse ja tallentaa luonnoksen vasta hyväksynnän jälkeen. Osallistujat rakentavat projektiin Virtaaman agentin osan 3 loppupuolella ja oman agentin osassa 4. Työkaluja käyttävää agenttia voi kokeilla lisäharjoituksessa maksullisella tilauksella. Kummassakin agentti pysähtyy samaan kohtaan, koska määritys käskee. Osan 1 purun virke sopii tähänkin: agentille annetaan tehtävä, mutta ei avaimia kaikkeen.",
+   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus, Määritelmä), kouluttajan ohje osa-1-mita-agentit-ovat.md (kohta Demo, Mitä sanot: ennen demoa ja demon jälkeen), osallistujan osien 3 ja 4 tehtävät ja lisaharjoitukset.md (Kokeilu 2). Esittäjä sanoo demon jälkeen: \"Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja koneeltanne, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.\" Lopetuksessa määritelmä luetaan oman agentin kannalta: \"Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää. Se ei avaa tiedostoja koneeltanne eikä lähetä mitään. Se voi myös erehtyä. Saman määrityksen voi siirtää sellaisenaan agentille, jolla on työkalut. Sellaisen näitte aamun demossa.\" Demossa kouluttaja antaa agentille tavoitteen eikä vaiheita. Agentti avaa viestin ja hinnaston itse ja tallentaa luonnoksen vasta hyväksynnän jälkeen. Osallistujat rakentavat projektiin Virtaaman agentin osan 3 loppupuolella ja oman agentin osassa 4. Työkaluja käyttävää agenttia voi kokeilla lisäharjoituksessa maksullisella tilauksella. Kummassakin agentti pysähtyy samaan kohtaan, koska määritys käskee. Osan 1 purun virke sopii tähänkin: agentille annetaan tehtävä, mutta ei avaimia kaikkeen.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -1013,7 +1013,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "9.05–9.17 · Matti näyttää demon, Kari päättää hyväksyntäkohdassa (ehdotus)\nDia näkyy vain ennen demoa. Sano: ”Annan agentille tavoitteen, en vaiheita. Katsokaa, mitä se tekee itse ja missä se pysähtyy.” Osoita demon aikana, kun agentti avaa viestin ja hinnaston. Kun luonnoksessa näkyy hinta, sano: ”Agentti löysi hinnan, koska sillä on hinnasto.” Hyväksyntäkohdassa Kari lukee luonnoksen ääneen ja hyväksyy sen. Näytä, että luonnostiedosto syntyy vasta sen jälkeen, ja sano: ”Agentti pysähtyi, koska määritys käskee.” Demon jälkeen: ”Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja itse, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.” Huomio: demo on ehdotus. Työkalu, vetäjä ja demon tehtävä ovat vielä päättämättä. Varasuunnitelma: jos demo ei käynnisty kahdessa minuutissa, näytä tallenne ja kerro siitä ääneen."
+   "text": "9.05–9.17 · Matti näyttää demon, Kari päättää hyväksyntäkohdassa (ehdotus)\nDia näkyy vain ennen demoa. Sano: ”Annan agentille tavoitteen, en vaiheita. Katsokaa, mitä se tekee itse ja missä se pysähtyy.” Osoita demon aikana, kun agentti avaa viestin ja hinnaston. Kun luonnoksessa näkyy hinta, sano: ”Agentti löysi hinnan, koska sillä on hinnasto.” Hyväksyntäkohdassa Kari lukee luonnoksen ääneen ja hyväksyy sen. Näytä, että luonnostiedosto syntyy vasta sen jälkeen, ja sano: ”Agentti pysähtyi, koska määritys käskee.” Demon jälkeen: ”Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja koneeltanne, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.” Huomio: demo on ehdotus. Työkalu, vetäjä ja demon tehtävä ovat vielä päättämättä. Varasuunnitelma: jos demo ei käynnisty kahdessa minuutissa, näytä tallenne ja kerro siitä ääneen."
   },
   "luento-puhe-04": {
    "x": 6000,
@@ -1022,7 +1022,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "9.17–9.20 · Kari vetää (ehdotus)\nKysy: ”Mikä tehtävä agentille annettiin?” Haetaan tavoitetta, ei vaiheita. ”Mitä agentti teki itse?” Haetaan: avasi viestin, haki hinnaston ja kirjoitti luonnoksen. ”Missä ihminen päätti?” Haetaan hyväksyntäkohtaa. Lopuksi sano: ”Agentille annetaan tehtävä, mutta ei avaimia kaikkeen.”"
+   "text": "9.17–9.20 · Kari vetää (ehdotus)\nKysy: ”Mikä tehtävä agentille annettiin?” Haetaan tavoitetta, ei vaiheita. ”Mitä agentti teki itse?” Haetaan: avasi viestin, haki hinnaston ja kirjoitti luonnoksen. ”Missä ihminen päätti?” Haetaan hyväksyntäkohtaa. Lopuksi sano: ”Agentille annetaan tehtävä, mutta ei avaimia kaikkeen.” Kerro vielä, mistä agentti tehdään: ”Kielimalli on vain agentin aivot. Agentiksi se muuttuu vasta, kun sille annetaan etukäteen muitakin asioita. Tärkeimmät niistä ovat ohjeet, tiedot, työkalut ja rajat. Demon agentilla oli työkalu, jolla se avasi itse tiedostot koneelta. Teidän agenttinne lukee vain projektiin tallennetut tiedostot, ja sille annetaan tänään ohjeet, tiedot ja rajat.” Jos aika ei riitä, sano vain kolme ensimmäistä virkettä. Jos purku venyy, sano tämä vasta dian 7 kohdalla."
   },
   "luento-puhe-05": {
    "x": 8000,
@@ -1031,7 +1031,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "9.17–9.20 · Kari vetää (ehdotus)\nKerro päivän neljä osaa yhdellä lauseella. Ensin katsotaan, mitä agentit ovat. Sitten agentille annetaan tehtävä sekä tiedot ja rajat, ja lopuksi jokainen tekee oman agentin. Huomio: dioille 4 ja 5 on yhteensä kolme minuuttia. On vielä sopimatta, jätetäänkö tämä dia pois, jos aika ei riitä. Jos dia jätetään pois, osallistujat näkevät päivän osat sivuston osavalitsimesta."
+   "text": "9.17–9.20 · Kari vetää (ehdotus)\nKerro päivän neljä osaa lyhyesti. Ensin katsotaan, mitä agentit ovat. Sitten otetaan käyttöön ohjeet, joiden mukaan tekoäly tekee tehtävän. Sen jälkeen tekoälylle annetaan tiedot ja rajat. Lopuksi jokainen tekee oman agentin. Huomio: dioille 4 ja 5 on yhteensä kolme minuuttia. On vielä sopimatta, jätetäänkö tämä dia pois, jos aika ei riitä. Jos dia jätetään pois, osallistujat näkevät päivän osat sivuston osavalitsimesta."
   },
   "luento-puhe-06": {
    "x": 10000,
@@ -1075,7 +1075,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "9.30–9.31 · Kari vetää (ehdotus)\nKerro, että tässä osassa käsitellään määritelmän kohtaa ”antaa tehtävän”. Iltapäivällä saman tehtävän tekee agentti. Riikka Lahtela on Virtaaman asiakaskoordinaattori. Hän hoitaa tarjoukset, laskutuksen ja asiakasviestit, ja käsittelyohjeen vastausluonnokset allekirjoitetaan hänen nimellään."
+   "text": "9.30–9.31 · Kari vetää (ehdotus)\nKerro, että tässä osassa käsitellään määritelmän kohtaa ”antaa tehtävän”. Sano: ”Tässä osassa otatte käyttöön käsittelyohjeen. Se on agentin ohjeiden ensimmäinen versio. Kun tekoäly noudattaa ohjeita, se tekee tehtävän joka kerta samalla tavalla.” Iltapäivällä saman tehtävän tekee agentti. Riikka Lahtela on Virtaaman asiakaskoordinaattori. Hän hoitaa tarjoukset, laskutuksen ja asiakasviestit, ja käsittelyohjeen vastausluonnokset allekirjoitetaan hänen nimellään."
   },
   "luento-puhe-10": {
    "x": 2000,
@@ -1208,7 +1208,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "12.15–12.17 · Matti vetää (ehdotus)\nKerro, että tässä osassa jatkuu määritelmän kohta ”hoidettavaksi”: rajat ja testit kertovat, voiko tehtävän jättää agentin hoidettavaksi. Kerro, että projektin agentti ei tee mitään itsestään eikä lähetä mitään. Sama määritys siirtyy kuitenkin agentille, jolla on työkalut. Tarina: agentti julkaisi demosivun oikean sivun päälle. Kerro se vain, jos siitä on sovittu eikä opiskelijaa tai ryhmää voi tunnistaa."
+   "text": "12.15–12.17 · Matti vetää (ehdotus)\nKerro, että tässä osassa jatkuu määritelmän kohta ”hoidettavaksi”: rajat ja testit kertovat, voiko tehtävän jättää agentin hoidettavaksi. Kerro, että projektin agentti toimii vain silloin, kun käyttäjä antaa sille työn. Saman määrityksen voi kuitenkin siirtää agentille, jolla on työkalut. Tarina: agentti julkaisi demosivun oikean sivun päälle. Kerro se vain, jos siitä on sovittu eikä opiskelijaa tai ryhmää voi tunnistaa."
   },
   "luento-puhe-23": {
    "x": 2000,
@@ -1324,7 +1324,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "14.50–14.52 · Matti vetää (ehdotus)\nPyydä osallistujia lukemaan määritelmä oman agenttinsa kannalta. Sano sitten: ”Teidän agenttinne tekee vaiheet, kun annatte sille työn, ja pysähtyy pyytämään hyväksynnän. Se ei avaa tiedostoja, ei lähetä mitään eikä tee mitään itsestään. Ja se voi erehtyä. Sama määritys siirtyy sellaisenaan agentille, jolla on työkalut. Sellaisen näitte aamun demossa.”"
+   "text": "14.50–14.52 · Matti vetää (ehdotus)\nPyydä osallistujia lukemaan määritelmä oman agenttinsa kannalta. Sano sitten: ”Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää. Se ei avaa tiedostoja koneeltanne eikä lähetä mitään. Se voi myös erehtyä. Saman määrityksen voi siirtää sellaisenaan agentille, jolla on työkalut. Sellaisen näitte aamun demossa.”"
   },
   "luento-puhe-35": {
    "x": 14000,

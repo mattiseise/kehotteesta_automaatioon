@@ -23,6 +23,7 @@ diat/luennoija/            luennoijan diat (36 kpl, puhujan muistiinpanot), itse
   assets/                  katselimen ja diojen skriptit, tyylit ja logo
 
 kouluttaja/                kouluttajan ohjeet, käsikirjoitukset, lisäharjoitukset, aineisto (itsenäinen)
+video/mita-agentit-ovat/   video "Mitä agentit ovat?" (yksi itsenäinen HTML-tiedosto puheraitoineen)
   index.html               hakemisto
   assets/                  navigaation tyyli ja logo
 
@@ -47,7 +48,8 @@ Jokainen osio (`osallistuja/`, `diat/esittajat/`, `diat/luennoija/`, `kouluttaja
 Lähteenä on kaksi claude.ai-artifaktia:
 
 1. Osallistujan sivusto: `https://claude.ai/artifact/6Cqu5ec9eBoXui2dBBvh27` (`index.html` ja `tiedostot/`).
-2. Yhteinen Design-kanvas: `https://claude.ai/artifact/Xve1QnkQuwnUgwUiAZubfk`, versio `1794817508-5012` (diat, luennoijan diat, kouluttajan sivut ja `canvas.json`).
+2. Yhteinen Design-kanvas: `https://claude.ai/artifact/Xve1QnkQuwnUgwUiAZubfk`, versio 49 (`1794896650-7809`, 17.11.2026) (diat, luennoijan diat, kouluttajan sivut ja `canvas.json`).
+3. Video: sarjakuvaesitysmoottorin repo `mattiseise/sarjakuvaesitys`, haara `esitys/mita-agentit-ovat` (17.11.2026, puheraidat commitissa `214df3b`). Rakennettu tiedosto `dist/mita-agentit-ovat/standalone.html` kopioidaan tiedostoksi `lahde/video/mita-agentit-ovat.html`. Rakennus lisää vain `noindex`-metan. Video lataa Reactin cdnjs.cloudflare.comista, joten se tarvitsee verkkoyhteyden.
 
 Osallistujan sivusto otettiin sellaisenaan. Kaksi muutosta: `<meta name="robots" content="noindex">` ja `assets/pages-shim.js`. Alkuperäinen sivu tallentaa liitteet claude.ai:n omalla `window.claude.use('downloads')` -rajapinnalla, jota GitHub Pagesissa ei ole. Korvike tarjoaa saman rajapinnan tavallisella selaimen latauksella, joten lataa-painikkeet näkyvät ja toimivat.
 
@@ -90,4 +92,6 @@ Sivusto ei sisällä osallistujien nimiä tai yrityksiä. Virtaama Oy ja sen hen
 
 ## Julkaisu
 
-Repoa ei ole työnnetty GitHubiin eikä Pagesia ole otettu käyttöön. Repo on julkinen, joten julkaisu on Matin päätös. Sivusto on `noindex`, mutta osoite on silti kenen tahansa luettavissa.
+Repo on julkinen, ja sivusto on GitHub Pagesissa osoitteessa `https://mattiseise.github.io/kehotteesta_automaatioon/`. Kaikilla sivuilla on `noindex`, mutta osoite on kenen tahansa luettavissa. Sivusto päivitetään vain Matin pyynnöstä.
+
+`tools/build.py` kirjoittaa tiedostot LF-rivinvaihdoin myös Windowsilla, joten rakennus ei muuta muuttumattomia tiedostoja.

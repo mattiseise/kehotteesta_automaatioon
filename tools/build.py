@@ -9,9 +9,10 @@ Lähteet (kansio lahde/):
   luento/*.dc.html                 luennoijan diat (luento-01 ... luento-36)
   kouluttaja/sivu-*.dc.html        kouluttajan sivut
   osallistuja/index.html + tiedostot/   osallistujan sivusto sellaisenaan
+  video/<nimi>.html                sarjakuvaesitysmoottorin valmis video (standalone.html puheraitoineen)
   assets/logo-valkoinen.png        logo
 
-Tulokset (kirjoitetaan yli): index.html, assets/, diat/, kouluttaja/, osallistuja/
+Tulokset (kirjoitetaan yli): index.html, assets/, diat/, kouluttaja/, osallistuja/, video/
 Ei koske kansioihin lahde/ ja tools/.
 """
 import html
@@ -35,7 +36,9 @@ def lue(p):
 def kirjoita(p, teksti):
     p = Path(p)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(teksti, encoding='utf-8')
+    # LF myös Windowsilla, jotta rakennus ei muuta jokaista tiedostoa gitissä.
+    with open(p, 'w', encoding='utf-8', newline='\n') as f:
+        f.write(teksti)
 
 
 def tuo(lahde, kohde):
@@ -352,6 +355,22 @@ def rakenna_osallistuja():
     return len(list((kohde / 'tiedostot').iterdir()))
 
 
+# ---------------------------------------------------------------- video
+
+def rakenna_video():
+    """lahde/video/<nimi>.html -> video/<nimi>/index.html. Ainoa muutos: robots-meta."""
+    kohde = ROOT / 'video'
+    tyhjenna(kohde)
+    n = 0
+    for src in sorted((LAHDE / 'video').glob('*.html')):
+        t = lue(src)
+        if '<head>' not in t:
+            sys.exit('%s: <head> puuttuu' % src.name)
+        kirjoita(kohde / src.stem / 'index.html', t.replace('<head>', '<head>' + ROBOTS, 1))
+        n += 1
+    return n
+
+
 # ---------------------------------------------------------------- etusivu
 
 def rakenna_etusivu():
@@ -371,11 +390,13 @@ def main():
         ROOT / 'diat' / 'luennoija', 'Luennoijan diat · Kehotteesta automaatioon', 'Luennoijan diat')
     k = rakenna_kouluttaja()
     o = rakenna_osallistuja()
+    v = rakenna_video()
     rakenna_etusivu()
     print('Esittäjien diat: %d (muistiinpano %d)' % (n1, m1))
     print('Luennoijan diat: %d (muistiinpano %d)' % (n2, m2))
     print('Kouluttajan sivut: %d' % k)
     print('Osallistujan liitteet: %d' % o)
+    print('Videot: %d' % v)
 
 
 if __name__ == '__main__':
