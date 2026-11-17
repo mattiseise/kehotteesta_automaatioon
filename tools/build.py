@@ -371,6 +371,10 @@ def rakenna_video():
         brandi = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">'
                   '<style id="brandi">\n' + lue(MALLIT / 'video-brandi.css') + '</style>')
         t = t.replace('</head>', brandi + '</head>', 1)
+        # Paluulinkki sivuston etusivulle videon yläpuolelle (React-juuren ulkopuolelle).
+        if t.count('<div id="agp-root">') != 1:
+            sys.exit('%s: agp-root puuttuu' % src.name)
+        t = t.replace('<div id="agp-root">', '<nav class="bc-paluu" aria-label="Sivusto"><a href="../../index.html">Etusivu</a></nav><div id="agp-root">', 1)
         # BC Pron ohje: ei emojeja painikkeissa.
         for emoji in ('\U0001F507 \u00c4\u00e4ni pois', '\U0001F50A \u00c4\u00e4ni p\u00e4\u00e4ll\u00e4'):
             t = t.replace(emoji, emoji[2:])

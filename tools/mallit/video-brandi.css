@@ -31,3 +31,7 @@
 .agx-bigplay { background: #9D7DFF; color: #1A0530; border: 0; box-shadow: none; font-weight: 700; }
 .agx-bigplay:hover { background: #FFFFFF; color: #1A0530; box-shadow: none; transform: none; }
 .agx-bigplay > :first-child { border-radius: 0; background: #1A0530; color: #9D7DFF; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.bc-paluu { padding: 12px max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)); }
+.bc-paluu a { display: inline-block; font: 600 14px Montserrat, Arial, sans-serif; color: #FFFFFF; background: #33195A; padding: 10px 16px; text-decoration: none; transition: background-color .2s cubic-bezier(.2,0,0,1), color .2s cubic-bezier(.2,0,0,1); }
+.bc-paluu a:hover { background: #9D7DFF; color: #1A0530; }
+.bc-paluu a:focus-visible { outline: 3px solid #9D7DFF; outline-offset: 2px; }
