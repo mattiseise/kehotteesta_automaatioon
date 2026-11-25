@@ -132,6 +132,15 @@ figure.kuva { border: 1px solid var(--viiva); background: var(--kirkas); width: 
 details.kuvaus > summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--osa-t); width: fit-content; padding: 2px 0; }
 .valitsin .nro { margin-right: 0.4em; }
 figure.kuva img { display: block; max-width: 100%; height: auto; }
+.kaavio { margin: 6px 0 0; --k-teksti: var(--teksti); --k-himmea: var(--himmea); --k-viiva: var(--himmea);
+  --k-agentti: var(--o1t); --k-linja: var(--o3t); --k-tark: var(--o1t); --k-portti: var(--o2t); --k-oma: var(--o4t); }
+.kaavio-paneelit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.kaavio-paneelit > div { border: 1px solid var(--viiva); background: var(--paperi); padding: 10px; }
+.kaavio svg { display: block; width: 100%; height: auto; }
+.kaavio figcaption { font-size: 15.5px; color: var(--himmea); margin-top: 8px; }
+.lopuksi a { color: var(--osa-t); font-weight: 600; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .kaavio-paneelit { grid-template-columns: 1fr; } }
+@media print { .kaavio-paneelit > div { break-inside: avoid; } }
 .huomautus { border-left: 5px solid var(--o4t); background: color-mix(in srgb, var(--o4) 12%, var(--paperi)); padding: 10px 14px; font-size: 15.5px; }
 
 .pohja { border: 1px solid var(--viiva); }
@@ -543,143 +552,48 @@ a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: 
 <tr>
 <td>33</td>
 <td>Purku</td>
-<td>Kolme agenttia</td>
-<td>80–85</td>
+<td>Kaksi agenttia</td>
+<td>80–83</td>
 <td>Matti vetää</td>
-<td>Kolme osallistujaa kertoo paikaltaan, mitä heidän agenttinsa tekee ja mitä testi paljasti.</td>
+<td>Kaksi osallistujaa kertoo paikaltaan, mitä heidän agenttinsa tekee ja mitä testi paljasti.</td>
 </tr>
 <tr>
 <td>34</td>
 <td>Sisältö</td>
-<td>Määritelmä uudelleen</td>
-<td>85–87</td>
+<td>Yksi asema, koko linjasto</td>
+<td>83–85</td>
 <td>Matti vetää</td>
-<td>Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Osallistujat lukevat määritelmän oman agenttinsa kannalta. Agentti tekee vaiheet ja pysähtyy pyytämään hyväksynnän, ja se on valmis vasta testattuna.</td>
+<td>Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Osallistujat rakensivat tänään yhden aseman. Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä se päättää itse, miten etenee. Linjastossa on monta asemaa, ja niiden välissä työ tarkistetaan.</td>
 </tr>
 <tr>
 <td>35</td>
-<td>Tehtävä</td>
-<td>Kortin loppu: Seuraavat 30 päivää</td>
-<td>87–92</td>
-<td>Kari vetää</td>
-<td>Täytä kortin kohdat Missä agentti on, Seuraava askel 30 päivän aikana ja Mistä huomaan hyödyn.</td>
+<td>Kouluttaja näyttää</td>
+<td>Agenttiputki: kokonainen linjasto</td>
+<td>85–89</td>
+<td>Kari käynnistää esityksen, Matti kommentoi</td>
+<td>Esityksestä Pedagoginen agenttiputki katsotaan luvut 1, 7 ja 8: miksi työ jaetaan agenteille ja miten kaksi tarkastusta palauttaa työn korjattavaksi. Viimeisen päätöksen tekee ihminen.</td>
 </tr>
 <tr>
 <td>36</td>
 <td>Sisältö</td>
+<td>Milloin kumpi?</td>
+<td>89–91</td>
+<td>Matti vetää</td>
+<td>Yleisagentti sopii työhön, joka tehdään kerran tai joka on joka kerta erilainen. Linjasto sopii työhön, joka toistuu ja jonka laatu ja tyyli pidetään hallinnassa.</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Sisältö</td>
 <td>Kiitos</td>
-<td>92–95</td>
+<td>91–95</td>
 <td>Matti ja Kari päättävät päivän</td>
 <td>Kouluttajat pyytävät tarkistamaan, että käsittelyohje, molemmat agentit, kortti ja pohjat ovat tallessa, ja muistuttavat tietosuojasta. Lopuksi he kertovat lisäharjoituksista, joita voi tehdä päivän jälkeen, ja kiittävät.</td>
 </tr>
 </tbody>
 </table></div>
-<p>Tärkein viesti: agentti on valmis vasta, kun se on testattu. Kouluttaja kertoo ääneen, mitä tietoja agenttiin ei saa laittaa, ennen kuin kukaan kokoaa tietopohjaa. Kortti täytetään ja lopetuksen 15 minuuttia pidetään aina. Jos aika loppuu, korjaus kirjataan korttiin seuraavaksi askeleeksi. Jos agentti ei pysähtynyt testissä, se on hyvä löytö eikä epäonnistuminen.</p></div><div class="dok"><h3>Tarinat ja käsitteet</h3>
-<p>Matti tarkistaa tarinoiden yksityiskohdat ja kertoo ne omin sanoin, kukin noin minuutissa. Tarinat ja käsitteet näkyvät dioilla merkintöinä.</p>
-<div class="taulu"><table>
-<thead>
-<tr>
-<th>Tarina</th>
-<th>Dia</th>
-<th>Perustelu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 Näin tämä koulutus tehtiin. Tekoäly kirjoitti aineiston, toinen tekoäly luki sen ensikertalaisen silmin, ja kaksi tarkistajaa palautti työn.</td>
-<td>20</td>
-<td>Polulla A tehdään sama pienessä mittakaavassa: tekoäly tekee työn ensin tekijän ja sitten tarkistajan ohjeella, ja ihminen hyväksyy tuloksen. Tarina kerrotaan ilman kuvaa.</td>
-</tr>
-<tr>
-<td>2 Matin oma agentti ei muista eilistä</td>
-<td>21</td>
-<td>Projekti jää talteen, koska agentti tietää vain sen, mitä sille on annettu. Jos joku on huomannut ChatGPT:n muistavan hänet, palvelu on lisännyt tallentamiaan muistiinpanoja konteksti-ikkunaan eli siihen, minkä tekoäly näkee.</td>
-</tr>
-<tr>
-<td>3 Oman kirjoitustyylin opettaminen tekoälylle vaati kolme korjauskierrosta.</td>
-<td>26</td>
-<td>Agenttia korjataan virke kerrallaan ja testataan uudelleen. Tarina näyttää saman tavan kertojan omassa työssä.</td>
-</tr>
-<tr>
-<td>4 Agentti julkaisi demosivun oikean sivun päälle. Kerrotaan vain, jos siitä sovitaan.</td>
-<td>22</td>
-<td>Tarina näyttää, miksi agentti pysähtyy ennen kuin se tekee jotain lopullista. Se kerrotaan vain, jos siitä sovitaan eikä opiskelijaa tai ryhmää voi tunnistaa.</td>
-</tr>
-<tr>
-<td>5 Iltapoikkeukset ja yhteydenottolomake</td>
-<td>pois</td>
-<td>Tarina havainnollisti automaation ja agentin eroa, ja se jäi pois itsenäisyyden asteikon mukana. Sen voi kertoa, jos joku kysyy.</td>
-</tr>
-<tr>
-<td>6 Luparaja</td>
-<td>29</td>
-<td>Agenttikorttiin kirjoitetaan agentin rajat, ja tarina antaa niistä arkisen esimerkin.</td>
-</tr>
-<tr>
-<td>Seuranta-agentti (varalla)</td>
-<td>pois</td>
-<td>Luonnoksen 3 osion 5 teoriajakso jäi pois, eikä tarina tue yhtäkään tehtävää.</td>
-</tr>
-<tr>
-<td>Työnjakotarina (varalla)</td>
-<td>pois</td>
-<td>Tarina toistaa tarinaa 1 ja on kauimpana osallistujan työstä.</td>
-</tr>
-<tr>
-<td>Matkakortit, valmentaja, tehtäväkansio, mittari, varmuuskopio</td>
-<td>pois</td>
-<td>Tarinat jäivät pois samasta syystä kuin luonnoksessa 3. Tarinat toimivat vain osittain, niitä ei ole varmistettu tai ne ovat liian teknisiä.</td>
-</tr>
-</tbody>
-</table></div>
-<div class="taulu"><table>
-<thead>
-<tr>
-<th>Käsite</th>
-<th>Dia</th>
-<th>Perustelu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Agentti</td>
-<td>2</td>
-<td>Määritelmä annetaan ennen demoa, ja se palaa jokaisen osan alussa.</td>
-</tr>
-<tr>
-<td>Hallusinointi</td>
-<td>7</td>
-<td>Aineistossa siitä käytetään nimeä keksitty vastaus, ja se nimetään hinnan purussa. Dialla 20 väärä sivunumero näyttää saman ilmiön.</td>
-</tr>
-<tr>
-<td>Lämpötila</td>
-<td>27, sanana pois</td>
-<td>Ilmiö kerrotaan purussa sanalla vaihtelu: sama viesti voi tuottaa eri kerralla eri tuloksen, joten testi tehdään uudelleen. Sanaa lämpötila ei tarvita, koska sitä ei voi näissä sovelluksissa säätää.</td>
-</tr>
-<tr>
-<td>Konteksti</td>
-<td>10</td>
-<td>Osan 2 sanastossa konteksti tarkoittaa taustatietoa eli TAKOAn T:tä.</td>
-</tr>
-<tr>
-<td>Konteksti-ikkuna</td>
-<td>16</td>
-<td>Käsite selittää, miksi aineisto viedään projektiin. Projektiin lisätty tiedosto on käytössä jokaisessa projektin keskustelussa.</td>
-</tr>
-<tr>
-<td>Agenttiverkko</td>
-<td>pois</td>
-<td>Kuva siitä, miten koulutus tehtiin, jäi pois, eikä yksikään tehtävä tarvitse sanaa.</td>
-</tr>
-<tr>
-<td>Automatisoitu työnkulku</td>
-<td>pois</td>
-<td>Käsite jäi pois itsenäisyyden asteikon ja tarinan 5 mukana.</td>
-</tr>
-</tbody>
-</table></div></div></div></article></main></div>
+<p>Tärkein viesti: agentti on valmis vasta, kun se on testattu. Kouluttaja kertoo ääneen, mitä tietoja agenttiin ei saa laittaa, ennen kuin kukaan kokoaa tietopohjaa. Kortti täytetään ja lopetuksen 15 minuuttia pidetään aina. Jos aika loppuu, korjaus kirjataan korttiin seuraavaksi askeleeksi. Jos agentti ei pysähtynyt testissä, se on hyvä löytö eikä epäonnistuminen.</p></div></div></article></main></div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 7310}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 8000}}'>
 class Component extends DCLogic {
   componentDidMount() { if ([].length) this.toista(); }
   componentWillUnmount() { this.tyhjenna(); }

@@ -132,6 +132,15 @@ figure.kuva { border: 1px solid var(--viiva); background: var(--kirkas); width: 
 details.kuvaus > summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--osa-t); width: fit-content; padding: 2px 0; }
 .valitsin .nro { margin-right: 0.4em; }
 figure.kuva img { display: block; max-width: 100%; height: auto; }
+.kaavio { margin: 6px 0 0; --k-teksti: var(--teksti); --k-himmea: var(--himmea); --k-viiva: var(--himmea);
+  --k-agentti: var(--o1t); --k-linja: var(--o3t); --k-tark: var(--o1t); --k-portti: var(--o2t); --k-oma: var(--o4t); }
+.kaavio-paneelit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.kaavio-paneelit > div { border: 1px solid var(--viiva); background: var(--paperi); padding: 10px; }
+.kaavio svg { display: block; width: 100%; height: auto; }
+.kaavio figcaption { font-size: 15.5px; color: var(--himmea); margin-top: 8px; }
+.lopuksi a { color: var(--osa-t); font-weight: 600; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .kaavio-paneelit { grid-template-columns: 1fr; } }
+@media print { .kaavio-paneelit > div { break-inside: avoid; } }
 .huomautus { border-left: 5px solid var(--o4t); background: color-mix(in srgb, var(--o4) 12%, var(--paperi)); padding: 10px 14px; font-size: 15.5px; }
 
 .pohja { border: 1px solid var(--viiva); }
@@ -311,13 +320,13 @@ a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: 
 <tr>
 <td>14.45–15.00</td>
 <td>Lopetus</td>
-<td>Kolme osallistujaa esittelee agenttinsa, ja määritelmä luetaan uudelleen. Jokainen kirjoittaa korttiin yhden asian, jonka tekee seuraavan 30 päivän aikana.</td>
+<td>Kaksi osallistujaa esittelee agenttinsa. Kouluttajat näyttävät, miten yhdestä asemasta rakennetaan linjasto (agenttiputken luvut 1, 7 ja 8) ja milloin kannattaa käyttää yleisagenttia ja milloin linjastoa. Jokainen kirjoittaa korttiin yhden asian, jonka tekee seuraavan 30 päivän aikana.</td>
 </tr>
 </tbody>
 </table></div>
 <p>Ajat ja minuutit ovat rungosta. Vetäjät ovat kouluttajan ohjeiden ehdotuksia. Tarkempi minuuttijako on alla diataulukoissa.</p></div></div></article></main></div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 2916}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 3289}}'>
 class Component extends DCLogic {
   componentDidMount() { if ([].length) this.toista(); }
   componentWillUnmount() { this.tyhjenna(); }

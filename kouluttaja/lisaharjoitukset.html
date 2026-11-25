@@ -129,6 +129,15 @@ figure.kuva { border: 1px solid var(--viiva); background: var(--kirkas); width: 
 details.kuvaus > summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--osa-t); width: fit-content; padding: 2px 0; }
 .valitsin .nro { margin-right: 0.4em; }
 figure.kuva img { display: block; max-width: 100%; height: auto; }
+.kaavio { margin: 6px 0 0; --k-teksti: var(--teksti); --k-himmea: var(--himmea); --k-viiva: var(--himmea);
+  --k-agentti: var(--o1t); --k-linja: var(--o3t); --k-tark: var(--o1t); --k-portti: var(--o2t); --k-oma: var(--o4t); }
+.kaavio-paneelit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.kaavio-paneelit > div { border: 1px solid var(--viiva); background: var(--paperi); padding: 10px; }
+.kaavio svg { display: block; width: 100%; height: auto; }
+.kaavio figcaption { font-size: 15.5px; color: var(--himmea); margin-top: 8px; }
+.lopuksi a { color: var(--osa-t); font-weight: 600; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .kaavio-paneelit { grid-template-columns: 1fr; } }
+@media print { .kaavio-paneelit > div { break-inside: avoid; } }
 .huomautus { border-left: 5px solid var(--o4t); background: color-mix(in srgb, var(--o4) 12%, var(--paperi)); padding: 10px 14px; font-size: 15.5px; }
 
 .pohja { border: 1px solid var(--viiva); }
@@ -350,9 +359,9 @@ a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: 
 <li>tekstitiedosto <code>seuranta.csv</code>, jonka ensimmäisellä rivillä lukee <code>Asiakas;Organisaatio;Luokka;Puuttuvat tiedot;Tila</code>.</li>
 </ul>
 <p>Anna agentille tämä tavoite:</p>
-<div class="pohja"><pre id="pohja-57">Käsittele kansion saapuneet kaikki viestit yksi kerrallaan tiedoston agentti-virtaama.md mukaan. Näytä jokaisesta viestistä yhteenveto ja vastausluonnos ja pysähdy pyytämään hyväksyntä. Tallenna luonnos omana tiedostonaan kansioon luonnokset ja lisää rivi tiedostoon seuranta.csv vasta, kun olen hyväksynyt luonnoksen. Älä lähetä mitään.</pre></div>
+<div class="pohja"><pre id="pohja-58">Käsittele kansion saapuneet kaikki viestit yksi kerrallaan tiedoston agentti-virtaama.md mukaan. Näytä jokaisesta viestistä yhteenveto ja vastausluonnos ja pysähdy pyytämään hyväksyntä. Tallenna luonnos omana tiedostonaan kansioon luonnokset ja lisää rivi tiedostoon seuranta.csv vasta, kun olen hyväksynyt luonnoksen. Älä lähetä mitään.</pre></div>
 <p>Jos ajastat tehtävän, anna ajastukselle oma tavoite. Ajastuksen aikana kukaan ei ole paikalla, joten tässä tavoitteessa agentti tallentaa luonnokset hyväksymättöminä eikä jää odottamaan hyväksyntää. Tavoite on tämä:</p>
-<div class="pohja"><pre id="pohja-58">Käsittele kansion saapuneet uudet viestit tiedoston agentti-virtaama.md vaiheiden 1–4 mukaan. Tallenna jokainen vastausluonnos kansioon luonnokset niin, että tiedoston nimen alussa on sana HYVÄKSYMÄTÖN, ja lisää tiedostoon seuranta.csv rivi, jonka tila on &quot;odottaa hyväksyntää&quot;. Älä lähetä mitään äläkä merkitse mitään hyväksytyksi.</pre></div>
+<div class="pohja"><pre id="pohja-59">Käsittele kansion saapuneet uudet viestit tiedoston agentti-virtaama.md vaiheiden 1–4 mukaan. Tallenna jokainen vastausluonnos kansioon luonnokset niin, että tiedoston nimen alussa on sana HYVÄKSYMÄTÖN, ja lisää tiedostoon seuranta.csv rivi, jonka tila on &quot;odottaa hyväksyntää&quot;. Älä lähetä mitään äläkä merkitse mitään hyväksytyksi.</pre></div>
 <ol>
 <li class="tarkistus-vaihe"><label><input type="checkbox" class="tarkistus-ruutu"><span>Valitse yksi kolmesta kokeilusta ja kysy kouluttajalta, mistä toiminto löytyy omassa palvelussasi.</span></label></li>
 <li class="tarkistus-vaihe"><label><input type="checkbox" class="tarkistus-ruutu"><span>Anna uudelle välineelle sama määritys ja tietopohja kuin projektille. Skillille tai lisäosalle annat tiedoston <code>agentti-virtaama.md</code> koodilohkon tekstin ja tiedoston <code>tietopohja-yhdistetty.md</code>. Työkaluja käyttävälle agentille ja ajastukselle annat ne tekemällä yllä kuvatun kansion.</span></label></li>

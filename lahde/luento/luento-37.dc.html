@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<title>Dia 37: Kiitos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.dia p, .dia h1, .dia h2, .dia h3{margin:0}
+.hahmo-kuva{transform-origin:50% 100%;animation:hahmo-keinu 6s ease-in-out infinite}
+@keyframes hahmo-keinu{0%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}100%{transform:rotate(-2deg)}}
+@media (prefers-reduced-motion: reduce){.hahmo-kuva{animation:none}}
+</style>
+</helmet>
+<div class="dia" style="position: relative; width: 1920px; height: 1080px; overflow: hidden; box-sizing: border-box; background:#1A0530;color:#FFFFFF;font-family:'Montserrat', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:32px">
+<div aria-hidden="true" style="position:absolute;left:0;top:400px;width:140px;height:280px;background:#9D7DFF;clip-path:polygon(0 0,100% 50%,0 100%)"></div>
+<img src="/_blob/efed3696e0d96f7d44b8c687579618c8" alt="Business College Pro" style="width:526px;height:160px" />
+<h2 style="font-size:60px;font-weight:700;line-height:1.12;color:#FFFFFF;text-align:center">Kiitos</h2>
+<div style="display:flex;flex-direction:column;gap:18px;align-items:center">
+<p style="font-size:32px;line-height:1.45;color:#FFFFFF;width:1300px;text-align:center">Kirjoita korttiin seuraava askel 30 päivän aikana ja päivä, jolloin teet sen.</p><p style="font-size:32px;line-height:1.45;color:#FFFFFF;width:1300px;text-align:center">Tarkista, että tallessa ovat käsittelyohje, Virtaaman agentti, oman agentin määritys, kortti ja pohjat.</p><p style="font-size:32px;line-height:1.45;color:#FFFFFF;width:1300px;text-align:center">Älä laita agenttiin asiakkaiden nimiä, yhteystietoja, terveystietoja tai henkilöstötietoja.</p><p style="font-size:32px;line-height:1.45;color:#FFFFFF;width:1300px;text-align:center">Päivän jälkeen löydät lisää harjoituksia sivulta Lisäharjoitukset.</p>
+</div>
+<p style="position:absolute;left:0;right:0;bottom:120px;text-align:center;font-size:30px;font-weight:700;color:#9D7DFF">The best learning partner for your future</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1920, "height": 1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

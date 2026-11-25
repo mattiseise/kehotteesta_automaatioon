@@ -5,8 +5,8 @@ Ajo repon juuresta:  python3 tools/build.py
 
 Lähteet (kansio lahde/):
   canvas.json                      Design-kanvaksen järjestys, otsikot ja puhujan muistiinpanot
-  diat/*.dc.html                   esittäjien diat (Main = dia 1, dia-02 ... dia-26)
-  luento/*.dc.html                 luennoijan diat (luento-01 ... luento-36)
+  diat/*.dc.html                   esittäjien diat (Main = dia 1, dia-02 ... dia-27)
+  luento/*.dc.html                 luennoijan diat (luento-01 ... luento-37)
   kouluttaja/sivu-*.dc.html        kouluttajan sivut
   osallistuja/index.html + tiedostot/   osallistujan sivusto sellaisenaan
   video/<nimi>.html                sarjakuvaesitysmoottorin valmis video (standalone.html puheraitoineen)

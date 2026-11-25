@@ -132,6 +132,15 @@ figure.kuva { border: 1px solid var(--viiva); background: var(--kirkas); width: 
 details.kuvaus > summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--osa-t); width: fit-content; padding: 2px 0; }
 .valitsin .nro { margin-right: 0.4em; }
 figure.kuva img { display: block; max-width: 100%; height: auto; }
+.kaavio { margin: 6px 0 0; --k-teksti: var(--teksti); --k-himmea: var(--himmea); --k-viiva: var(--himmea);
+  --k-agentti: var(--o1t); --k-linja: var(--o3t); --k-tark: var(--o1t); --k-portti: var(--o2t); --k-oma: var(--o4t); }
+.kaavio-paneelit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.kaavio-paneelit > div { border: 1px solid var(--viiva); background: var(--paperi); padding: 10px; }
+.kaavio svg { display: block; width: 100%; height: auto; }
+.kaavio figcaption { font-size: 15.5px; color: var(--himmea); margin-top: 8px; }
+.lopuksi a { color: var(--osa-t); font-weight: 600; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .kaavio-paneelit { grid-template-columns: 1fr; } }
+@media print { .kaavio-paneelit > div { break-inside: avoid; } }
 .huomautus { border-left: 5px solid var(--o4t); background: color-mix(in srgb, var(--o4) 12%, var(--paperi)); padding: 10px 14px; font-size: 15.5px; }
 
 .pohja { border: 1px solid var(--viiva); }
@@ -205,12 +214,115 @@ a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: 
 
 </style>
 </helmet>
-<div class="kv"><main class="palsta"><header class="ylapalkki"><div class="logo-linkki"><img class="logo" src="/_blob/efed3696e0d96f7d44b8c687579618c8" alt="Business College Pro" width="171" height="52" /></div></header><article class="sivu o0 nakyma" aria-label="Diojen käsikirjoitukset"><nav class="valitsin" aria-label="Päivän osat"><div class="vl o0"><span>Päivä</span></div><div class="vl o1"><span class="nro">1</span><span class="nimi"> Mitä agentit ovat?</span></div><div class="vl o2"><span class="nro">2</span><span class="nimi"> Anna tehtävä</span></div><div class="vl o3"><span class="nro">3</span><span class="nimi"> Anna tiedot ja rajat</span></div><div class="vl o4"><span class="nro">4</span><span class="nimi"> Oma agentti</span></div></nav><header class="tunnus"><p class="pieni">Diojen käsikirjoitukset · jatkuu (3/3)</p></header><div class="sisus"><div class="dok"><h3>Sovittavat asiat</h3>
+<div class="kv"><main class="palsta"><header class="ylapalkki"><div class="logo-linkki"><img class="logo" src="/_blob/efed3696e0d96f7d44b8c687579618c8" alt="Business College Pro" width="171" height="52" /></div></header><article class="sivu o0 nakyma" aria-label="Diojen käsikirjoitukset"><nav class="valitsin" aria-label="Päivän osat"><div class="vl o0"><span>Päivä</span></div><div class="vl o1"><span class="nro">1</span><span class="nimi"> Mitä agentit ovat?</span></div><div class="vl o2"><span class="nro">2</span><span class="nimi"> Anna tehtävä</span></div><div class="vl o3"><span class="nro">3</span><span class="nimi"> Anna tiedot ja rajat</span></div><div class="vl o4"><span class="nro">4</span><span class="nimi"> Oma agentti</span></div></nav><header class="tunnus"><p class="pieni">Diojen käsikirjoitukset · jatkuu (3/3)</p></header><div class="sisus"><div class="dok"><h3>Tarinat ja käsitteet</h3>
+<p>Matti tarkistaa tarinoiden yksityiskohdat ja kertoo ne omin sanoin, kukin noin minuutissa. Tarinat ja käsitteet näkyvät dioilla merkintöinä.</p>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Tarina</th>
+<th>Dia</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Näin tämä koulutus tehtiin. Tekoäly kirjoitti aineiston, toinen tekoäly luki sen ensikertalaisen silmin, ja kaksi tarkistajaa palautti työn.</td>
+<td>20</td>
+<td>Polulla A tehdään sama pienessä mittakaavassa: tekoäly tekee työn ensin tekijän ja sitten tarkistajan ohjeella, ja ihminen hyväksyy tuloksen. Tarina kerrotaan ilman kuvaa.</td>
+</tr>
+<tr>
+<td>2 Matin oma agentti ei muista eilistä</td>
+<td>21</td>
+<td>Projekti jää talteen, koska agentti tietää vain sen, mitä sille on annettu. Jos joku on huomannut ChatGPT:n muistavan hänet, palvelu on lisännyt tallentamiaan muistiinpanoja konteksti-ikkunaan eli siihen, minkä tekoäly näkee.</td>
+</tr>
+<tr>
+<td>3 Oman kirjoitustyylin opettaminen tekoälylle vaati kolme korjauskierrosta.</td>
+<td>26</td>
+<td>Agenttia korjataan virke kerrallaan ja testataan uudelleen. Tarina näyttää saman tavan kertojan omassa työssä.</td>
+</tr>
+<tr>
+<td>4 Agentti julkaisi demosivun oikean sivun päälle. Kerrotaan vain, jos siitä sovitaan.</td>
+<td>22</td>
+<td>Tarina näyttää, miksi agentti pysähtyy ennen kuin se tekee jotain lopullista. Se kerrotaan vain, jos siitä sovitaan eikä opiskelijaa tai ryhmää voi tunnistaa.</td>
+</tr>
+<tr>
+<td>5 Iltapoikkeukset ja yhteydenottolomake</td>
+<td>pois</td>
+<td>Tarina havainnollisti automaation ja agentin eroa, ja se jäi pois itsenäisyyden asteikon mukana. Sen voi kertoa, jos joku kysyy.</td>
+</tr>
+<tr>
+<td>6 Luparaja</td>
+<td>29</td>
+<td>Agenttikorttiin kirjoitetaan agentin rajat, ja tarina antaa niistä arkisen esimerkin.</td>
+</tr>
+<tr>
+<td>Seuranta-agentti (varalla)</td>
+<td>pois</td>
+<td>Luonnoksen 3 osion 5 teoriajakso jäi pois, eikä tarina tue yhtäkään tehtävää.</td>
+</tr>
+<tr>
+<td>Työnjakotarina (varalla)</td>
+<td>pois</td>
+<td>Tarina toistaa tarinaa 1 ja on kauimpana osallistujan työstä.</td>
+</tr>
+<tr>
+<td>Matkakortit, valmentaja, tehtäväkansio, mittari, varmuuskopio</td>
+<td>pois</td>
+<td>Tarinat jäivät pois samasta syystä kuin luonnoksessa 3. Tarinat toimivat vain osittain, niitä ei ole varmistettu tai ne ovat liian teknisiä.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="taulu"><table>
+<thead>
+<tr>
+<th>Käsite</th>
+<th>Dia</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agentti</td>
+<td>2</td>
+<td>Määritelmä annetaan ennen demoa, ja se palaa jokaisen osan alussa.</td>
+</tr>
+<tr>
+<td>Hallusinointi</td>
+<td>7</td>
+<td>Aineistossa siitä käytetään nimeä keksitty vastaus, ja se nimetään hinnan purussa. Dialla 20 väärä sivunumero näyttää saman ilmiön.</td>
+</tr>
+<tr>
+<td>Lämpötila</td>
+<td>27, sanana pois</td>
+<td>Ilmiö kerrotaan purussa sanalla vaihtelu: sama viesti voi tuottaa eri kerralla eri tuloksen, joten testi tehdään uudelleen. Sanaa lämpötila ei tarvita, koska sitä ei voi näissä sovelluksissa säätää.</td>
+</tr>
+<tr>
+<td>Konteksti</td>
+<td>10</td>
+<td>Osan 2 sanastossa konteksti tarkoittaa taustatietoa eli TAKOAn T:tä.</td>
+</tr>
+<tr>
+<td>Konteksti-ikkuna</td>
+<td>16</td>
+<td>Käsite selittää, miksi aineisto viedään projektiin. Projektiin lisätty tiedosto on käytössä jokaisessa projektin keskustelussa.</td>
+</tr>
+<tr>
+<td>Agenttiverkko</td>
+<td>pois</td>
+<td>Kuva siitä, miten koulutus tehtiin, jäi pois, eikä yksikään tehtävä tarvitse sanaa.</td>
+</tr>
+<tr>
+<td>Automatisoitu työnkulku</td>
+<td>pois</td>
+<td>Käsite jäi pois itsenäisyyden asteikon ja tarinan 5 mukana.</td>
+</tr>
+</tbody>
+</table></div></div><div class="dok"><h3>Sovittavat asiat</h3>
 <ol>
 <li><strong>Demon työkalu, vetäjä ja tehtävä.</strong> Käytetäänkö ChatGPT Workia vai Claude Coworkia? Käyttääkö agentti selainta vai koko tietokonetta? Ehdotus on, että Matti näyttää demon ja Kari päättää hyväksyntäkohdassa.</li>
 <li><strong>Karin TAKOA-diat.</strong> Tulevatko diat samaan esitykseen BC Pron ilmeellä, vai näyttääkö Kari ne omasta tiedostostaan?</li>
 <li><strong>Kouluttajien työnjako.</strong> Jokaisen osan vetäjä on ehdotus. Samoin on ehdotus se, kumpi kouluttaja kiertää neuvomassa minkäkin palvelun käyttäjiä.</li>
-<li><strong>Parit ja lopetus.</strong> Parien muodostaminen klo 14.10 ja kolmen agentin esittely lopetuksessa ovat ehdotuksia.</li>
+<li><strong>Parit ja lopetus.</strong> Parien muodostaminen klo 14.10 ja kahden agentin esittely lopetuksessa ovat ehdotuksia.</li>
 <li><strong>Osan 1 aikataulu.</strong> Dioille 4 ja 5 on yhteensä kolme minuuttia. Jos aika ei riitä, dia 5 jätetään pois, ja osallistujat näkevät päivän osat sivuston osavalitsimesta.</li>
 <li><strong>Tarina 4.</strong> Saako kertoa, miten agentti julkaisi demosivun oikean sivun päälle?</li>
 <li><strong>Viestin liittäminen ohjeen perään.</strong> Tapa mainitaan nyt osan 2 ongelmatilanteiden neuvoissa sekä osallistujan sivulla että kouluttajan ohjeissa. Muutetaanko osallistujan varsinaiset askeleet sen mukaisiksi? Tapaa on kokeiltu kerran ja vain yhdessä palvelussa.</li>
@@ -220,7 +332,7 @@ a.seuraavaksi:focus-visible { outline: 3px solid var(--kirkas); outline-offset: 
 </ol></div><div class="dok"><h3>Testien tila</h3>
 <p>Osallistujan tehtäviä on kokeiltu oikeassa palvelussa vain ChatGPT:n ilmaisella tunnuksella 13.11. ja 14.11.2026. Jokainen viesti annettiin kerran, joten toisella kerralla tulos voi olla erilainen. Hintakysymykseen ChatGPT ei keksinyt hintaa yhdessäkään viidestä vastauksesta. Tarkistajan ohjeella tekoäly antoi budjetin lähteeksi sivun 2, vaikka lause on sivulla 1. Virtaaman agentti pysähtyi pyytämään hyväksynnän jokaisessa testatussa viestissä. Hankalan asiakkaan viestin 1 ja kolmannen asiakasviestin testit epäonnistuivat 13.11. Kun määritykseen oli lisätty rivi varausehdosta, molemmat testit menivät läpi 14.11. Claudessa ei ole kokeiltu mitään, eikä demoa ole harjoiteltu kummallakaan työkalulla. Oman agentin haastattelua ja parin kanssa tehtävää testiä ei ole kokeiltu missään palvelussa.</p></div></div></article></main></div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 1379}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1280, "height": 3062}}'>
 class Component extends DCLogic {
   componentDidMount() { if ([].length) this.toista(); }
   componentWillUnmount() { this.tyhjenna(); }
