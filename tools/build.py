@@ -83,6 +83,10 @@ KOUKKU_AGENTTIDEMO = """window.DIA_ANIM = {
   }
 };"""
 
+# Käsittelyohjeen dia etenee esittäjän tahdissa kuudessa vaiheessa: viesti, ohje, tulosteen kentät,
+# puuttuvat tiedot, vastausluonnos ja ihmisen tarkistus (slide.js lukee listan pysahdykset).
+KOUKKU_H1 = """window.DIA_ANIM = { pysahdykset: [1500, 3900, 5900, 6700, 7200, 8000] };"""
+
 KOUKKU_H3 = """window.DIA_ANIM = {
   times: [300, 4200],
   render: function (aika) {
@@ -111,6 +115,8 @@ def muunna_animaatio(body, nimi):
     if nimi.startswith('dia-08'):
         body = body.replace('left: {{ mk.left }}; opacity: {{ mk.op }}', 'left: 1524px; opacity: 1')
         koukku = KOUKKU_AGENTTIDEMO
+    elif nimi.startswith('dia-09'):
+        koukku = KOUKKU_H1
     elif nimi.startswith('dia-11'):
         M = [269, 284, 343, 243, 317, 213]
         KU = [237, 243, 256, 356, 250, 221]

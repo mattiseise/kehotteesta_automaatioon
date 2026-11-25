@@ -16,7 +16,7 @@ osallistuja/               osallistujan sivusto (itsenäinen)
   tiedostot/               liitteet sellaisinaan (md, txt, csv, pdf)
   assets/pages-shim.js     latausrajapinnan korvike (ks. alla)
 
-diat/esittajat/            esittäjien diat (26 kpl), itsenäinen
+diat/esittajat/            esittäjien diat (21 kpl), itsenäinen
 diat/luennoija/            luennoijan diat (36 kpl, puhujan muistiinpanot), itsenäinen
   index.html               katselin
   slides/NN.html           yksittäiset diat

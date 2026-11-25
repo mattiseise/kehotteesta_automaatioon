@@ -195,54 +195,6 @@
    "title": "21. Työnjako päivän aikana",
    "page": "diat"
   },
-  "dia-22-muutos.dc.html": {
-   "x": 2000,
-   "y": 10400,
-   "w": 1920,
-   "h": 1080,
-   "title": "22. Miksi runko muuttui",
-   "page": "diat"
-  },
-  "dia-23-testattu.dc.html": {
-   "x": 4000,
-   "y": 10400,
-   "w": 1920,
-   "h": 1080,
-   "title": "23. Mitä on testattu ja mitä ei",
-   "page": "diat"
-  },
-  "dia-24-riskit.dc.html": {
-   "x": 6000,
-   "y": 10400,
-   "w": 1920,
-   "h": 1080,
-   "title": "24. Mitä tehdään, jos jokin menee pieleen?",
-   "page": "diat"
-  },
-  "dia-25-paatokset.dc.html": {
-   "x": 0,
-   "y": 12480,
-   "w": 1920,
-   "h": 1080,
-   "title": "25. Kuusi asiaa on vielä päättämättä",
-   "page": "diat"
-  },
-  "dia-26-aikajana.dc.html": {
-   "x": 2000,
-   "y": 12480,
-   "w": 1920,
-   "h": 1080,
-   "title": "26. Valmistelut koulutuspäivään asti",
-   "page": "diat"
-  },
-  "dia-27-loppu.dc.html": {
-   "x": 4000,
-   "y": 12480,
-   "w": 1920,
-   "h": 1080,
-   "title": "27. Seuraavaksi demo ja testit Claudessa",
-   "page": "diat"
-  },
   "sivu-alku.dc.html": {
    "x": 0,
    "y": 0,
@@ -682,12 +634,6 @@
   "dia-19-tyokalut.dc.html",
   "dia-20-matti.dc.html",
   "dia-21-tyonjako.dc.html",
-  "dia-22-muutos.dc.html",
-  "dia-23-testattu.dc.html",
-  "dia-24-riskit.dc.html",
-  "dia-25-paatokset.dc.html",
-  "dia-26-aikajana.dc.html",
-  "dia-27-loppu.dc.html",
   "sivu-alku.dc.html",
   "sivu-osa-1.dc.html",
   "sivu-osa-2.dc.html",
@@ -743,7 +689,7 @@
    "x": 0,
    "y": 1140,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Sarjan alkuosa eli osiot 1–4 (Lähtökohta, Neljä osaa, Työkalut ja Kouluttajat) on tehty esitettäväksi tilaajille 26.11.2026, kun Matti ja Kari esittelevät uudistetun koulutuksen. Viimeinen osio, Kouluttajien omat diat, on Matin ja Karin omaa tilannetietoa: miksi runko muuttui, mitä on testattu, riskit, avoimet päätökset ja aikataulu. Sitä ei ole tehty esitettäväksi tilaajille. Osallistujille sarjaa ei näytetä. Sarja on päivitetty uuteen runkoon: neljä osaa, joita yhdistää määritelmä \"Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi.\" Vanhan rungon diat ovat kansiossa diat/arkisto-vanha-runko. Osallistujamäärä: ennakkokyselyn mukaan 22, vanhassa aineistossa 24 (ilmoittautumiset 11.11.2026). Ilme noudattaa Business College Pron brändiohjetta. Logo, värit, typografia ja liike tulevat BC-Pro Design Systemistä (siirretty Claudeen 11.11.2026).",
+   "text": "Puhujan muistiinpano: Tervetuloa. Esittelemme koulutuspäivän Kehotteesta automaatioon: miten päivä etenee, mitä osallistujat tekevät ja miten kouluttajat jakavat työn. Koulutus on 2.12.2026 klo 9–15, ja ilmoittautuneita on noin 22. Tavoitteena on, että jokaisella on päivän päätteeksi testattu agentti omaa työtään varten.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -752,7 +698,7 @@
    "x": 2000,
    "y": 1140,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: 17-runko-nelja-osaa.md (kohdat Miksi runko muuttuu ja Punainen lanka), osallistujan osat 1–4 (tehtävien otsikot ja lupaukset). Esittäjä sanoo: koko päivä tehdään yhden keksityn yrityksen aineistolla, ja jokainen osa alkaa samalla määritelmällä. Osa 1 näyttää koko määritelmän, osa 2 kohdan \"antaa tehtävän\", osa 3 kohdan \"hoidettavaksi\" ja osa 4 kohdan \"voi antaa\". Tehtäviä on osallistujan sivuilla 15: osassa 1 kolme, osassa 2 kaksi, osan 3 alkupuolella yhteinen tehtävä ja polkujen A ja B kaksi tehtävää kummallakin, osan 3 loppupuolella kaksi ja osassa 4 kolme. Osallistuja valitsee polun A tai B, joten hän tekee 13 tehtävää. Kohdat Jos ehdit ja lisäharjoitukset eivät ole luvuissa mukana. Opetusaikaa on 295 minuuttia, sama kuin ennen uudistusta. Osallistujamäärä on ennakkokyselyn mukaan 22, ja kyselyyn vastasi 13. Vanhassa aineistossa luku on 24, eikä asiaa ole vielä päätetty. Osallistujan mukaansa saamat asiat tulevat osien 2 ja 4 lupauksista: osan 2 jälkeen osallistujalla on tallessa oma käsittelyohje, ja osan 4 jälkeen hänellä on testattu agentti omaa työtään varten ja kortti, jonka avulla hän jatkaa seuraavana päivänä. Lopetuksessa tarkistetaan lisäksi, että tallessa ovat myös Virtaaman agentti ja pohjat.",
+   "text": "Puhujan muistiinpano: Koko päivä tehdään yhden keksityn yrityksen, Virtaama Oy:n, aineistolla, ja jokainen osa alkaa samalla määritelmällä. Kun aineisto ei vaihdu, osallistujan ei tarvitse opetella uutta esimerkkiä joka osassa. Tehtäviä on kaikkiaan 15, mutta osan 3 alkupuolella osallistuja valitsee polun A tai B, joten hän tekee niistä 13. Opetusaikaa on 295 minuuttia. Osallistuja vie mukanaan oman käsittelyohjeen, testatun agentin ja agenttikortin, jonka avulla hän jatkaa seuraavana päivänä.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -761,7 +707,7 @@
    "x": 4000,
    "y": 1140,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Tämä dia korvaa vanhan portaikon. Virtaama Oy kulkee mukana koko päivän, ja osa 3 jakautuu lounaan kohdalta kahtia. Jokainen osa alkaa samalla määritelmällä, ja yksi sen kohta on korostettu: osa 1 koko virke, osa 2 \"antaa tehtävän\", osa 3 \"hoidettavaksi\" ja osa 4 \"voi antaa\". Kysymykset ovat rungon kohdasta Punainen lanka (17-runko-nelja-osaa.md). Jokaisella osalla on oma väri osallistujan sivulla, osan tunnuksessa ja määritelmän korostuksessa. Virtaama Oy on keksitty kuuden hengen koulutus- ja konsultointiyritys Tampereelta. Sen aineisto (asiakasviestit, raportti, muistiinpanot, taloustaulukko, palvelukuvaus, hinnasto ja usein kysytyt kysymykset) säilyi uudessa rungossa sellaisenaan. Osan 4 aika 13.25–15.00 sisältää lopetuksen 14.45–15.00.",
+   "text": "Puhujan muistiinpano: Määritelmä on päivän punainen lanka: agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Jokaisessa osassa korostetaan yhtä sen kohtaa. Osa 1 näyttää koko määritelmän, osa 2 kohdan \"antaa tehtävän\", osa 3 kohdan \"hoidettavaksi\" ja osa 4 kohdan \"voi antaa\". Osa 3 jakautuu lounaan kohdalta kahtia, ja osan 4 aikaan sisältyy lopetus klo 14.45–15.00.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -770,7 +716,7 @@
    "x": 6000,
    "y": 1140,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähde: ennakkokysely 14.11.2026, 13 vastausta 22 osallistujalta (ennakkokyselyn koonti 14.11.2026). Työkalukysymyksessä vastaaja sai valita monta. Agentit mainitsi viisi suoraan, ja yksi kuvasi agenttia nimeämättä sitä (5 + 1). Vastauksia ei viedä aineistoon sellaisinaan, koska niissä on nimiä. Diassa ei ole nimiä, yrityksiä eikä lainauksia. Matti katsoo kyselystä ja ennakkoviestin vastauksista, ketkä ovat käyttäneet tekoälyä vasta vähän, ja ohjaa heidät kokeneemman viereen ja lähelle kiertävää kouluttajaa. Toimialat ilmoittautumislomakkeista 11.11.2026 (24 ilmoittautunutta, toimiala osin päätelty): 9 liikunta ja hyvinvointi, 8 luova ala ja media, 3 kauppa ja tuotteet, 3 HR ja talous. Kaksi kolmasosaa tulee yksin- tai pienyrityksistä. Mukana on ihmisiä, jotka käsittelevät terveystietoja, henkilöstötietoja ja asiakasrekistereitä. Siksi tietosuojaraja sanotaan ääneen osan 4 alussa.",
+   "text": "Puhujan muistiinpano: Ennakkokyselyyn vastasi 13 osallistujaa 22:sta. Useimmat vastaajat käyttävät tekoälyä jo viikoittain, ja kuudella on maksullinen ChatGPT. Eniten toivottiin agentteja. Ilmoittautuneista suurin osa tulee liikunnan ja hyvinvoinnin sekä luovan alan ja median yrityksistä, ja kaksi kolmasosaa yksin- tai pienyrityksistä. Osa käsittelee työssään terveys- ja henkilöstötietoja, joten tietosuojaraja sanotaan ääneen osan 4 alussa. Vasta aloittaneet istuvat kokeneempien vieressä.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -779,7 +725,7 @@
    "x": 0,
    "y": 3220,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Aikataulu on rungon taulukosta (17-runko-nelja-osaa.md) ja kouluttajan tarkistuslistasta. Vetäjät ovat tarkistuslistan ehdotuksia. Päivä on vahvistettu: 2.12.2026 klo 9.00–15.00, lounas 45 minuuttia. Osa 3 jakautuu lounaan kohdalta: alkupuolella tekoälylle annetaan tiedot (projekti, ohje, lähde) ja loppupuolella rajat ja testit. Lopetuksen 15 minuuttia ei lyhennetä. Mitä karsitaan, jos aika loppuu, kerrotaan kunkin osan kouluttajan ohjeessa kohdassa Jos aika loppuu.",
+   "text": "Puhujan muistiinpano: Päivä alkaa klo 9 ja päättyy klo 15. Lounas on klo 11.30–12.15, ja aamu- ja iltapäivällä on kymmenen minuutin tauot. Osa 3 jakautuu lounaan kohdalta: ennen sitä tekoälylle annetaan tiedot ja sen jälkeen rajat ja testit. Lopetuksen 15 minuuttia pidetään aina, vaikka jostain muusta jouduttaisiin karsimaan.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -788,7 +734,7 @@
    "x": 2000,
    "y": 3220,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan osat 1–4 (rivit Tarvitset ja AINEISTO), kouluttajan ohjeet osa-1-mita-agentit-ovat.md ja demon-valmistelu.md, osa-3a-anna-tiedot.md (kohdat Ennen osaa ja Odotetut tulokset), lisaharjoitukset.md ja kansio release/aineisto/virtaama. Esittäjä sanoo: Virtaama Oy on keksitty tamperelainen koulutusyritys, ja sen aineisto kulkee mukana koko päivän. Osassa 1 osallistuja vertaa tekoälyn vastausta hinnastoon, ja osan 3 loppupuolella agentin ensimmäinen testi tarkistetaan samasta hinnastosta. Asiakasviestit 1 ja 2 ovat osan 2 tehtävissä. Demon kansiossa on vain viesti 2, koska viestin 1 puuttuvat tiedot ovat vastaus osan 2 tehtävään 1. Viesti 1 annetaan osan 3 loppupuolella Virtaaman agentille. Raportti ja muistiinpanot lisätään projektiin kaikkien yhteisessä tehtävässä 1, ja niitä käytetään polulla A. Taulukko on polulla B. Raportin budjetti on 18 500 € ja muistiinpanoissa 16 500 €, ja vastuuhenkilö vaihtuu toisessa palaverissa ilman päätöstä. Taulukossa on huhtikuun kulupiikki ja tappiollinen kesäkuu. Varalla ovat raportti.md, muistiinpanot.docx ja talous_6kk.xlsx. Tiedostossa tietopohja-yhdistetty.md ovat palvelukuvaus, hinnasto ja usein kysytyt kysymykset. Ne on yhdistetty, koska ChatGPT:n ilmaisella tunnuksella voi lisätä vain kolme tiedostoa päivässä. Demon kansioon nämä kolme tiedostoa kopioidaan erikseen. Osassa 4 Virtaaman tiedostoja ei käytetä, vaan osallistuja kokoaa tietopohjan omasta työstään ilman henkilötietoja. Keksityt yritysnimet tarkistetaan YTJ:stä ennen ennakkoviestiä.",
+   "text": "Puhujan muistiinpano: Virtaama Oy on keksitty kuuden hengen koulutus- ja konsultointiyritys Tampereelta. Aineistossa on hinnasto, asiakasviestit, raportti, palaverimuistiinpanot, taloustaulukko ja agentin tietopohja. Siihen on tarkoituksella piilotettu ristiriitoja: raportissa ja muistiinpanoissa on eri budjetti, vastuuhenkilö vaihtuu ilman päätöstä, ja taulukossa on kulupiikki ja tappiollinen kuukausi. Niiden avulla osallistuja oppii tarkistamaan tekoälyn tuloksen lähteestä. Osassa 4 Virtaamaa ei enää käytetä, vaan jokainen kokoaa tietopohjan omasta työstään ilman henkilötietoja.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -797,7 +743,7 @@
    "x": 4000,
    "y": 3220,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-1-mita-agentit-ovat.md, demon-valmistelu.md ja rungon kohta Demo agentista, joka käyttää tietokonetta. Koko demo on ehdotus, myös ääneen sanottavat virkkeet. Se on pienempi versio vanhan rungon kouluttajan demosta: sama aineisto, määritys agentti-virtaama.md ja tavoiteteksti, mutta kansiossa saapuneet on vain asiakasviesti 2. Agentti avaa viestin ja hinnaston ja näyttää yhteenvedon ja luonnoksen. Ennen kuin se tallentaa mitään, se pysähtyy pyytämään hyväksynnän. Ehdotuksessa Matti näyttää demon ja Kari päättää hyväksyntäkohdassa. Asiakasviestiä 1 ei käsitellä demossa, koska sen puuttuvat tiedot ovat vastaus osan 2 tehtävään 1. Jos viestin käsittely vie harjoituksessa yli kuusi minuuttia, loppu näytetään tallenteelta. Vaatimukset: selainta tai tietokonetta käyttävä ChatGPT Work vaatii hakutulosten mukaan maksullisen tilauksen (14.11.2026), ja Free- ja Go-tilauksella Work on rajoitettu. Clauden computer use (beta) toimii vain Pro-, Max- ja Ultra-tilauksilla. Tietokonetta ohjaava toiminto vaatii kummassakin työpöytäsovelluksen. Saatavuudesta Suomessa ei ole tietoa, joten demotiliä kokeillaan pari päivää ennen ja uudelleen aamulla 2.12. Turvallisuus: demossa ei ole kirjautumista, rahaa eikä henkilötietoja. Muut sovellukset ja ilmoitukset suljetaan. Lupia ei aseteta tilaan, jossa agentti ei kysy mitään. Purkuun yksi virke: agentille annetaan tehtävä, mutta ei avaimia kaikkeen. Tehtävä 2 näyttää, että ilman lähdettä vastaus ei tule Virtaaman hinnastosta. Testissä 13.11.2026 ChatGPT ei keksinyt hintaa yhdessäkään viidestä vastauksesta, joten purkua ei rakenneta keksityn hinnan varaan. Hinnaston mukaan koulutuspäivä maksaa 2 380 € ilman arvonlisäveroa. Tehtävän 3 paperi otetaan esiin osassa 4.",
+   "text": "Puhujan muistiinpano: Osa 1 alkaa määritelmällä ja demolla. Kouluttaja antaa agentille tavoitteen, ei vaiheita. Agentti avaa Virtaaman asiakasviestin ja hinnaston itse, kirjoittaa luonnoksen ja pysähtyy pyytämään hyväksyntää. Mitään ei lähetetä. Osallistujat kirjaavat demosta, mitä agentti teki itse ja missä ihminen päätti. Sen jälkeen he kysyvät tekoälyltä Virtaaman hintaa antamatta sille hinnastoa ja huomaavat, ettei tekoäly voi tietää oikeaa hintaa ilman lähdettä. Lopuksi jokainen kirjoittaa paperille työtehtävän, jonka antaisi agentille. Paperi otetaan esiin osassa 4.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -806,7 +752,7 @@
    "x": 6000,
    "y": 3220,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-1-mita-agentit-ovat.md (kohdat Aikataulu, Demo ja Purku), demon-valmistelu.md (demokansio ja agentille annettava tavoite) ja rungon kohta Demo agentista, joka käyttää tietokonetta. Animaatio etenee kerran, kun dia tulee näkyviin, ja jää lopputilaan. Se näyttää ehdotetun demon kulun. Demoa ei ole vielä kokeiltu, joten loki on odotettu kulku eikä tallenne. Kouluttaja antaa tavoitteen, ja agentti avaa viestin ja hinnaston itse. Se näyttää yhteenvedon ja luonnoksen ja pysähtyy pyytämään hyväksynnän. Luonnos tallennetaan ja seurantarivi lisätään vasta hyväksynnän jälkeen. Mitään ei lähetetä. Demo on osan 1 alussa klo 9.05–9.17, ja se kestää noin 12 minuuttia. Työkalu (ChatGPT Work tai Claude Cowork), vetäjä ja tehtävä ovat vielä päättämättä. Ehdotuksessa Matti näyttää demon ja Kari päättää hyväksyntäkohdassa. Demokansiossa ovat asiakasviesti 2, palvelukuvaus, hinnasto, usein kysytyt kysymykset, määritys agentti-virtaama.md, tyhjä luonnoskansio ja seuranta.csv. Asiakasviestiä 1 ei käsitellä demossa, koska sen puuttuvat tiedot ovat vastaus osan 2 tehtävään 1. Luonnoksessa pitää olla hinta 1 380 € ilman arvonlisäveroa ja lähteenä hinnasto. Esittäjä sanoo ennen demoa: \"Annan agentille tavoitteen, en vaiheita. Katsokaa, mitä se tekee itse ja missä se pysähtyy.\" Demon jälkeen: \"Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne.\" Alarivi kertoo, mitä osallistuja kirjaa demosta osan 1 tehtävässä 1. Demoa ei ole vielä kokeiltu kummallakaan työkalulla. Jos demo ei käynnisty kahdessa minuutissa, näytetään tallenne.",
+   "text": "Puhujan muistiinpano: Dia näyttää demon suunnitellun kulun kuutena vaiheena. Kouluttaja antaa tavoitteen. Agentti avaa viestin ja hakee hinnaston itse. Se näyttää luonnoksen, jossa hinta on 1 380 € ilman arvonlisäveroa ja lähteenä on hinnasto. Sitten se pysähtyy kysymään, hyväksytäänkö luonnos. Tallennus tehdään vasta hyväksynnän jälkeen, eikä mitään lähetetä. Iltapäivällä osallistujat rakentavat saman määrityksen omaan projektiinsa.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -815,7 +761,7 @@
    "x": 0,
    "y": 5300,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Animaatio etenee kerran, kun dia tulee näkyviin, ja pysähtyy lopputilaan: viesti, ohjeen kolme vaihetta, osa tulosteen kentistä lomakkeena ja lopuksi luonnos ihmisen tarkistettavaksi. Kuvassa on osan 2 toinen viesti (asiakasviesti-2.txt), koska ensimmäisen viestin tuloste paljastaisi tehtävän 1 vastauksen. Toisesta viestistä ei puutu tietoja, joten kenttä puuttuvat_tiedot on tyhjä. Luonnos ei kerro hintaa, koska ohjeessa ei ole hinnastoa. Tehtävässä 1 (asiakasviesti-1.txt) osallistuja kirjoittaa ensin oman listansa puuttuvista tiedoista ja lukee vasta sitten tekoälyn tulosteen. Oikeat puuttuvat tiedot ovat osallistujamäärä, ajankohta ja toteutustapa (lähi vai etä). Ne kerrotaan osallistujille vasta purussa. Tuloste tallennetaan nimellä tuloste-viesti-1.txt, koska osan 3 loppupuolella agentin työtä verrataan siihen. Tehtävässä 2 osallistuja etsii ohjeesta T:n ja A:n (TAUSTATIEDOT ja TAVOITE), tekee ohjeeseen yhden muutoksen ja kokeilee sitä viestillä asiakasviesti-2.txt. Kari näyttää kahdeksassa minuutissa, missä T ja A näkyvät ohjeessa ja miksi osallistuja kysyy puuttuvat tiedot asiakkaalta itse. Iltapäivän agentti tekee samat kolme vaihetta. Jos TAKOA venyy, Matti aloittaa tehtävän 1 klo 9.38 kellon mukaan. Jos tehtävä 2 jää kesken, yksi muutos ja tallennettu ohje riittävät. Vetäjät ovat kouluttajan ohjeen ehdotus.",
+   "text": "Puhujan muistiinpano: Osassa 2 tekoälylle annetaan tehtävä käsittelyohjeella. Animaatio etenee vaiheittain: ensin asiakkaan viesti, sitten ohjeen kolme vaihetta, tulosteen kentät, puuttuvat tiedot, vastausluonnos ja lopuksi ihmisen tarkistus. Ohje pitää tulosteen kentät samoina. Kuvassa on toinen asiakasviesti, sama kuin aamun demossa. Kari näyttää aluksi TAKOA-mallin ja sen, miten malli näkyy ohjeessa. Tehtävässä 1 osallistuja kirjoittaa ensin itse, mitä tietoja viestistä puuttuu, ja vertaa omaa vastaustaan tekoälyn tulosteeseen. Tehtävässä 2 hän muokkaa ohjetta ja kokeilee sitä toisella viestillä. Osan jälkeen jokaisella on tallessa oma käsittelyohje.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -824,7 +770,7 @@
    "x": 2000,
    "y": 5300,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan sivu osa-3a-anna-tiedot.md ja kouluttajan ohje. Tehtävä 1 on kaikille sama, myös polun B valitsijoille. Siinä opitaan luomaan projekti, jota tarvitaan osan loppupuolella. Askelten painikkeet ja kuvat ovat ChatGPT:stä marraskuulta 2026. Clauden projektinäkymä näytetään vasta askeleen 4 jälkeen tai Clauden käyttäjille paikan päällä. ChatGPT:n ilmaisella tunnuksella voi lisätä kolme tiedostoa päivässä: raportti tässä osassa, Virtaaman tietopohja loppupuolella ja oma tietopohja osassa 4. Muistiinpanot ja taulukko liitetään tekstinä. Klo 10.40 kädennosto: polun B tekijät siirtyvät salin toiseen laitaan Karin luo. Jos osallistuja ei osaa valita tai tekoäly on hänelle uusi, hän valitsee A. Polku A: raportissa budjetti 18 500 € (sivut 1, 10 ja 11), palaverissa 29.9.2026 16 500 €. Vastuuhenkilö Juho vaihtuu palaverissa 13.10.2026 Tiinaan ilman päätöstä. Takarajan siirto 15.12.2026 on kirjattu muutos, ei ristiriita. Polku B: myynti 76 900 €, kulut 72 000 €, tulos 4 900 € eli 6,4 % myynnistä. Huhtikuun kuluissa on laitehankinta 5 400 €, jota ei ole tiedostossa, joten tekoäly ei voi tietää syytä. Kesäkuun myynti on jakson pienin. Purku: polku A Matti 4 min, polku B Kari 4 min, yhteinen kysymys Matti 2 min, siirtymä 5 min. Jos tehtävä 1 venyy yli klo 10.45, A1 ja B1 lyhenevät viiteen minuuttiin.",
+   "text": "Puhujan muistiinpano: Osan 3 alkupuolella tekoälylle annetaan tiedot ja tulos tarkistetaan. Ensin jokainen luo projektin ja tallentaa siihen ohjeen ja raportin samaan tahtiin kouluttajan kanssa. Sitten osallistuja valitsee polun. Polulla A tekoäly tekee raportista tehtävälistan, ja osallistuja tarkistaa sivuviitteet ja ristiriidat itse. Polulla B tekoäly analysoi taulukon, ja osallistuja tarkistaa tuloksen kaavalla. Kummallakin polulla periaate on sama: jos tekoälyn tulos ja lähde eroavat, lähde ratkaisee. Jos osallistuja ei osaa päättää, hän valitsee polun A.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -833,7 +779,7 @@
    "x": 4000,
    "y": 5300,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan sivu osa-3a-anna-tiedot.md (tehtävät B1 ja B2), kouluttajan ohje osa-3a-anna-tiedot.md (Vetäjä, Aikataulu, Tehtävien aikana, Purku ja Odotetut tulokset) ja tiedosto talous_6kk.csv. Kun dia tulee näkyviin, kaavio kasvaa kuukausi kerrallaan, ja sen jälkeen kaksi poikkeamaa korostuu kultaisella. Pylväät ovat taulukon luvut: myynti ja kulut tammikuusta kesäkuuhun. Ehdotuksessa Kari ohjaa polkua B klo 10.40–11.10 salin toisella laidalla ja näyttää kaavan. Tehtävässä B1 osallistuja antaa taulukon ja analyysipyynnön tekoälylle projektin ulkopuolella ja kirjaa paperille tuloksen ja poikkeamakuukaudet. Tehtävässä B2 hän laskee tuloksen itse kaavalla Excelissä tai Google Sheetsissä. Englanninkielisessä versiossa kaava on =SUM(B2:B7)-SUM(C2:C7). Oikea tulos on 4 900 € eli 6,4 % myynnistä (myynti 76 900 €, kulut 72 000 €). Huhtikuun kuluissa on kertaluonteinen laitehankinta 5 400 €, jota ei ole tiedostossa. Kesäkuun myynti 9 800 € on jakson pienin. Esittäjä sanoo: tekoäly näkee poikkeaman, mutta se ei voi tietää syytä, jos syy ei ole tiedostossa. Kaavasta näkee, mistä soluista luku tulee, mutta tekoälyn luvusta ei näe. Purun kysymykset (Kari, 4 min): jäikö puolesta vuodesta mitään käteen, ja kumpi poikkeama on huolestuttavampi? Haetaan: käteen jäi niukasti, ja kesäkuu huolestuttaa enemmän, koska hiljainen kesä toistuu mutta hankinta tehdään kerran. Purun jälkeen osallistuja voi tehdä Lisäharjoitukset-sivulta tehtävän Kysy \"entä jos\". Tulos ilman laitehankintaa on 10 300 € eli 13,4 % myynnistä. Jos CSV aukeaa yhteen sarakkeeseen, aineistossa on talous_6kk.xlsx. ChatGPT:n ilmaisella tunnuksella taulukon teksti liitetään viestikenttään.",
+   "text": "Puhujan muistiinpano: Polun B kaavio näyttää Virtaaman myynnin ja kulut puolen vuoden ajalta. Ensin pylväät kasvavat, ja sitten kaksi poikkeamaa korostuu: huhtikuun kulupiikin ja tappiollisen kesäkuun. Tekoäly huomaa poikkeamat, mutta se ei voi tietää niiden syytä, jos sitä ei ole kerrottu tiedostossa. Osallistuja laskee tuloksen itse kaavalla. Oikea tulos on 4 900 € eli 6,4 % myynnistä. Kaavasta näkee, mistä soluista luku tulee, mutta tekoälyn luvusta sitä ei näe.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -842,7 +788,7 @@
    "x": 6000,
    "y": 5300,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan sivu osa-3b-anna-rajat-ja-testaa.md, kouluttajan ohje ja pohja agentti-testit.md. Määritys agentti-virtaama liitetään projektin ohjeisiin ja tietopohja lisätään yhtenä tiedostona tietopohja-yhdistetty.md. ChatGPT:n projektin ohjeisiin mahtuu 8 000 merkkiä, joten tietopohja ei mahdu sinne määrityksen perään. Tehtävässä 1 agentin työtä verrataan aamun tiedostoon tuloste-viesti-1.txt. Testipohjaa ei liitetä projektiin, koska agentti ei saa nähdä odotettuja tuloksia. Jokainen testi annetaan uudessa keskustelussa. Jos agentti antaa lopullisen viestin kysymättä hyväksyntää, testi hylätään, vaikka sisältö olisi oikein. Hankala asiakas: viestit järjestyksessä 1, 3, 4, 2 (kiire, toimitusjohtajaksi esittäytyvä, alennuspaine, tietopohjan ulkopuolelta). Kari sanoo viestin, Matti näyttää sen kirjoitettuna, eikä pohjan kohtaa Lisäviestit avata. Jos tehtävä 1 venyy yli klo 12.40, hankalan asiakkaan viesteistä käydään läpi vain viesti 3. Ehdotus: rakentamisen aikana toinen kouluttaja tukee ChatGPT:n ja toinen Clauden käyttäjiä. Purun viimeinen kysymys vie osaan 4: mitä sinun agenttisi ei saa luvata?",
+   "text": "Puhujan muistiinpano: Lounaan jälkeen osallistujat rakentavat Virtaaman asiakasviestiagentin valmiista määrityksestä ja testaavat sen kolmella viestillä. Ensimmäisellä viestillä selvitetään, hakeeko agentti hinnan hinnastosta. Toisella selvitetään, lupaako agentti jotain, mitä yritys ei voi toteuttaa, ja kolmannella, totteleeko se asiakkaan viestiin kirjoitettua käskyä. Jokaisessa testissä agentin pitää pysähtyä pyytämään hyväksyntää. Testien jälkeen Kari esittää hankalaa asiakasta, ja kaikki antavat samat viestit omalle agentilleen. Lopuksi jokainen tekee yhden korjauksen: lisää määritykseen yhden virkkeen ja antaa saman testiviestin uudelleen.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -851,7 +797,7 @@
    "x": 0,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan sivu osa-4-oma-agentti.md, kouluttajan ohje ja pohja agenttikortti.md. Kortissa ovat agentin nimi, tehtävä yhdellä virkkeellä, tietopohja, tärkeimmät rajat, testien tulos, missä agentti on, seuraava askel 30 päivän aikana ja mistä huomaa hyödyn. Rungossa kortin kohdiksi on kirjattu tehtävä, tiedot, rajat ja hyväksyntä. Viisi aihiota: asiakasviestien käsittelijä, sisältöagentti, tarjousagentti, raporttiagentti ja ohjeagentti. Määritys tehdään haastattelukehotteella Virtaaman projektin ulkopuolella: tekoäly kysyy ensin, yksi kysymys kerrallaan. Osa Testit jää osallistujalle, koska agentti ei saa nähdä odotettuja tuloksia. Pari istuu osallistujan koneen ääreen ja antaa viestit, ja osallistuja merkitsee tulokset korttiin. Kouluttaja ilmoittaa vaihdon klo 14.25. Ilman paria jäävä osallistuja liittyy johonkin pariin kolmanneksi. Klo 14.35 Kari pyytää täyttämään korjauksen yhteydessä kortin kohdat Missä agentti on ja Mistä huomaan hyödyn. Seuraava askel kirjoitetaan yhdessä lopetuksessa. Lopetuksen kaksi esittelijää pyydetään klo 14.35 mennessä. Ainakin yhden heistä agentti ei ole mennyt testistä läpi tai sitä on korjattu. Esittelijä vastaa paikaltaan ilman heijastinta kahteen kysymykseen: mitä agentti tekee ja mitä testi paljasti. Esittelyt ovat samalla osan purku. Esittelyjen jälkeen tulevat kohta Yhdestä asemasta linjastoon ja kolme lukua esityksestä Pedagoginen agenttiputki (luvut 1, 7 ja 8). Lopuksi ovat kohta Milloin kumpi ja seuraava askel korttiin päivämäärineen. Linjasto-osuus on seuraavalla dialla. Ryhmässä on asiakasseurantaa tekeviä, joten Matti sanoo alussa: terveys- ja valmennusalan asiakasseurannasta tehdään tänään vain versio, jossa ei ole asiakkaiden tietoja. Jos aika loppuu, seuraavaksi tärkein on yksi testi, jossa agentti pysähtyy. Sen jälkeen tulevat kolme testiä parin kanssa, ja korjaus kirjataan korttiin seuraavaksi askeleeksi.",
+   "text": "Puhujan muistiinpano: Osassa 4 jokainen rakentaa agentin omaan työhönsä. Aiheena on aamulla paperille kirjoitettu tehtävä. Osallistuja valitsee viidestä aihiosta lähimmän, ja tekoäly haastattelee häntä, ennen kuin kirjoittaa määrityksen. Pari testaa agentin, ja osallistuja tekee yhden korjauksen. Kaikki kirjataan agenttikorttiin: tehtävä, tietopohja, rajat, testien tulos ja seuraava askel. Asiakkaiden tietoja ei käytetä, ja terveys- ja valmennusalan asiakasseurannasta tehdään versio ilman niitä. Lopetukseen varataan aina 15 minuuttia.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -860,7 +806,7 @@
    "x": 2000,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Tämä dia näytetään tilaajille, jotta lopetuksen idea tulee selväksi. Lopetus selittää koulutuksen nimen. Osassa 2 opitaan käyttämään kehotetta, ja osissa 3 ja 4 siitä tehdään agentti. Lopetuksessa nähdään, miten agenteista rakennetaan linjasto eli automaatio. Lopetus on klo 14.45–15.00. Ensin kaksi osallistujaa esittelee agenttinsa. Sitten Matti vetää kohdan Yhdestä asemasta linjastoon, ja Kari käynnistää esityksen Pedagoginen agenttiputki (https://seise.org/esitykset/agenttiputki/, luvut 1, 7 ja 8). Sen jälkeen Matti vetää kohdan Milloin kumpi. Lopuksi jokainen kirjaa korttiin seuraavan askeleen päivämäärineen. Osallistujat rakensivat yhden aseman eli agentin, jolla on ohjeet, tiedot ja rajat. Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä yleisagentti päättää itse, miten etenee. Linjastossa jokainen vaihe tarkistetaan, ja ihminen hyväksyy. Linjastokaan ei kirjoita joka kerta samaa tekstiä. Yleisagenttia ei väitetä huonoksi. Se sopii työhön, joka tehdään kerran tai joka on joka kerta erilainen. Claude Cowork ja ChatGPT:n dot ovat esimerkkejä, eikä osallistuja tarvitse niitä. OpenAI julkaisi dotin 29.9.2026 Pro- ja Business Premium -tilauksille, ja Enterprise-, Edu- ja Healthcare-työtiloissa se on betana. Hakutulosten mukaan Pro-tilauksen dot ei ole saatavilla ETA-alueella, joten Suomessa se on käytännössä vain organisaatiotilauksissa. Osallistujia ei kehoteta hankkimaan maksullista tilausta. Määritelmä pysyy samana: agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Osallistujan agentti ei avaa tiedostoja koneelta eikä lähetä mitään. Kaavio on sama kuin osallistujan sivulla (Lopuksi: yhdestä agentista linjastoon). Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus) ja osallistujan sivu osa-4-oma-agentti.md.",
+   "text": "Puhujan muistiinpano: Lopetus selittää koulutuksen nimen. Osassa 2 opitaan kirjoittamaan kehote, osissa 3 ja 4 siitä tehdään agentti, ja lopetuksessa nähdään, miten agenteista rakennetaan linjasto eli automaatio. Ensin kaksi osallistujaa esittelee agenttinsa, ja sitten näytetään kolme lukua esityksestä Pedagoginen agenttiputki. Yleisagentti, esimerkiksi Claude Cowork, päättää itse, miten se etenee, joten tyyli ja sisältö vaihtelevat kerrasta toiseen. Yleisagentti sopii työhön, joka tehdään kerran tai joka on aina erilainen. ChatGPT:n dot on Suomessa käytännössä vain organisaatioiden tilauksissa, eikä osallistujan tarvitse hankkia sitä. Linjastossa vaiheet ja tarkastus päätetään etukäteen, ja ihminen hyväksyy lopputuloksen. Linjasto sopii toistuvaan työhön, jonka laatu ja tyyli on pidettävä hallinnassa. Sekään ei kirjoita joka kerta samaa tekstiä, mutta jokainen vaihe tarkistetaan. Lopuksi jokainen kirjaa korttiin seuraavan askeleen päivämäärineen.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -869,7 +815,7 @@
    "x": 4000,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: pohja release/pohjat/agentti.md (kuusi osaa, kohdat Näin viet määrityksen projektiin ja Mihin tietopohja laitetaan), osallistujan osa 4 tehtävä Rakenna agentti pohjasta ja kohta Jos ehdit, osallistujan osan 3 loppupuoli, lisaharjoitukset.md (Osa 4: Määritys muissa välineissä) ja kouluttajan ohjeiden kohdat Mitä on testattu. Esittäjä sanoo: määrityksessä on kuusi osaa. Viisi ensimmäistä liitetään projektin ohjeisiin, ja osan Testit tekijä pitää itsellään, koska agentti ei saa nähdä odotettuja tuloksia. Toimintalogiikassa on aina vaihe, jossa agentti pysähtyy pyytämään hyväksynnän. Osan 3 loppupuolella osallistuja käyttää valmista Virtaaman määritystä, ja osassa 4 hän tekee oman määrityksen samalla pohjalla haastattelukehotteen avulla. Tietopohja lisätään projektiin tiedostona. Jos se ei onnistu, teksti liitetään ohjeisiin määrityksen perään tai jokaisen keskustelun ensimmäiseen viestiin. ChatGPT:n projektin ohjeisiin mahtuu 8 000 merkkiä. Projekti ja ohjeet on kokeiltu ChatGPT:n ilmaisella tunnuksella 13.11.2026. Claudessa projektia ja ohjeita ei ole vielä kokeiltu. Lisäharjoitus ei ole pakollinen. Clauden skillejä voi käyttää myös ilmaisella tunnuksella, mutta oman skillin tekemistä ilmaisella tunnuksella ei ole tarkistettu, joten osallistujaa neuvotaan kysymään sitä kouluttajalta. ChatGPT:n lisäosan luominen, työkaluja käyttävä agentti ja ajastettu tehtävä vaativat maksullisen tilauksen. Ajastuksen toimimista ei voi luvata, koska se ei toimi kaikilla tilauksilla.",
+   "text": "Puhujan muistiinpano: Agentin määrityksessä on kuusi osaa. Viisi ensimmäistä liitetään projektin ohjeisiin. Testit-osan tekijä pitää itsellään, koska agentti ei saa nähdä odotettuja tuloksia. Toimintalogiikassa on aina vaihe, jossa agentti pysähtyy pyytämään hyväksyntää. Osassa 3 osallistuja käyttää valmista Virtaaman määritystä, ja osassa 4 hän tekee omansa samalla pohjalla. Vapaaehtoisessa lisäharjoituksessa määrityksen voi viedä esimerkiksi Clauden skilliksi.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -878,7 +824,7 @@
    "x": 6000,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus: Yhdestä asemasta linjastoon ja Milloin kumpi), kouluttajan ohje osa-1-mita-agentit-ovat.md (kohta Demo, Mitä sanot: ennen demoa ja demon jälkeen), osallistujan osien 3 ja 4 tehtävät ja lisaharjoitukset.md (Kokeilu 2). Esittäjä sanoo demon jälkeen: \"Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja koneeltanne, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.\" Lopetuksessa Matti sanoo kohdassa Yhdestä asemasta linjastoon: \"Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää, se ei lähetä mitään ja se voi erehtyä. Rakensitte tänään yhden aseman.\" Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä yleisagentti päättää itse, miten etenee. Linjastossa on monta asemaa, ja niiden välissä työ tarkistetaan. Esimerkkinä näytetään kolme lukua esityksestä Pedagoginen agenttiputki. Yleisagentteja ovat esimerkiksi Claude Cowork ja ChatGPT:n dot. Demossa kouluttaja antaa agentille tavoitteen eikä vaiheita. Agentti avaa viestin ja hinnaston itse ja tallentaa luonnoksen vasta hyväksynnän jälkeen. Osallistujat rakentavat projektiin Virtaaman agentin osan 3 loppupuolella ja oman agentin osassa 4. Lisäharjoituksessa määritystä voi kokeilla maksullisella tilauksella myös työkaluja käyttävässä agentissa. Kummassakin agentti pysähtyy samaan kohtaan, koska määritys niin käskee. Osan 1 purun virke sopii tähänkin: agentille annetaan tehtävä, mutta ei avaimia kaikkeen.",
+   "text": "Puhujan muistiinpano: Dia kokoaa päivän kolme agenttia. Projektiin rakennettu agentti tekee vaiheet, kun käyttäjä antaa sille työn, ja pysähtyy pyytämään hyväksyntää. Se ei avaa tiedostoja koneelta eikä lähetä mitään, ja se voi erehtyä. Demon yleisagentti avaa tiedostot itse, mutta tallentaa vasta hyväksynnän jälkeen. Linjastossa on monta asemaa, ja työ tarkistetaan niiden välissä. Saman määrityksen voi antaa sellaisenaan yleisagentille. Agentille annetaan tehtävä, mutta ei avaimia kaikkeen.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -887,7 +833,7 @@
    "x": 0,
    "y": 9460,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähde: kouluttajan ohje osa-2-anna-tehtava.md. Kari näyttää viisi vaihetta yhdellä kuvalla noin kolmessa minuutissa. Sitten hän näyttää käsittelyohjeesta, että TAUSTATIEDOT on T, TAVOITE on A ja TÄRKEIN SÄÄNTÖ on K: jos tieto puuttuu viestistä, tekoäly kirjaa sen puuttuvaksi eikä arvaa. Listaa kolmesta tarkistettavasta tiedosta ei näytetä ennen tehtävän 1 askelta 2. Käsittelyohjetta käyttäessään tekoäly ei voi kysyä asiakkaalta, joten se kirjaa puuttuvat tiedot kenttään. Osallistuja kysyy ne asiakkaalta itse. Viimeinen A tehdään, kun ohje tallennetaan tehtävän 2 lopussa. O jää kuvaan, eikä sanota, milloin sitä harjoitellaan. Lisäharjoitusten sisällöntuotannossa tehdään somejulkaisusta kolme vaihtoehtoa ja arvio. Osassa 4 haastattelukehote kysyy ensin puuttuvat tiedot yksi kerrallaan. Osan 2 ulkopuoliset kohdat ovat vanhasta diasta, ja ne on liitetty samoihin tehtäviin uusissa osissa (lähdeaineisto on nyt osan 3 alkupuolella, määritys osan 3 loppupuolella ja osassa 4). Huomio Karille: TAKOA-diasarjan neuvoa tallentaa onnistuminen ChatGPT:n omaksi GPT:ksi tai Geminin Gemiksi ei käytetä. Tarkistuslistan mukaan Kari päivittää viidennen vaiheen: projekti kaikille, lisäharjoituksena Clauden skilli tai ChatGPT:n lisäosa.",
+   "text": "Puhujan muistiinpano: TAKOA on Karin malli tekoälyn ohjaamiseen. Kari esittelee sen osan 2 alussa ja näyttää, missä kohdin käsittelyohjetta vaiheet ovat: taustatiedot, tavoite ja sääntö, jonka mukaan puuttuva tieto kirjataan eikä sitä arvata. Vaihe \"Kysy ennen kuin tuotat\" näkyy myös osan 4 haastattelukehotteessa. \"Arkistoi onnistuminen\" tarkoittaa toimivan ohjeen tallentamista. Vaihetta \"Optimoi vaihtoehdoista\" harjoitellaan lisäharjoituksissa.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -896,7 +842,7 @@
    "x": 2000,
    "y": 9460,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Ilmaisella tunnuksella kummassakin palvelussa toimii projekti, jossa on ohjeet ja tietopohja. Se on yhteinen perustaso, ja siksi jokainen rakentaa agentin projektiin. OpenAI:n omat sivut ovat osin ristiriidassa keskenään (taidot ja ajastetut tehtävät ilmaisella tunnuksella), joten nämä testataan itse ennen päivää. Tarkemmat tiedot lähteineen ovat tiedostossa 04-tyokalufaktat.md. Täsmennys 14.11.2026: selainta tai tietokonetta käyttävä ChatGPT Work vaatii hakutulosten mukaan maksullisen tilauksen, ja Free- ja Go-tilauksella Work on rajoitettu. Siksi sitä ei luvata demoon ilmaisella tunnuksella. OpenAI:n ohjesivuja ei saatu 14.11.2026 luettua suoraan.",
+   "text": "Puhujan muistiinpano: Tekoälytyökalut muuttuvat juuri nyt. Henkilökohtaisilla tileillä ChatGPT:n omia GPT:itä ei voi enää luoda, ja ne poistuvat 11.12.2026. Siksi koulutuksessa ei tehdä GPT:itä eikä Geminin Gemejä. Ilmaisella tunnuksella sekä ChatGPT:ssä että Claudessa toimii projekti, jossa on ohjeet ja tietopohja. Koska se on yhteinen perustaso, jokainen rakentaa agentin projektiin. ChatGPT:n ilmaisella tunnuksella tiedostoja voi lisätä kolme päivässä, joten agentin tietopohja on koottu yhdeksi tiedostoksi.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -905,7 +851,7 @@
    "x": 4000,
    "y": 9460,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohjeiden Vetäjä-rivit ja aikataulut (osa-1-mita-agentit-ovat.md, osa-3a-anna-tiedot.md), ennakkoviesti.md, tarkistuslista.md (Testit oikeissa palveluissa ja Tärkeimmät varaukset) ja nykyinen dia Työkalut muuttuvat nyt. Esittäjä sanoo: koko päivän työkaluna on ChatGPT tai Claude. Ennakkoviestissä jokaista pyydetään hankkimaan tunnus jompaankumpaan, ja ilmainen tunnus riittää päivän perustehtäviin. Jos osallistuja käyttää työssään Geminiä tai Copilotia, hän luo iltapäivää varten ilmaisen tunnuksen ChatGPT:hen tai Claudeen. Gemini ja Copilot kokeillaan ennen päivää aamupäivän tehtävillä, mutta niitä ei ole vielä kokeiltu. Osan 3 alkupuolella Matti näyttää projektin luomisen ChatGPT:stä ja Clauden projektinäkymän omalta tililtään. Osallistujan sivun painikkeet ja kuvat ovat ChatGPT:stä marraskuulta 2026. Clauden valikkopolkuja ei ole varmennettu. Demon työkalu on päättämättä: ChatGPT Work vai Claude Cowork, ja selain vai tietokoneen käyttö. Ehdotuksessa Matti näyttää demon, ja demo vaatii maksullisen tilauksen. Työkaluja käyttävää agenttia voi kokeilla myös lisäharjoituksessa Määritys muissa välineissä. Polulla B Kari näyttää kaavan Excelissä tai Google Sheetsissä. Kun osallistujat rakentavat agenttia, toinen kouluttaja auttaa ChatGPT:n ja toinen Clauden käyttäjiä. Vielä on sopimatta, kumpi kouluttaja auttaa minkäkin palvelun käyttäjiä.",
+   "text": "Puhujan muistiinpano: Koko päivän työkaluna on ChatGPT tai Claude, ja perustehtäviin riittää ilmainen tunnus. Ennakkoviestissä jokaista pyydetään hankkimaan tunnus jompaankumpaan. Jos osallistuja käyttää työssään Geminiä tai Copilotia, hän luo päivää varten ilmaisen tunnuksen ChatGPT:hen tai Claudeen. Demon agentti käyttää tietokonetta ja vaatii maksullisen tilauksen, mutta osallistujat eivät tarvitse sitä. Polulla B tulos tarkistetaan Excelissä tai Google Sheetsissä.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -914,7 +860,7 @@
    "x": 6000,
    "y": 9460,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan osat 1–4 (tehtävien otsikot ja Onnistui, kun -ehdot), kouluttajan ohjeiden Vetäjä-rivit ja 06-luennoijan-kasikirjoitus.md (Tarinat ja käsitteet, tarina 1). Sarakkeiden Osaaminen ja Matin omassa työssä sisältö on ennallaan. Esittäjä sanoo: Matti opettaa sitä, mitä tekee jo itse työssään. Osan 2 käsittelyohje ja osien 3 ja 4 agentin määritys ovat samanlaisia järjestelmällisiä ohjeita kuin hänen omat ohjeensa. Polulla A tekoäly tekee tehtävälistan tekijän ohjeella ja etsii lähteet tarkistajan ohjeella, ja lopuksi ihminen tarkistaa itse. Osan 3 loppupuolella Virtaaman agentti testataan kolmella viestillä, ja osassa 4 pari testaa osallistujan oman agentin. Demon näyttää ehdotuksen mukaan Matti, mutta demon työkalu, vetäjä ja tehtävä ovat vielä päättämättä. Jokaisessa tehtävässä on ehto, josta osallistuja näkee, onnistuiko hän. Tämän koulutuksen materiaali tehtiin samalla tavalla kuin polun A tehtävä: tekoäly kirjoitti, toinen luki tekstin ensikertalaisen silmin, kaksi tarkistajaa palautti työn, ja lopuksi tehtiin kielenhuolto. Tämän voi kertoa noin minuutissa omin sanoin.",
+   "text": "Puhujan muistiinpano: Matti opettaa sitä, mitä tekee jo omassa työssään. Osan 2 käsittelyohje ja agentin määritys ovat samanlaisia järjestelmällisiä ohjeita kuin hänen omansa. Polun A tekijä ja tarkistaja on sama malli, jolla hän tekee opetusmateriaalia agenttien kanssa. Tämän koulutuksen materiaali tehtiin samoin: tekoäly suunnitteli ja kirjoitti, tarkistajat palauttivat työn korjattavaksi, ja lopuksi tehtiin kielenhuolto. Asian voi kertoa omin sanoin noin minuutissa.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -923,61 +869,7 @@
    "x": 0,
    "y": 11540,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Ehdotus on koottu kouluttajan ohjeiden Vetäjä-riveistä ja aikataulutaulukoista sekä tarkistuslistan päivän aikataulusta. Osa 1: Kari vetää määritelmän, purun ja oman kokeilun. Matti näyttää demon, ja Kari päättää hyväksyntäkohdassa. Osa 2: Kari esittelee TAKOAn, Matti vetää tehtävät ja purun, ja kouluttajat kiertävät palveluittain. Osan 3 alkupuoli: purussa Matti vetää polun A ja Kari polun B, ja yhteisen kysymyksen ja siirtymän vetää Matti. Osan 3 loppupuoli: Kari esittää hankalaa asiakasta, Matti näyttää viestit kirjoitettuna ja kirjaa kädennostojen tulokset. Osa 4: Kari antaa korttiohjeen klo 14.35, jolloin osallistujat täyttävät korjauksen yhteydessä kortin kohdat Missä agentti on ja Mistä huomaan hyödyn. Lopetuksessa Matti vetää kahden agentin esittelyt, linjasto-osuuden (Yhdestä asemasta linjastoon) ja kohdan Milloin kumpi. Kari käynnistää esityksen Pedagoginen agenttiputki, ja Matti kommentoi. Kari vetää kohdan Seuraava askel ja kiittää lopuksi. Muut tehtävät tarkistuslistasta: Kari päivittää TAKOA-diasarjan viidennen vaiheen. Vielä päättämättä: kumpi tukee mitäkin palvelua ja kumpi kysyy lounaalla tiedosto- ja käyttörajoista. Vanhassa työnjaossa Kari hoiti myös viestinnän tilaajalle. Uusissa ohjeissa sitä ei mainita.",
-   "size": "m",
-   "fill": "purple",
-   "page": "diat"
-  },
-  "muistiinpano-22": {
-   "x": 2000,
-   "y": 11540,
-   "w": 1920,
-   "text": "Puhujan muistiinpano: Vanhan rungon luvut ovat tiedostosta 17-runko-nelja-osaa.md (osat, askeleet, sanat ja agenttien alku). Vanhassa luvussa 30 ovat mukana myös syventävät tehtävät, ja pakollisia oli 17. Uudet luvut 15 tehtävää ja 89 askelta on laskettu osien 1–4 osallistujan sivuilta. Niissä ovat mukana molemmat osan 3 polut A ja B, mutta eivät kohdat Jos ehdit eivätkä lisäharjoitukset. Yksi osallistuja tekee siis 13 tehtävää ja 79 askelta. Noin 2 050 sanaa on uusien osallistujan sivujen näkyvä tehtäväteksti. Rungon tavoitteet olivat 10 pakollista tehtävää, enintään 70 askelta ja noin 2 500 sanaa. Sanatavoite alittuu, mutta askeleita on tavoitetta enemmän (79, tavoite enintään 70). Askelten määrä kasvoi viidellä, kun pitkiä askelia jaettiin kielenhuollossa kahdeksi. Työn määrä ei kasvanut. Palaute on tiedostossa 17-runko-nelja-osaa.md kohdassa Miksi runko muuttuu.",
-   "size": "m",
-   "fill": "purple",
-   "page": "diat"
-  },
-  "muistiinpano-23": {
-   "x": 4000,
-   "y": 11540,
-   "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohjeiden kohdat Mitä on testattu, tarkistuslistan Tärkeimmät varaukset ja audit-koosteet runko-r9 ja runko-r10. Osan 2 käsittelyohje: viestin liittäminen ohjeen perään kokeiltiin 13.11.2026 ensimmäisellä viestillä, ja Shift+Enter 14.11.2026 testityökalulla. Ohjeeseen on sen jälkeen lisätty kohta TAVOITE, joten ohje testataan uudelleen kaikilla kolmella viestillä. Osan 3 alkupuoli: projekti, ohjeet ja osallistujan polut varmennettiin 13.11.2026. Tarkistaja antoi budjetille väärän sivunumeron 2. Osan 3 loppupuoli: agentti pysähtyi pyytämään hyväksynnän jokaisessa testatussa viestissä. 13.11.2026 kaksi viestiä ei mennyt läpi (hankalan asiakkaan viesti 1 ja kolmas asiakasviesti). Määritykseen lisättiin rivi varausehdosta, ja 14.11.2026 kumpikin meni läpi. 14.11.2026 ei kokeiltu muutospyyntöä ja hyväksyntää, testiä 3 eikä hankalan asiakkaan viestejä 2–4. Pituudet: määritys 7 106 merkkiä tallentui, Tekoälyklinikan virkkeen kanssa 7 238. Määritys ja kaikki viisi korjausvirkettä ovat yhteensä 7 736 merkkiä, eikä tätä versiota ole tallennettu. ChatGPT ei näytä merkkimäärää. Osan 1 hintakysymys: viidessä vastauksessa ei keksitty hintaa. Testaamatta myös: Gemini ja Copilot, maksullinen ChatGPT ja ChatGPT Work, vaalea teema ja saavutettavuus, lisäharjoitusten sivun pedagogiikka ja kieli. Macin Cmd+nuoli alas on testaamatta.",
-   "size": "m",
-   "fill": "purple",
-   "page": "diat"
-  },
-  "muistiinpano-24": {
-   "x": 6000,
-   "y": 11540,
-   "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohjeiden kohdat Varatie, Yleisimmät jumit ja Jos aika loppuu sekä demon-valmistelu.md. Demossa vikaa ei etsitä yleisön edessä. Kun siirrytään tallenteeseen, se sanotaan ääneen. Jos agentti ei pysähdy, tilanne käytetään opetuksena. ChatGPT:n ilmaisen tunnuksen kolme lisäystä päivässä: raportti osan 3 alkupuolella, Virtaaman tietopohja osan 3 loppupuolella ja oma tietopohja osassa 4. Muistiinpanot ja taulukko liitetään tekstinä. Projektin ohjeisiin mahtuu 8 000 merkkiä, joten tietopohja lisätään tiedostona tai liitetään keskustelun ensimmäiseen viestiin. Jos projektia ei saa tehtyä, agentti tehdään yhdessä keskustelussa valmiilla aloitusviestillä. Tunnusongelma, joka ei ratkea kymmenessä minuutissa, hoidetaan tauolla klo 10.15. Karsinta: osan 2 TAKOA katkaistaan klo 9.38. Osan 3 alkupuolella A1 ja B1 lyhenevät, jos tehtävä 1 venyy yli klo 10.45. Loppupuolella hankala asiakas lyhenee viesteihin 1 ja 3 tai pelkkään viestiin 3. Osassa 4 kortti ja lopetus tehdään aina. Jos verkko kaatuu, kouluttaja näyttää tallennetut tulosteet.",
-   "size": "m",
-   "fill": "purple",
-   "page": "diat"
-  },
-  "muistiinpano-25": {
-   "x": 0,
-   "y": 13620,
-   "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: demon-valmistelu.md (työkalu, vetäjä ja tehtävä), kouluttajan ohjeiden ehdotukset, tarkistuslista ja rungon kohta Avoimet päätökset. Vanhoista päätöksistä uusi runko ratkaisi osittain polkujen tuen, joka on nyt osa työnjakoa. Lisäksi se ratkaisi testien tilanteen ChatGPT:n osalta (testattu ilmaisella tunnuksella 13.–14.11.2026). Osa rungon avoimista päätöksistä on jo ratkaistu materiaaleissa: demo on osan 1 alussa, osallistuja valitsee osan 3 alkupuolella polun A tai B, ja lisäharjoitukset ovat omalla sivullaan. Matti hyväksyi rungon 14.11.2026. Vielä päättämättä on myös osallistujamäärä aineistossa: 22 vai 24. Tarkistuslistan mukaan pitää päättää myös aineiston varakanava paikan päällä. Vanhasta listasta jäi epäselväksi, pyydetäänkö tilaajalta julkisen kuvauksen päivitystä (GPT- ja Gems-maininnat), koska uudet ohjeet eivät mainitse sitä. Tärkeimmät nyt: 1 ja 6, koska demon harjoitus, tallenne ja Claude-testi pitää tehdä ennen päivää. Ennakkoviesti lähtee noin viikkoa ennen.",
-   "size": "m",
-   "fill": "purple",
-   "page": "diat"
-  },
-  "muistiinpano-26": {
-   "x": 2000,
-   "y": 13620,
-   "w": 1920,
-   "text": "Puhujan muistiinpano: Päivämäärät ovat aineistosta: ChatGPT-testit 13.11. ja 14.11.2026 (kouluttajan ohjeet), uusi runko ja tarkistuskierrokset r9 ja r10 14.11.2026, osallistujan sivusto, kanvas ja jakelupaketit julkaistu 14.11.2026 (runko-r12-kielikierros.md), Matin ja Karin esittely tilaajille 26.11.2026 (Matti 14.11.2026) ja koulutus 2.12.2026. Demon harjoitukselle, tallenteelle ja Claude-testille ei ole aineistossa päivämäärää. Tarkistuslistan mukaan testit oikeissa palveluissa tehdään koulutusta edeltävällä viikolla. Ennakkoviesti lähtee noin viikkoa ennen, ja YTJ-tarkistus tehdään ennen sitä. Muistutuksen voi lähettää kaksi päivää ennen. Demotiliä kokeillaan pari päivää ennen ja uudelleen aamulla 2.12. Vanhan rungon mukaisia ovat yhä release-kansio, vanhat jakelupaketit ja course.json. ChatGPT:n omat GPT:t poistuvat 11.12.2026, yhdeksän päivää koulutuksen jälkeen.",
-   "size": "m",
-   "fill": "purple",
-   "page": "diat"
-  },
-  "muistiinpano-27": {
-   "x": 4000,
-   "y": 13620,
-   "w": 1920,
-   "text": "Puhujan muistiinpano: Tilanne 14.11.2026: uusi runko on käytössä osallistujan sivustossa, kanvaksessa ja jakelupaketeissa, ja kouluttajan ohjeet on kirjoitettu uuden rungon mukaan. Vanhan rungon mukaisia ovat yhä release-kansio, vanhat jakelupaketit ja course.json. Seuraavaksi: 26.11. Matti ja Kari esittelevät koulutuksen tilaajille. Avoimista päätöksistä tärkeimmät ovat demon työkalu ja vetäjä sekä työnjako. Ennen päivää tehdään myös demon harjoitus ja tallenne, Claude-testi, YTJ-tarkistus ja ennakkoviesti. ChatGPT:ssä testit uusitaan niiltä osin kuin niitä ei tehty 14.11.2026. Kari päivittää TAKOA-diasarjan viidennen vaiheen.",
+   "text": "Puhujan muistiinpano: Osassa 1 Kari käy läpi määritelmän ja vetää purun, ja Matti näyttää demon. Osassa 2 Kari esittelee TAKOAn, ja Matti vetää tehtävät. Osan 3 alkupuolella Matti ohjaa polkua A ja Kari polkua B. Lounaan jälkeen Kari esittää hankalaa asiakasta. Osan 4 vetää Matti. Lopetuksessa Matti vetää esittelyt ja linjasto-osuuden, ja Kari käynnistää agenttiputken ja vetää seuraavan askeleen. Kun osallistujat rakentavat agenttia, toinen kouluttaja tukee ChatGPT:n ja toinen Clauden käyttäjiä.",
    "size": "m",
    "fill": "purple",
    "page": "diat"

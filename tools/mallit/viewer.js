@@ -15,7 +15,30 @@
   var muistAika = document.getElementById('muist-aika');
   var muistTeksti = document.getElementById('muist-teksti');
   var ruudukko = document.getElementById('ruudukko');
-  var idx = 0, ruudukkoRakennettu = false;
+  var idx = 0, ruudukkoRakennettu = false, taaksepain = false, vaiheTeksti = '';
+  /* Animoitu dia käyttää askeleen ensin itse (slide.js: diaAskel). Vasta kun sen vaiheet ovat
+     lopussa, siirrytään seuraavaan diaan. Taaksepäin tultaessa dia näytetään valmiina. */
+  var odottaa = null;
+  function siirry(suunta) { taaksepain = suunta < 0; nayta(idx + suunta); }
+  function askel(suunta) {
+    var w = kehys.contentWindow, suora = false;
+    try {
+      if (w && typeof w.diaAskel === 'function') { suora = true; if (w.diaAskel(suunta)) return; }
+    } catch (e) { suora = false; }
+    if (suora || !w) { siirry(suunta); return; }
+    /* Varatie, jos dian ikkunaan ei päästä suoraan: kysytään dialta viestillä. */
+    if (odottaa) return;
+    odottaa = { suunta: suunta, ajastin: setTimeout(function () { var s = odottaa.suunta; odottaa = null; siirry(s); }, 400) };
+    w.postMessage({ dia: 'askel', suunta: suunta }, '*');
+  }
+  kehys.addEventListener('load', function () {
+    if (!taaksepain) return;
+    taaksepain = false;
+    var w = kehys.contentWindow;
+    try { if (w && typeof w.diaKaikki === 'function') { w.diaKaikki(); return; } } catch (e) {}
+    if (w) w.postMessage({ dia: 'kaikki' }, '*');
+  });
+  function paivitaLaskuri() { laskuri.textContent = (idx + 1) + ' / ' + N + vaiheTeksti; }
   var muistiinpanoja = S.some(function (s) { return s.note; });
   if (!muistiinpanoja) muistNappi.hidden = true;
 
@@ -28,7 +51,8 @@
     var s = S[idx];
     kehys.src = s.src;
     kehys.title = s.title;
-    laskuri.textContent = (idx + 1) + ' / ' + N;
+    vaiheTeksti = '';
+    paivitaLaskuri();
     otsikko.textContent = s.title;
     edellinen.disabled = idx === 0;
     seuraava.disabled = idx === N - 1;
@@ -87,8 +111,8 @@
   }
   function nappain(avain) {
     switch (avain) {
-      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': if (!ruudukko.classList.contains('nakyy')) nayta(idx + 1); break;
-      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': if (!ruudukko.classList.contains('nakyy')) nayta(idx - 1); break;
+      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': if (!ruudukko.classList.contains('nakyy')) askel(1); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': if (!ruudukko.classList.contains('nakyy')) askel(-1); break;
       case 'Home': nayta(0); break;
       case 'End': nayta(N - 1); break;
       case 'g': case 'G': ruudukkoNakyviin(); break;
@@ -109,17 +133,26 @@
   window.addEventListener('message', function (e) {
     if (e.source !== kehys.contentWindow || !e.data) return;
     if (e.data.dia === 'key') nappain(e.data.key);
-    else if (e.data.dia === 'swipe') nayta(idx + (e.data.dir === 'next' ? 1 : -1));
+    else if (e.data.dia === 'swipe') askel(e.data.dir === 'next' ? 1 : -1);
+    else if (e.data.dia === 'askel-tulos' && odottaa) {
+      clearTimeout(odottaa.ajastin);
+      var s = odottaa.suunta; odottaa = null;
+      if (!e.data.kaytetty) siirry(s);
+    }
+    else if (e.data.dia === 'vaihe') {
+      vaiheTeksti = e.data.yht ? ' · vaihe ' + e.data.nyt + '/' + e.data.yht : '';
+      paivitaLaskuri();
+    }
   });
   var x0 = null, y0 = null;
   document.addEventListener('touchstart', function (e) { var t = e.changedTouches[0]; x0 = t.clientX; y0 = t.clientY; }, { passive: true });
   document.addEventListener('touchend', function (e) {
     if (x0 === null) return;
     var t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0; x0 = null;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > 1.5 * Math.abs(dy)) nayta(idx + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 50 && Math.abs(dx) > 1.5 * Math.abs(dy)) askel(dx < 0 ? 1 : -1);
   }, { passive: true });
-  edellinen.addEventListener('click', function () { nayta(idx - 1); });
-  seuraava.addEventListener('click', function () { nayta(idx + 1); });
+  edellinen.addEventListener('click', function () { askel(-1); });
+  seuraava.addEventListener('click', function () { askel(1); });
   ruudukkoNappi.addEventListener('click', function () { ruudukkoNakyviin(); });
   muistNappi.addEventListener('click', function () { muistiinpanot(); });
   kokoNappi.addEventListener('click', kokoRuutu);

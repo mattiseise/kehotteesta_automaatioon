@@ -18,8 +18,11 @@
   window.addEventListener('resize', skaalaa);
   skaalaa();
 
-  /* Animaatio: elementit, joilla on luokka at-<ms>, saavat luokan "on", kun aika on kulunut.
-     Diakohtainen koukku (window.DIA_ANIM = {times, render(aika)}) hoitaa muut tilat. */
+  /* Animaatio etenee esittäjän tahdissa. Elementit, joilla on luokka at-<ms>, saavat luokan "on",
+     kun animaation aika on kulunut. Aika etenee vaiheittain: jokainen nuoli oikealle, välilyönti tai
+     Seuraava-painallus toistaa seuraavan vaiheen. Vaiheen rajat ovat koukun listassa pysahdykset
+     (oletus: jokainen aika on oma vaiheensa). Kun vaiheet ovat lopussa, katselin siirtyy seuraavaan diaan.
+     Diakohtainen koukku (window.DIA_ANIM = {times, pysahdykset, render(aika)}) hoitaa muut tilat. */
   var cfg = window.DIA_ANIM || {};
   var kohteet = [], ajat = {};
   [].forEach.call(document.querySelectorAll('[class]'), function (el) {
@@ -30,28 +33,63 @@
   });
   (cfg.times || []).forEach(function (t) { ajat[t] = 1; });
   var aikalista = Object.keys(ajat).map(Number).sort(function (a, b) { return a - b; });
+  var vaiheet = (cfg.pysahdykset || aikalista).slice().sort(function (a, b) { return a - b; });
+  var vaihe = 0, ajastimet = [];
+  var nappi = document.querySelector('[data-anim-btn]');
+  var vahenna = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (aikalista.length) {
-    var nappi = document.querySelector('[data-anim-btn]');
-    var ajastimet = [], soi = false;
-    var vahenna = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function aseta(aika) {
+    kohteet.forEach(function (o) { o.el.classList.toggle('on', aika >= o.t); });
+    if (cfg.render) cfg.render(aika);
+  }
+  function tyhjenna() { ajastimet.forEach(clearTimeout); ajastimet = []; }
+  function raja(i) { return i <= 0 ? -1 : vaiheet[i - 1]; }
+  function ilmoita() {
+    if (nappi) nappi.textContent = vaihe >= vaiheet.length ? 'Aloita alusta' : 'Näytä kaikki';
+    if (upotettu) window.parent.postMessage({ dia: 'vaihe', nyt: vaihe, yht: vaiheet.length }, '*');
+  }
+  function mene(i, toista) {
+    tyhjenna();
+    var vanha = raja(vaihe);
+    vaihe = Math.max(0, Math.min(vaiheet.length, i));
+    var uusi = raja(vaihe);
+    if (!toista || vahenna || uusi <= vanha) { aseta(uusi); ilmoita(); return; }
+    var valilla = aikalista.filter(function (t) { return t > vanha && t <= uusi; });
+    var ensin = valilla.length ? valilla[0] : uusi;
+    valilla.forEach(function (t) {
+      ajastimet.push(setTimeout(function () { aseta(t); }, t - ensin + 150));
+    });
+    ilmoita();
+  }
+  /* Katselin kutsuu: palauttaa true, jos dia käytti askeleen itse. */
+  window.diaAskel = function (suunta) {
+    if (!vaiheet.length) return false;
+    if (suunta > 0 && vaihe < vaiheet.length) { mene(vaihe + 1, true); return true; }
+    if (suunta < 0 && vaihe > 0) { mene(vaihe - 1, false); return true; }
+    return false;
+  };
+  window.diaKaikki = function () { if (vaiheet.length) mene(vaiheet.length, false); };
+  if (upotettu) {
+    window.addEventListener('message', function (e) {
+      if (e.source !== window.parent || !e.data) return;
+      if (e.data.dia === 'askel') window.parent.postMessage({ dia: 'askel-tulos', kaytetty: window.diaAskel(e.data.suunta) }, '*');
+      else if (e.data.dia === 'kaikki') window.diaKaikki();
+    });
+  }
 
-    var aseta = function (aika) {
-      kohteet.forEach(function (o) { o.el.classList.toggle('on', aika >= o.t); });
-      if (cfg.render) cfg.render(aika);
-    };
-    var teksti = function () { if (nappi) nappi.textContent = soi ? 'Näytä kaikki heti' : 'Toista animaatio'; };
-    var tyhjenna = function () { ajastimet.forEach(clearTimeout); ajastimet = []; };
-    var valmis = function () { tyhjenna(); soi = false; aseta(1e9); teksti(); };
-    var toista = function () {
-      tyhjenna();
-      if (vahenna) { valmis(); return; }
-      soi = true; teksti(); aseta(-1);
-      aikalista.forEach(function (t) { ajastimet.push(setTimeout(function () { aseta(t); }, t)); });
-      ajastimet.push(setTimeout(function () { soi = false; teksti(); }, aikalista[aikalista.length - 1] + 1200));
-    };
-    if (nappi) nappi.addEventListener('click', function () { if (soi) valmis(); else toista(); });
-    toista();
+  if (vaiheet.length) {
+    if (nappi) nappi.addEventListener('click', function () { mene(vaihe >= vaiheet.length ? 0 : vaiheet.length, false); });
+    var pienoiskuva = false;
+    try { pienoiskuva = !!(window.frameElement && window.frameElement.getAttribute('aria-hidden') === 'true'); } catch (e) {}
+    if (pienoiskuva) mene(vaiheet.length, false); else mene(0, false);
+    if (!upotettu) {
+      document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (e.key === ' ' && e.target && e.target.tagName === 'BUTTON') return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') { if (window.diaAskel(1)) e.preventDefault(); }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { if (window.diaAskel(-1)) e.preventDefault(); }
+      });
+    }
   }
 
   /* Katselimessa: näppäimet ja pyyhkäisyt välitetään ylös, jotta ne toimivat myös kun fokus on diassa */
