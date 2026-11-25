@@ -24,126 +24,6 @@
   }
  ],
  "boards": {
-  "sivu-alku.dc.html": {
-   "x": 0,
-   "y": 0,
-   "w": 1280,
-   "h": 1144,
-   "title": "Alku",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-osa-1.dc.html": {
-   "x": 1360,
-   "y": 0,
-   "w": 1280,
-   "h": 2890,
-   "title": "Osa 1: Mitä agentit ovat?",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-osa-2.dc.html": {
-   "x": 2720,
-   "y": 0,
-   "w": 1280,
-   "h": 3242,
-   "title": "Osa 2: Anna tehtävä",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-osa-3a.dc.html": {
-   "x": 4080,
-   "y": 0,
-   "w": 1280,
-   "h": 5342,
-   "title": "Osa 3, alkupuoli: Anna tiedot",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-osa-3b.dc.html": {
-   "x": 5440,
-   "y": 0,
-   "w": 1280,
-   "h": 3531,
-   "title": "Osa 3, loppupuoli: Anna rajat ja testaa",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-osa-4.dc.html": {
-   "x": 6800,
-   "y": 0,
-   "w": 1280,
-   "h": 5306,
-   "title": "Osa 4: Oma agentti",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-lisaharjoitukset.dc.html": {
-   "x": 8160,
-   "y": 0,
-   "w": 1280,
-   "h": 1258,
-   "title": "Lisäharjoitukset",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-aineisto.dc.html": {
-   "x": 9520,
-   "y": 0,
-   "w": 1280,
-   "h": 2832,
-   "title": "Pohjat ja aineisto",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-kouluttaja.dc.html": {
-   "x": 10880,
-   "y": 0,
-   "w": 1280,
-   "h": 5402,
-   "title": "Kouluttajan ohjeet",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-kasikirjoitus-1.dc.html": {
-   "x": 12240,
-   "y": 0,
-   "w": 1280,
-   "h": 3289,
-   "title": "Diojen käsikirjoitukset (1/3)",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-kasikirjoitus-2.dc.html": {
-   "x": 13600,
-   "y": 0,
-   "w": 1280,
-   "h": 8000,
-   "title": "Diojen käsikirjoitukset (2/3)",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
-  "sivu-kasikirjoitus-3.dc.html": {
-   "x": 14960,
-   "y": 0,
-   "w": 1280,
-   "h": 3062,
-   "title": "Diojen käsikirjoitukset (3/3)",
-   "page": "sivusto",
-   "expand": "fill",
-   "is_interactive": true
-  },
   "Main.dc.html": {
    "x": 0,
    "y": 0,
@@ -362,6 +242,126 @@
    "h": 1080,
    "title": "27. Seuraavaksi demo ja testit Claudessa",
    "page": "diat"
+  },
+  "sivu-alku.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1280,
+   "h": 1144,
+   "title": "Alku",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-osa-1.dc.html": {
+   "x": 1360,
+   "y": 0,
+   "w": 1280,
+   "h": 2890,
+   "title": "Osa 1: Mitä agentit ovat?",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-osa-2.dc.html": {
+   "x": 2720,
+   "y": 0,
+   "w": 1280,
+   "h": 3242,
+   "title": "Osa 2: Anna tehtävä",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-osa-3a.dc.html": {
+   "x": 4080,
+   "y": 0,
+   "w": 1280,
+   "h": 5342,
+   "title": "Osa 3, alkupuoli: Anna tiedot",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-osa-3b.dc.html": {
+   "x": 5440,
+   "y": 0,
+   "w": 1280,
+   "h": 3531,
+   "title": "Osa 3, loppupuoli: Anna rajat ja testaa",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-osa-4.dc.html": {
+   "x": 6800,
+   "y": 0,
+   "w": 1280,
+   "h": 5306,
+   "title": "Osa 4: Oma agentti",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-lisaharjoitukset.dc.html": {
+   "x": 8160,
+   "y": 0,
+   "w": 1280,
+   "h": 1258,
+   "title": "Lisäharjoitukset",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-aineisto.dc.html": {
+   "x": 9520,
+   "y": 0,
+   "w": 1280,
+   "h": 2832,
+   "title": "Pohjat ja aineisto",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-kouluttaja.dc.html": {
+   "x": 10880,
+   "y": 0,
+   "w": 1280,
+   "h": 5402,
+   "title": "Kouluttajan ohjeet",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-kasikirjoitus-1.dc.html": {
+   "x": 12240,
+   "y": 0,
+   "w": 1280,
+   "h": 3289,
+   "title": "Diojen käsikirjoitukset (1/3)",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-kasikirjoitus-2.dc.html": {
+   "x": 13600,
+   "y": 0,
+   "w": 1280,
+   "h": 8000,
+   "title": "Diojen käsikirjoitukset (2/3)",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "sivu-kasikirjoitus-3.dc.html": {
+   "x": 14960,
+   "y": 0,
+   "w": 1280,
+   "h": 3062,
+   "title": "Diojen käsikirjoitukset (3/3)",
+   "page": "sivusto",
+   "expand": "fill",
+   "is_interactive": true
   },
   "luento-01.dc.html": {
    "x": 0,
@@ -632,7 +632,7 @@
    "y": 10720,
    "w": 1920,
    "h": 1080,
-   "title": "34. Yksi asema, koko linjasto",
+   "title": "34. Yhdestä asemasta linjastoon",
    "page": "luentodiat"
   },
   "luento-35.dc.html": {
@@ -739,14 +739,6 @@
   "luento-37.dc.html"
  ],
  "notes": {
-  "otsikko-sivusto": {
-   "x": 0,
-   "y": -420,
-   "text": "Osallistujan sivusto",
-   "kind": "title1",
-   "maxW": 16240,
-   "page": "sivusto"
-  },
   "muistiinpano-01": {
    "x": 0,
    "y": 1140,
@@ -859,7 +851,7 @@
    "x": 0,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: osallistujan sivu osa-4-oma-agentti.md, kouluttajan ohje ja pohja agenttikortti.md. Kortissa ovat agentin nimi, tehtävä yhdellä virkkeellä, tietopohja, tärkeimmät rajat, testien tulos, missä agentti on, seuraava askel 30 päivän aikana ja mistä huomaa hyödyn. Rungossa kortin kohdiksi on kirjattu tehtävä, tiedot, rajat ja hyväksyntä. Viisi aihiota: asiakasviestien käsittelijä, sisältöagentti, tarjousagentti, raporttiagentti ja ohjeagentti. Määritys tehdään haastattelukehotteella Virtaaman projektin ulkopuolella: tekoäly kysyy ensin, yksi kysymys kerrallaan. Osa Testit jää osallistujalle, koska agentti ei saa nähdä odotettuja tuloksia. Pari istuu osallistujan koneen ääreen ja antaa viestit, ja osallistuja merkitsee tulokset korttiin. Kouluttaja ilmoittaa vaihdon klo 14.25. Ilman paria jäävä osallistuja liittyy johonkin pariin kolmanneksi. Klo 14.35 Kari pyytää täyttämään korjauksen yhteydessä kortin kohdat Missä agentti on ja Mistä huomaan hyödyn. Seuraava askel kirjoitetaan yhdessä lopetuksessa. Lopetuksen kaksi esittelijää pyydetään klo 14.35 mennessä. Ainakin yhden heistä agentti ei ole mennyt testistä läpi tai sitä on korjattu. Esittelijä vastaa paikaltaan ilman heijastinta: mitä agentti tekee ja mitä testi paljasti. Esittelyt ovat samalla osan purku. Sen jälkeen lopetuksessa ovat Yksi asema, koko linjasto, kolme lukua esityksestä Pedagoginen agenttiputki (luvut 1, 7 ja 8), Milloin kumpi ja seuraava askel korttiin päivämäärineen. Linjasto-osuus on seuraavalla dialla. Ryhmässä on asiakasseurantaa tekeviä, joten Matti sanoo alussa: terveys- ja valmennusalan asiakasseurannasta tehdään tänään vain versio, jossa ei ole asiakkaiden tietoja. Jos aika loppuu, seuraavaksi tärkein on yksi testi, jossa agentti pysähtyy. Sen jälkeen tulevat parin kolme testiä, ja korjaus kirjataan korttiin seuraavaksi askeleeksi.",
+   "text": "Puhujan muistiinpano: Lähteet: osallistujan sivu osa-4-oma-agentti.md, kouluttajan ohje ja pohja agenttikortti.md. Kortissa ovat agentin nimi, tehtävä yhdellä virkkeellä, tietopohja, tärkeimmät rajat, testien tulos, missä agentti on, seuraava askel 30 päivän aikana ja mistä huomaa hyödyn. Rungossa kortin kohdiksi on kirjattu tehtävä, tiedot, rajat ja hyväksyntä. Viisi aihiota: asiakasviestien käsittelijä, sisältöagentti, tarjousagentti, raporttiagentti ja ohjeagentti. Määritys tehdään haastattelukehotteella Virtaaman projektin ulkopuolella: tekoäly kysyy ensin, yksi kysymys kerrallaan. Osa Testit jää osallistujalle, koska agentti ei saa nähdä odotettuja tuloksia. Pari istuu osallistujan koneen ääreen ja antaa viestit, ja osallistuja merkitsee tulokset korttiin. Kouluttaja ilmoittaa vaihdon klo 14.25. Ilman paria jäävä osallistuja liittyy johonkin pariin kolmanneksi. Klo 14.35 Kari pyytää täyttämään korjauksen yhteydessä kortin kohdat Missä agentti on ja Mistä huomaan hyödyn. Seuraava askel kirjoitetaan yhdessä lopetuksessa. Lopetuksen kaksi esittelijää pyydetään klo 14.35 mennessä. Ainakin yhden heistä agentti ei ole mennyt testistä läpi tai sitä on korjattu. Esittelijä vastaa paikaltaan ilman heijastinta kahteen kysymykseen: mitä agentti tekee ja mitä testi paljasti. Esittelyt ovat samalla osan purku. Esittelyjen jälkeen tulevat kohta Yhdestä asemasta linjastoon ja kolme lukua esityksestä Pedagoginen agenttiputki (luvut 1, 7 ja 8). Lopuksi ovat kohta Milloin kumpi ja seuraava askel korttiin päivämäärineen. Linjasto-osuus on seuraavalla dialla. Ryhmässä on asiakasseurantaa tekeviä, joten Matti sanoo alussa: terveys- ja valmennusalan asiakasseurannasta tehdään tänään vain versio, jossa ei ole asiakkaiden tietoja. Jos aika loppuu, seuraavaksi tärkein on yksi testi, jossa agentti pysähtyy. Sen jälkeen tulevat kolme testiä parin kanssa, ja korjaus kirjataan korttiin seuraavaksi askeleeksi.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -868,7 +860,7 @@
    "x": 2000,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Tämä dia näytetään tilaajille, jotta lopetuksen idea tulee selväksi. Lopetus lunastaa koulutuksen nimen: osassa 2 opitaan kehote, osissa 3 ja 4 siitä tehdään agentti, ja lopetuksessa nähdään, miten agenteista rakennetaan linjasto eli automaatio. Lopetuksen kulku on 14.45–15.00: kaksi osallistujaa esittelee agenttinsa, Matti vetää kohdan Yksi asema, koko linjasto, Kari käynnistää esityksen Pedagoginen agenttiputki (https://seise.org/esitykset/agenttiputki/, luvut 1, 7 ja 8), Matti vetää kohdan Milloin kumpi, ja lopuksi jokainen kirjaa korttiin seuraavan askeleen päivämäärineen. Osallistujat rakensivat yhden aseman eli agentin, jolla on ohjeet, tiedot ja rajat. Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä yleisagentti päättää itse, miten etenee. Linjastossa jokainen vaihe tarkistetaan, ja ihminen hyväksyy. Linjastokaan ei kirjoita joka kerta samaa tekstiä. Yleisagenttia ei väitetä huonoksi: se sopii tutkivaan ja kertaluonteiseen työhön. Claude Cowork ja ChatGPT:n dot ovat esimerkkejä, eivät osallistujan edellytys. Dot on saatavilla vain Pro- ja Business Premium -tilauksilla, eikä osallistujia kehoteta hankkimaan maksullista tilausta. Määritelmä pysyy samana: agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Osallistujan agentti ei avaa tiedostoja koneelta eikä lähetä mitään. Kaavio on sama kuin osallistujan sivulla (Lopuksi: yhdestä agentista linjastoon). Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus) ja osallistujan sivu osa-4-oma-agentti.md.",
+   "text": "Puhujan muistiinpano: Tämä dia näytetään tilaajille, jotta lopetuksen idea tulee selväksi. Lopetus selittää koulutuksen nimen. Osassa 2 opitaan käyttämään kehotetta, ja osissa 3 ja 4 siitä tehdään agentti. Lopetuksessa nähdään, miten agenteista rakennetaan linjasto eli automaatio. Lopetus on klo 14.45–15.00. Ensin kaksi osallistujaa esittelee agenttinsa. Sitten Matti vetää kohdan Yhdestä asemasta linjastoon, ja Kari käynnistää esityksen Pedagoginen agenttiputki (https://seise.org/esitykset/agenttiputki/, luvut 1, 7 ja 8). Sen jälkeen Matti vetää kohdan Milloin kumpi. Lopuksi jokainen kirjaa korttiin seuraavan askeleen päivämäärineen. Osallistujat rakensivat yhden aseman eli agentin, jolla on ohjeet, tiedot ja rajat. Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä yleisagentti päättää itse, miten etenee. Linjastossa jokainen vaihe tarkistetaan, ja ihminen hyväksyy. Linjastokaan ei kirjoita joka kerta samaa tekstiä. Yleisagenttia ei väitetä huonoksi. Se sopii työhön, joka tehdään kerran tai joka on joka kerta erilainen. Claude Cowork ja ChatGPT:n dot ovat esimerkkejä, eikä osallistuja tarvitse niitä. OpenAI julkaisi dotin 29.9.2026 Pro- ja Business Premium -tilauksille, ja Enterprise-, Edu- ja Healthcare-työtiloissa se on betana. Hakutulosten mukaan Pro-tilauksen dot ei ole saatavilla ETA-alueella, joten Suomessa se on käytännössä vain organisaatiotilauksissa. Osallistujia ei kehoteta hankkimaan maksullista tilausta. Määritelmä pysyy samana: agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Osallistujan agentti ei avaa tiedostoja koneelta eikä lähetä mitään. Kaavio on sama kuin osallistujan sivulla (Lopuksi: yhdestä agentista linjastoon). Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus) ja osallistujan sivu osa-4-oma-agentti.md.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -886,7 +878,7 @@
    "x": 6000,
    "y": 7380,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus: Yksi asema, koko linjasto ja Milloin kumpi), kouluttajan ohje osa-1-mita-agentit-ovat.md (kohta Demo, Mitä sanot: ennen demoa ja demon jälkeen), osallistujan osien 3 ja 4 tehtävät ja lisaharjoitukset.md (Kokeilu 2). Esittäjä sanoo demon jälkeen: \"Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja koneeltanne, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.\" Lopetuksessa Matti sanoo kohdassa Yksi asema, koko linjasto: \"Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää, se ei lähetä mitään ja se voi erehtyä. Rakensitte tänään yhden aseman.\" Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä yleisagentti päättää itse, miten etenee. Linjastossa on monta asemaa, ja niiden välissä työ tarkistetaan. Esimerkkinä näytetään kolme lukua esityksestä Pedagoginen agenttiputki. Yleisagentteja ovat esimerkiksi Claude Cowork ja ChatGPT:n dot. Demossa kouluttaja antaa agentille tavoitteen eikä vaiheita. Agentti avaa viestin ja hinnaston itse ja tallentaa luonnoksen vasta hyväksynnän jälkeen. Osallistujat rakentavat projektiin Virtaaman agentin osan 3 loppupuolella ja oman agentin osassa 4. Lisäharjoituksessa määritystä voi kokeilla maksullisella tilauksella myös agentissa, jolla on työkalut. Kummassakin agentti pysähtyy samaan kohtaan, koska määritys käskee. Osan 1 purun virke sopii tähänkin: agentille annetaan tehtävä, mutta ei avaimia kaikkeen.",
+   "text": "Puhujan muistiinpano: Lähteet: kouluttajan ohje osa-4-oma-agentti.md (kohta Lopetus: Yhdestä asemasta linjastoon ja Milloin kumpi), kouluttajan ohje osa-1-mita-agentit-ovat.md (kohta Demo, Mitä sanot: ennen demoa ja demon jälkeen), osallistujan osien 3 ja 4 tehtävät ja lisaharjoitukset.md (Kokeilu 2). Esittäjä sanoo demon jälkeen: \"Mitään ei lähetetty. Iltapäivällä rakennatte saman määrityksen omaan projektiinne. Siellä agentti ei avaa tiedostoja koneeltanne, mutta se tekee samat vaiheet ja pysähtyy samaan kohtaan.\" Lopetuksessa Matti sanoo kohdassa Yhdestä asemasta linjastoon: \"Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää, se ei lähetä mitään ja se voi erehtyä. Rakensitte tänään yhden aseman.\" Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä yleisagentti päättää itse, miten etenee. Linjastossa on monta asemaa, ja niiden välissä työ tarkistetaan. Esimerkkinä näytetään kolme lukua esityksestä Pedagoginen agenttiputki. Yleisagentteja ovat esimerkiksi Claude Cowork ja ChatGPT:n dot. Demossa kouluttaja antaa agentille tavoitteen eikä vaiheita. Agentti avaa viestin ja hinnaston itse ja tallentaa luonnoksen vasta hyväksynnän jälkeen. Osallistujat rakentavat projektiin Virtaaman agentin osan 3 loppupuolella ja oman agentin osassa 4. Lisäharjoituksessa määritystä voi kokeilla maksullisella tilauksella myös työkaluja käyttävässä agentissa. Kummassakin agentti pysähtyy samaan kohtaan, koska määritys niin käskee. Osan 1 purun virke sopii tähänkin: agentille annetaan tehtävä, mutta ei avaimia kaikkeen.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -931,7 +923,7 @@
    "x": 0,
    "y": 11540,
    "w": 1920,
-   "text": "Puhujan muistiinpano: Ehdotus on koottu kouluttajan ohjeiden Vetäjä-riveistä ja aikataulutaulukoista sekä tarkistuslistan päivän aikataulusta. Osa 1: Kari vetää määritelmän, purun ja oman kokeilun. Matti näyttää demon, ja Kari päättää hyväksyntäkohdassa. Osa 2: Kari esittelee TAKOAn, Matti vetää tehtävät ja purun, ja kouluttajat kiertävät palveluittain. Osan 3 alkupuoli: purussa Matti vetää polun A ja Kari polun B, ja yhteisen kysymyksen ja siirtymän vetää Matti. Osan 3 loppupuoli: Kari esittää hankalaa asiakasta, Matti näyttää viestit kirjoitettuna ja kirjaa kädennostojen tulokset. Osa 4: Kari antaa korttiohjeen klo 14.35, jolloin osallistujat täyttävät korjauksen yhteydessä kortin kohdat Missä agentti on ja Mistä huomaan hyödyn. Lopetuksessa Matti vetää kahden agentin esittelyt, linjasto-osuuden (Yksi asema, koko linjasto) ja kohdan Milloin kumpi. Kari käynnistää esityksen Pedagoginen agenttiputki, ja Matti kommentoi. Kari vetää seuraavan askeleen ja kiittää lopuksi. Muut tehtävät tarkistuslistasta: Kari päivittää TAKOA-diasarjan viidennen vaiheen. Vielä päättämättä: kumpi tukee mitäkin palvelua ja kumpi kysyy lounaalla tiedosto- ja käyttörajoista. Vanhassa työnjaossa Kari hoiti myös viestinnän tilaajalle. Uusissa ohjeissa sitä ei mainita.",
+   "text": "Puhujan muistiinpano: Ehdotus on koottu kouluttajan ohjeiden Vetäjä-riveistä ja aikataulutaulukoista sekä tarkistuslistan päivän aikataulusta. Osa 1: Kari vetää määritelmän, purun ja oman kokeilun. Matti näyttää demon, ja Kari päättää hyväksyntäkohdassa. Osa 2: Kari esittelee TAKOAn, Matti vetää tehtävät ja purun, ja kouluttajat kiertävät palveluittain. Osan 3 alkupuoli: purussa Matti vetää polun A ja Kari polun B, ja yhteisen kysymyksen ja siirtymän vetää Matti. Osan 3 loppupuoli: Kari esittää hankalaa asiakasta, Matti näyttää viestit kirjoitettuna ja kirjaa kädennostojen tulokset. Osa 4: Kari antaa korttiohjeen klo 14.35, jolloin osallistujat täyttävät korjauksen yhteydessä kortin kohdat Missä agentti on ja Mistä huomaan hyödyn. Lopetuksessa Matti vetää kahden agentin esittelyt, linjasto-osuuden (Yhdestä asemasta linjastoon) ja kohdan Milloin kumpi. Kari käynnistää esityksen Pedagoginen agenttiputki, ja Matti kommentoi. Kari vetää kohdan Seuraava askel ja kiittää lopuksi. Muut tehtävät tarkistuslistasta: Kari päivittää TAKOA-diasarjan viidennen vaiheen. Vielä päättämättä: kumpi tukee mitäkin palvelua ja kumpi kysyy lounaalla tiedosto- ja käyttörajoista. Vanhassa työnjaossa Kari hoiti myös viestinnän tilaajalle. Uusissa ohjeissa sitä ei mainita.",
    "size": "m",
    "fill": "purple",
    "page": "diat"
@@ -1006,6 +998,14 @@
    "fill": "teal",
    "size": "l",
    "text": "Näin muokkaatte yhdessä: tekstiä voi muokata suoraan diassa tai sivulla. Isommat muutokset pyydetään Claudelta kommentilla: valitse kohta, kirjoita kommentti ja lähetä se Claudelle. Animaatio toistuu Play-tilassa."
+  },
+  "otsikko-sivusto": {
+   "x": 0,
+   "y": -420,
+   "text": "Osallistujan sivusto",
+   "kind": "title1",
+   "maxW": 16240,
+   "page": "sivusto"
   },
   "luento-osio-0": {
    "x": 0,
@@ -1342,7 +1342,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "14.45–14.48 · Matti vetää (ehdotus)\nEsittelijät vastaavat paikaltaan ilman heijastinta. Ensimmäisellä kysymyksellä haetaan tehtävää, tietopohjaa ja rajoja yhdellä virkkeellä. Toisella haetaan löytöjä. Korjausvirkkeet lisätään yksi kerrallaan. Kesken jäänyttä työtä ei jatketa lopetuksessa, vaan se kirjataan korttiin seuraavaksi askeleeksi. Huomio: kahden agentin esittely on ehdotus."
+   "text": "14.45–14.48 · Matti vetää (ehdotus)\nEsittelijät vastaavat paikaltaan ilman heijastinta. Ensimmäiseen kysymykseen esittelijä kertoo yhdellä virkkeellä agentin tehtävän, tietopohjan ja rajat. Toiseen hän kertoo, mitä testeissä löytyi. Korjausvirkkeet lisätään yksi kerrallaan. Kesken jäänyttä työtä ei jatketa lopetuksessa, vaan se kirjataan korttiin seuraavaksi askeleeksi. Huomio: kahden agentin esittely on ehdotus."
   },
   "luento-puhe-34": {
    "x": 12000,
@@ -1351,7 +1351,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "14.48–14.50 · Matti vetää (ehdotus)\nSano: ”Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää, se ei lähetä mitään ja se voi erehtyä. Rakensitte tänään yhden aseman. Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä se päättää itse, miten etenee. Linjastossa on monta asemaa, ja niiden välissä työ tarkistetaan. Aamulla kehotteen tulos vaihteli, tallennettu ohje piti muodon samana, agentti sai tiedot ja rajat, ja linjastossa jokainen vaihe tarkistetaan. Kun vaiheet on päätetty etukäteen, linjaston voi käynnistää saapuva viesti tai ajastus, ja ihminen tulee mukaan hyväksymään. Silloin työstä tulee automaatio.”"
+   "text": "14.48–14.50 · Matti vetää (ehdotus)\nSano: ”Agentti on tekoäly, jolle voi antaa tehtävän hoidettavaksi. Teidän agenttinne tekee vaiheet vasta, kun annatte sille työn. Se pysähtyy pyytämään hyväksyntää, se ei lähetä mitään ja se voi erehtyä. Rakensitte tänään yhden aseman. Aamun demossa yleisagentti sai tavoitteen ja Virtaaman määrityksen, joten se toimi kuin yksi asema. Ilman määritystä se päättää itse, miten etenee. Linjastossa on monta asemaa, ja niiden välissä työ tarkistetaan. Aamulla kehotteen tulos vaihteli. Tallennettu ohje piti muodon samana. Agentti sai tiedot ja rajat. Linjastossa jokainen vaihe tarkistetaan. Kun vaiheet on päätetty etukäteen, linjaston voi käynnistää saapuva viesti tai ajastus. Ihminen tulee mukaan hyväksymään. Silloin työstä tulee automaatio.”"
   },
   "luento-puhe-35": {
    "x": 14000,
@@ -1360,7 +1360,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "14.50–14.54 · Kari käynnistää esityksen, Matti kommentoi (ehdotus)\nKari avaa valmiiksi kaksi välilehteä: seise.org/esitykset/agenttiputki/#avaus ja #linnea. Luku 7 jatkuu itsestään lukuun 8. Syvälinkki avaa luvun äänettömänä, joten toisto käynnistetään painikkeesta. Esitys etenee automaattisesti seuraavaan lukuun, joten pysäytä se luvun 1 ja luvun 8 lopussa. Esityksen jälkeen Matti nostaa kaksi asiaa: tekijä ei tarkista omaa työtään, ja viimeisen päätöksen tekee ihminen. Esityksessä putkea pitää liikkeessä Claus, Matin oma yleisagentti, joka toimii putken orkestroijana. Yleisagentti voi siis toimia linjaston työnjohtajana, mutta linjasto määrää, mitä tehdään. Huomio: jos aika loppuu, jätetään pois ensin huomio Clausista ja sitten luvut 7 ja 8."
+   "text": "14.50–14.54 · Kari käynnistää esityksen, Matti kommentoi (ehdotus)\nKari avaa valmiiksi kaksi välilehteä: seise.org/esitykset/agenttiputki/#avaus ja #linnea. Luku 7 jatkuu itsestään lukuun 8. Kun luku avataan omalla linkillään, se alkaa äänettömänä. Käynnistä siksi toisto painikkeesta. Esitys etenee automaattisesti seuraavaan lukuun, joten pysäytä se luvun 1 ja luvun 8 lopussa. Esityksen jälkeen Matti nostaa esiin kaksi asiaa: tekijä ei tarkista omaa työtään, ja viimeisen päätöksen tekee ihminen. Esityksessä työtä ohjaa Claus, joka on Matin oma yleisagentti. Yleisagentti voi siis toimia linjaston työnjohtajana, mutta linjasto määrää, mitä tehdään. Huomio: jos aika loppuu, jätetään pois ensin huomio Clausista ja sitten luvut 7 ja 8."
   },
   "luento-puhe-36": {
    "x": 16000,
@@ -1378,7 +1378,7 @@
    "size": "m",
    "fill": "purple",
    "page": "luentodiat",
-   "text": "14.56–15.00 · Matti ja Kari päättävät päivän (ehdotus)\nKari sanoo: ”Kirjoittakaa kortin kohtaan Seuraava askel 30 päivän aikana, mitä teette ja minä päivänä.” Pyydä tarkistamaan, että tallessa ovat oma käsittelyohje, Virtaaman agentti, oman agentin määritys, kortti ja pohjat. Matti sanoo: ”Kun rakennatte agentin omaan työhönne, älkää laittako siihen asiakkaiden nimiä, yhteystietoja, terveystietoja tai henkilöstötietoja. Tarkistakaa oman organisaationne ohjeet ennen kuin käytätte agenttia oikeaan työhön. Katsokaa myös palvelunne tietosuoja-asetuksista, käytetäänkö keskustelujanne mallin kehittämiseen.” Kerro lisäharjoituksista. Kari sanoo: ”Kiitos päivästä. Tarkistaminen on se osa, jota tekoäly ei tee puolestanne.”"
+   "text": "14.56–15.00 · Matti ja Kari päättävät päivän (ehdotus)\nKari sanoo: ”Kirjoittakaa kortin kohtaan Seuraava askel 30 päivän aikana, mitä teette ja minä päivänä.” Pyydä tarkistamaan, että tallessa ovat oma käsittelyohje, Virtaaman agentti, oman agentin määritys, kortti ja pohjat. Matti sanoo: ”Kun rakennatte agentin omaan työhönne, älkää laittako siihen asiakkaiden nimiä, yhteystietoja, terveystietoja tai henkilöstötietoja. Tarkistakaa oman organisaationne ohjeet, ennen kuin käytätte agenttia oikeaan työhön. Katsokaa myös palvelunne tietosuoja-asetuksista, käytetäänkö keskustelujanne mallin kehittämiseen.” Kerro lisäharjoituksista. Kari sanoo: ”Kiitos päivästä. Tarkistaminen on se osa, jota tekoäly ei tee puolestanne.”"
   },
   "luento-ohje": {
    "x": -1100,
