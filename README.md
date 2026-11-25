@@ -16,6 +16,7 @@ osallistuja/               osallistujan sivusto (itsenäinen)
   tiedostot/               liitteet sellaisinaan (md, txt, csv, pdf)
   assets/pages-shim.js     latausrajapinnan korvike (ks. alla)
 
+esittely/                  koulutuskokonaisuuden esittely (kulku, diat, video, testitehtävät)
 diat/esittajat/            esittäjien diat (21 kpl), itsenäinen
 diat/luennoija/            luennoijan diat (36 kpl, puhujan muistiinpanot), itsenäinen
   index.html               katselin

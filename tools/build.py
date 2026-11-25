@@ -10,9 +10,10 @@ Lähteet (kansio lahde/):
   kouluttaja/sivu-*.dc.html        kouluttajan sivut
   osallistuja/index.html + tiedostot/   osallistujan sivusto sellaisenaan
   video/<nimi>.html                sarjakuvaesitysmoottorin valmis video (standalone.html puheraitoineen)
+  esittely/index.html              koulutuskokonaisuuden esittely (kopioidaan sellaisenaan)
   assets/logo-valkoinen.png        logo
 
-Tulokset (kirjoitetaan yli): index.html, assets/, diat/, kouluttaja/, osallistuja/, video/
+Tulokset (kirjoitetaan yli): index.html, assets/, diat/, esittely/, kouluttaja/, osallistuja/, video/
 Ei koske kansioihin lahde/ ja tools/.
 """
 import html
@@ -389,6 +390,18 @@ def rakenna_video():
     return n
 
 
+# ---------------------------------------------------------------- esittely
+
+def rakenna_esittely():
+    """lahde/esittely/index.html -> esittely/index.html sellaisenaan (koulutuskokonaisuuden esittely tilaajille)."""
+    kohde = ROOT / 'esittely'
+    tyhjenna(kohde)
+    t = lue(LAHDE / 'esittely' / 'index.html')
+    if ROBOTS not in t:
+        t = t.replace('<head>', '<head>' + ROBOTS, 1)
+    kirjoita(kohde / 'index.html', t)
+
+
 # ---------------------------------------------------------------- etusivu
 
 def rakenna_etusivu():
@@ -409,6 +422,7 @@ def main():
     k = rakenna_kouluttaja()
     o = rakenna_osallistuja()
     v = rakenna_video()
+    rakenna_esittely()
     rakenna_etusivu()
     print('Esittäjien diat: %d (muistiinpano %d)' % (n1, m1))
     print('Luennoijan diat: %d (muistiinpano %d)' % (n2, m2))
